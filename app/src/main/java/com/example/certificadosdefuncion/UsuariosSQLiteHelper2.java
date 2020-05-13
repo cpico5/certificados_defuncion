@@ -41,7 +41,7 @@ static String nombreD = nom.nombreDatos();
 	static String prefix = "listado";
 
 	 private static final String DATABASE_NAME = Environment.getExternalStorageDirectory() +"/Mis_archivos/" +nombreD+"_"+prefix+"";
-	 private static final int DATABASE_VERSION = 5;
+	 private static final int DATABASE_VERSION = 7;
 	 
 	 public UsuariosSQLiteHelper2(Context context, String name,CursorFactory factory, int version) {
 		 super(context, DATABASE_NAME, null, DATABASE_VERSION);
