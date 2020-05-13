@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="AMARILLO">#FFFF00</color>
+    <color name="AZUL">#0000FF</color>
+    <color name="AZULITO">#8E2121</color>
+    <color name="BLANCO">#FFFFFF</color>
+    <color name="GRIS">#C0C0C0</color>
+    <color name="MARRON">#67403A</color>
+    <color name="MORADO">#C733C9</color>
+    <color name="NARANJA">#F28220</color>
+    <color name="NEGRO">#000000</color>
+    <color name="PISTACHO">#C0D787</color>
+    <color name="ROJO">#DE0814</color>
+    <color name="ROSA">#FF3389</color>
+    <color name="TRANSPARENTE">#00000000</color>
+    <color name="VERDE">#1bb600</color>
+    <color name="VIOLETA">#FF00FF</color>
+    <color name="colorAccent">#585858</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="green">#1bb600</color>
+    <color name="my_spinner_text_color">#7e0202</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="my_spinner_text_size">15dp</dimen>
+    <string name="AlgoInseguro">Algo inseguro</string>
+    <string name="AlgoSeguro">Algo seguro</string>
+    <string name="Bien">Bien</string>
+    <string name="Buena">Buena</string>
+    <string name="Bueno">Bueno</string>
+    <string name="Cerca">Cerca</string>
+    <string name="Lejos">Lejos</string>
+    <string name="Mal">Mal</string>
+    <string name="Mala">Mala</string>
+    <string name="Malo">Malo</string>
+    <string name="Masbaratos">Más baratos</string>
+    <string name="Mascaros">Más Caros</string>
+    <string name="Mbueno">Muy bueno</string>
+    <string name="Mejores">Mejores</string>
+    <string name="Mmejores">Mucho mejores</string>
+    <string name="Mpeores">Mucho peores</string>
+    <string name="Muchisimo">Muchísimo</string>
+    <string name="Mucho">Mucho</string>
+    <string name="MuchoMasBaratos">Mucho más baratos</string>
+    <string name="MuchoMasCaros">Mucho más Caros</string>
+    <string name="MuchoMasCerca">Mucho más cerca</string>
+    <string name="MuchoMasLejos">Mucho más lejos</string>
+    <string name="MuyBien">Muy bien</string>
+    <string name="MuyInseguro">Muy inseguro</string>
+    <string name="MuyMal">Muy mal</string>
+    <string name="MuyMala">Muy mala</string>
+    <string name="MuyMalo">Muy malo</string>
+    <string name="MuySeguro">Muy seguro</string>
+    <string name="Muybuena">Muy buena</string>
+    <string name="Nada">Nada</string>
+    <string name="PREGUNTA1">Juzgado</string>
+    <string name="PREGUNTA2">Tipo de documento</string>
+    <string name="PREGUNTA3">Folio</string>
+    <string name="PREGUNTA4">Apellido Paterno</string>
+    <string name="PREGUNTA5">Apellido Materno</string>
+    <string name="PREGUNTA6">Nombres</string>
+    <string name="PREGUNTA7">Genero</string>
+    <string name="PREGUNTA8">CURP</string>
+    <string name="PREGUNTA9">Fecha de deceso</string>
+    <string name="PREGUNTA9a">Año</string>
+    <string name="PREGUNTA9d">Dia</string>
+    <string name="PREGUNTA9m">Mes</string>
+    <string name="Peores">Peores</string>
+    <string name="Poco">Poco</string>
+    <string name="Regular">Regular</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Certificados_v1</string>
+    <string name="de_acuerdo">De acuerdo</string>
+    <string name="en_desacuerdo">En desacuerdo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="igual">Igual</string>
+    <string name="internet">Internet</string>
+    <string name="mejor">Mejor</string>
+    <string name="mucha">Mucha</string>
+    <string name="nc">No contestó</string>
+    <string name="nide_acuerdo">Ni de acuerdo, ni en desacuerdo</string>
+    <string name="ninguna">Ninguna</string>
+    <string name="no">No</string>
+    <string name="noSabe">No Sabe</string>
+    <string name="otraForma">Otra forma</string>
+    <string name="otro">Otro</string>
+    <string name="peor">Peor</string>
+    <string name="periodico">Periódico</string>
+    <string name="poca">Poca</string>
+    <string name="radio">Radio</string>
+    <string name="si">Si</string>
+    <string name="television">Televisión</string>
+    <string name="zona">zona</string>
+    <style name="AlertDialogStyle" parent="android:Theme.Holo.Light">
+        <item name="android:paddingTop">25dp</item>
+        <item name="android:paddingBottom">25dp</item>
+    <item name="android:textColorPrimary">@color/NEGRO</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:textColor">#00FF00</item>
+        <item name="android:typeface">serif</item>
+        <item name="android:textSize">20sp</item>
+         <item name="android:textAppearanceMedium">@style/MyAlertTextAppearance</item>
+         
+</style>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        
+        
+        <item name="android:spinnerItemStyle">
+            @style/spinnerItemStyle
+        </item> 
+        
+        <item name="android:spinnerDropDownItemStyle">
+            @style/mySpinnerItemStyle
+       </item>
+        
+    </style>
+    <style name="MyAlertTextAppearance">
+    
+    <item name="android:textSize">31sp</item>
+    <item name="android:textColor">@color/ROJO</item>
+</style>
+    <style name="MyButtonBar">
+    
+    <item name="android:divider">@color/BLANCO</item>
+   
+    <item name="android:dividerHeight">60sp</item>
+    <item name="android:showDividers">middle</item>
+    <item name="android:background">@color/GRIS</item>
+    <item name="android:textSize">35sp</item>
+</style>
+    <style name="RadioButton">
+         <item name="android:textSize">15sp</item>
+         <item name="android:textStyle">bold</item>     
+     </style>
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+    	<item name="android:textColor">@color/my_spinner_text_color</item>
+   	 	<item name="android:textSize">@dimen/my_spinner_text_size</item>
+    </style>
+    <style name="spinnerDropDownItemStyle">
+        <item name="android:padding">18dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#585858</item>
+    </style>
+    <style name="spinnerItemStyle">
+        <item name="android:padding">18dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#585858</item>
+    </style>
+</resources>
