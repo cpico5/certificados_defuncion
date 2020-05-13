@@ -1,4 +1,10 @@
-#Wed May 13 17:09:41 CDT 2020
-base.0=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+#Wed May 13 18:02:56 CDT 2020
+path.2=classes2.dex
+path.1=classes.dex
 path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.2=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+base.1=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+base.0=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
