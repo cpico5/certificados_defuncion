@@ -21,6 +21,7 @@ import com.example.censopuelosbarrios.R;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -47,7 +48,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -216,6 +219,7 @@ public class MainActivityPantalla1 extends Activity {
 	public EditText editPregunta9a;
 	public EditText editPregunta9m;
 	public EditText editPregunta9d;
+	public EditText editFechaDeceso;
 
 
 	
@@ -249,6 +253,8 @@ public class MainActivityPantalla1 extends Activity {
 	LinearLayout lay7;
 	LinearLayout lay8;
 	LinearLayout lay9;
+
+	public ImageButton imageButtonVale;
 
 
 	public String maximo = "";
@@ -677,10 +683,14 @@ public class MainActivityPantalla1 extends Activity {
 		editPregunta5= (EditText)findViewById(R.id.editPregunta5);
 		editPregunta6= (EditText)findViewById(R.id.editPregunta6);
 		editPregunta8= (EditText)findViewById(R.id.editPregunta8);
+		editFechaDeceso= (EditText)findViewById(R.id.editFechaDeceso);
+		editFechaDeceso.setEnabled(false);
+
+		imageButtonVale = (ImageButton) findViewById(R.id.imageButtonVale);
 		
-		editPregunta9a= (EditText)findViewById(R.id.editPregunta9a);
-		editPregunta9m= (EditText)findViewById(R.id.editPregunta9m);
-		editPregunta9d= (EditText)findViewById(R.id.editPregunta9d);
+//		editPregunta9a= (EditText)findViewById(R.id.editPregunta9a);
+//		editPregunta9m= (EditText)findViewById(R.id.editPregunta9m);
+//		editPregunta9d= (EditText)findViewById(R.id.editPregunta9d);
 
 		spinner_juzgado= (Spinner) findViewById(R.id.spinner_juzgado);
 
@@ -712,7 +722,7 @@ public class MainActivityPantalla1 extends Activity {
 //		preg_clas_2.xml
 
 
-		
+
 		btnGuardar = (Button) findViewById(R.id.btnGuardar);
 		btnSalir = (Button) findViewById(R.id.btnSalir);
 		btnSalir.setEnabled(false);
@@ -758,6 +768,33 @@ public class MainActivityPantalla1 extends Activity {
 		});
 
 
+		final Calendar myCalendarioF = Calendar.getInstance();
+
+		final DatePickerDialog.OnDateSetListener dateFecha = new DatePickerDialog.OnDateSetListener() {
+			@Override
+			public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+				// TODO Auto-generated method stub
+				myCalendarioF.set(Calendar.YEAR, year);
+				myCalendarioF.set(Calendar.MONTH, monthOfYear);
+				myCalendarioF.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+				String myFormat = "yyyy-MM-dd"; //In which you need put here
+				SimpleDateFormat sdf = new SimpleDateFormat(myFormat);
+				editFechaDeceso.setText(sdf.format(myCalendarioF.getTime()));
+
+			}
+
+		};
+
+		imageButtonVale.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				new DatePickerDialog(MainActivityPantalla1.this,dateFecha, myCalendarioF
+						.get(Calendar.YEAR), myCalendarioF.get(Calendar.MONTH),
+						myCalendarioF.get(Calendar.DAY_OF_MONTH)).show();
+			}
+		});
+
 
 		
 	}////// FIN ONCREATE/////////////////////////////
@@ -773,7 +810,7 @@ public class MainActivityPantalla1 extends Activity {
 		super.onPause();
 
 	}
-	
+
 
 	class CierraEncuesta extends TimerTask {
 
@@ -840,7 +877,7 @@ public class MainActivityPantalla1 extends Activity {
 		String str6 = editPregunta6.getText().toString().toUpperCase();
 		String str7 = op7.toUpperCase();
 		String str8 = editPregunta8.getText().toString().toUpperCase();
-		String str9 = editPregunta9a.getText().toString()+"-"+editPregunta9m.getText().toString()+"-"+editPregunta9d.getText().toString();
+		String str9 = editFechaDeceso.getText().toString();
 
 		String strFinal = "\n";
 
@@ -959,10 +996,8 @@ public class MainActivityPantalla1 extends Activity {
 			  else if (lay7.getVisibility() == View.VISIBLE && op7.matches("SIN DATOS")){Toast.makeText(this,"CAPTURA:  " +  captura7,Toast.LENGTH_LONG).show();}
 			  else if (lay8.getVisibility() == View.VISIBLE && editPregunta8.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura8,Toast.LENGTH_LONG).show();}
 			  else if (lay9.getVisibility() == View.VISIBLE
-					  	&& editPregunta9a.getText().toString().trim().length()==0
-			  			&& editPregunta9m.getText().toString().trim().length()==0
-			  			&& editPregunta9d.getText().toString().trim().length()==0
-			  ){Toast.makeText(this,"CAPTURA:  " +  captura9,Toast.LENGTH_LONG).show();}
+					  	&& editFechaDeceso.getText().toString().trim().length()==0
+			  			){Toast.makeText(this,"CAPTURA:  " +  captura9,Toast.LENGTH_LONG).show();}
 
 			else {
 
@@ -973,14 +1008,14 @@ public class MainActivityPantalla1 extends Activity {
 				
 
 			}// Finaliza else de validaci�n
-			  
+
 			break;
 
 		}
 
 	}
 
-	
+
 	public void Salir(View view) {
 		finish();
 	}
