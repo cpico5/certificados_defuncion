@@ -472,11 +472,13 @@ public class Entrada extends Activity {
 									showProgress(false);
 
 									Intent intent = new Intent(Entrada.this, MainActivityPantalla1.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 									Bundle bundle = new Bundle();
 									bundle.putString("Nombre", String.valueOf(usuario.getId()));
 									intent.putExtras(bundle);
 									intent.putExtra(USUARIO,usuario);
 									startActivity(intent);
+                                    finish();
 
 								}
 							}

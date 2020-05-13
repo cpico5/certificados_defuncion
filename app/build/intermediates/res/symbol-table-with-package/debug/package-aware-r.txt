@@ -1631,6 +1631,7 @@ id live_stream_indicator
 id live_stream_seek_bar
 id loading_indicator
 id login_progress
+id login_progressMain
 id logo_only
 id masked
 id match_global_nicknames

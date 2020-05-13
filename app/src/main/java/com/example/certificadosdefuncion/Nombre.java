@@ -4,6 +4,7 @@ public class Nombre  {
 
 	public static final String customURL = "https://opinion.cdmx.gob.mx/certificados/";
 	public static final String USUARIO = "usuario";
+	public static final String ID_CERTIFICADO = "IDCERTIFICADO";
 	public static final String PADRON = "padron";
 	public static final String LATITUDE = "latitude";
 	public static final String LONGITUDE = "longitude";

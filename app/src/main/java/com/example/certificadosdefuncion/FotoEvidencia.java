@@ -18,6 +18,8 @@ import java.util.List;
 import java.util.Set;
 
 import com.example.censopuelosbarrios.R;
+import com.example.certificadosdefuncion.model.Usuario;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -54,6 +56,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.example.certificadosdefuncion.Nombre.ID_CERTIFICADO;
+import static com.example.certificadosdefuncion.Nombre.USUARIO;
 
 
 public class FotoEvidencia extends Activity {
@@ -511,11 +515,28 @@ public class FotoEvidencia extends Activity {
         return super.onKeyDown(keyCode, event);
     }
 
+    private Usuario usuario;
+    private int idCertificado = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.foto_evidencia);
+
+        Intent startingIntent = getIntent();
+        if (startingIntent == null) {
+            finish();
+            return;
+        }
+
+        if (savedInstanceState != null) {
+            usuario = (Usuario) savedInstanceState.getSerializable(USUARIO);
+            idCertificado = (Integer) savedInstanceState.getSerializable(ID_CERTIFICADO);
+        } else {
+            usuario = (Usuario) startingIntent.getSerializableExtra(USUARIO);
+            idCertificado = (Integer) startingIntent.getSerializableExtra(ID_CERTIFICADO);
+        }
 
         Thread.setDefaultUncaughtExceptionHandler(new Crash(this));
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
