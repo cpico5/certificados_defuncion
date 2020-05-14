@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -61,12 +62,14 @@ public class ImagenAdapter extends RecyclerView.Adapter<ImagenAdapter.ImagenView
     public class ImagenViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtNombre;
-        ImageButton btnDelete;
+        //ImageButton btnDelete;
+        Button btnDelete;
 
         public ImagenViewHolder(@NonNull View itemView) {
             super(itemView);
             txtNombre =     itemView.findViewById(R.id.idNombre);
-            btnDelete =   (ImageButton)  itemView.findViewById(R.id.btnDelete);
+            //btnDelete =   (ImageButton)  itemView.findViewById(R.id.btnDelete);
+            btnDelete =   (Button)  itemView.findViewById(R.id.btnDelete);
 
             itemView.setTag(this);
             itemView.setOnClickListener(mOnItemClickListener);
