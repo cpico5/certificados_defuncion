@@ -305,7 +305,7 @@ public class Entrada extends Activity {
 
         /* Abre la app de seguimiento*/
 
-        try {
+        /*try {
             Intent launchIntent = getPackageManager().getLaunchIntentForPackage("mx.gob.cdmx.seguimiento");
             startActivity(launchIntent);
         } catch (Exception e) {
@@ -314,7 +314,7 @@ public class Entrada extends Activity {
 
             dialogoSeguimiento();
 
-        }
+        }*/
 
 		mLoginFormView = findViewById(R.id.editUsuario);
 		mProgressView = findViewById(R.id.login_progress);
