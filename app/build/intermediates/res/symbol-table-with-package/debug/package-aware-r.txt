@@ -1474,6 +1474,7 @@ id bottom
 id btnArchivo
 id btnAudios
 id btnConsultar
+id btnDelete
 id btnE1
 id btnFotos
 id btnGuardar
@@ -1571,6 +1572,7 @@ id fill_horizontal
 id fill_vertical
 id fixed
 id forever
+id fotos_evidencia_recycler
 id ghost_view
 id gone
 id googleMaterial2
@@ -1594,6 +1596,7 @@ id icon_group
 id icon_only
 id icon_uri
 id icon_view
+id idNombre
 id ifRoom
 id image
 id imageButtonVale
@@ -1906,6 +1909,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout entrada
 layout foto_evidencia
+layout item_list_fotos
 layout menu_principal
 layout mr_chooser_dialog
 layout mr_chooser_list_item
