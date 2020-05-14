@@ -44,6 +44,16 @@
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
+            <ProgressBar
+                android:id="@+id/login_progressMain"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:foregroundGravity="center"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -84,13 +94,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
+            android:layout_height="wrap_content">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/fotos_evidencia_recycler"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                tools:listitem="@android:layout/activity_list_item"/>
 
         </LinearLayout>
 
@@ -110,16 +120,6 @@
                 android:textColor="@drawable/color" />
 
         </LinearLayout>
-
-        <ProgressBar
-            android:id="@+id/login_progressMain"
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:foregroundGravity="center"
-            android:textAlignment="center"
-            android:visibility="gone" />
 
     <!--</ScrollView>  !-->
         </LinearLayout>

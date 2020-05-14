@@ -687,8 +687,8 @@ public class FotoEvidencia extends Activity {
 
     public void dialogo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Tomar otra Fotografía").setTitle("IMPORTANTE").setCancelable(false)
-                .setNegativeButton("Siguiente", new DialogInterface.OnClickListener() {
+        builder.setMessage("Finaliza captura de fotos").setTitle("IMPORTANTE").setCancelable(false)
+                .setNegativeButton("Terminar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
 //						detenerGrabacion();
@@ -714,6 +714,9 @@ public class FotoEvidencia extends Activity {
                     }
                 }).setPositiveButton("Cancelar", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
+
+                showProgress(false);
+                Guarda.setEnabled(true);
 
 //						detenerGrabacion();
                /* Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
@@ -944,7 +947,7 @@ public class FotoEvidencia extends Activity {
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
 
-                    if (imagen.getDrawable() != null) {
+                    if (!listaImagenes.isEmpty()) {
                         Log.i("datos f", "Solo hay foto");
                         Guarda.setEnabled(false);
                         //insertaFoto();
@@ -1157,6 +1160,8 @@ public class FotoEvidencia extends Activity {
             //debe mostrar la imagen en el image view
             imagen.setImageResource(0);
             listaImagenes.remove(fotoActual);
+            File fichero = new File(fotoActual.getPathImagen());
+            fichero.delete();
 
             fillImagen();
 
