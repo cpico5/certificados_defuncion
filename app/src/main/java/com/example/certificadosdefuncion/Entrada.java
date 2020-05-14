@@ -500,7 +500,8 @@ public class Entrada extends Activity {
 							Type collectionType = new TypeToken<Usuario>() {}.getType();
 							usuario = gson.fromJson(jsonUser.toString(), collectionType);
 
-							daoManager.deleteClausule(Usuario.class, "id='" + user + "'", null);
+							//daoManager.deleteClausule(Usuario.class, "usuario='" + user + "'", null);
+							daoManager.delete(Usuario.class);
 
 							if (usuario != null) {
 								usuario.setPassword(Integer.valueOf(password));
