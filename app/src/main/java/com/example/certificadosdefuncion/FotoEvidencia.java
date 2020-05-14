@@ -715,6 +715,9 @@ public class FotoEvidencia extends Activity {
                 }).setPositiveButton("Cancelar", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
 
+                showProgress(false);
+                Guarda.setEnabled(true);
+
 //						detenerGrabacion();
                /* Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -944,7 +947,7 @@ public class FotoEvidencia extends Activity {
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
 
-                    if (imagen.getDrawable() != null) {
+                    if (!listaImagenes.isEmpty()) {
                         Log.i("datos f", "Solo hay foto");
                         Guarda.setEnabled(false);
                         //insertaFoto();
