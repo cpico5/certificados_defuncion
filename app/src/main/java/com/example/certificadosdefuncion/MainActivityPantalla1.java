@@ -30,6 +30,7 @@ import com.loopj.android.http.MySSLSocketFactory;
 import com.loopj.android.http.RequestHandle;
 import com.loopj.android.http.RequestParams;
 
+import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
@@ -42,6 +43,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -52,6 +54,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.provider.Settings.Secure;
+import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -128,43 +131,42 @@ public class MainActivityPantalla1 extends Activity {
 	public RadioGroup rdPreguntaOcupacion, rdPreguntaFocos, rdPreguntaE1a, rdPreguntaE1b, rdPreguntaCoche, rdPreguntaE3,
 			rdPreguntaE4, rdPreguntaCuantosCoches, rdPreguntaTrabajo, rdPreguntaE7, rdPregunta4a, rdPregunta4b,
 			rdPregunta4c, rdPregunta4d, rdPregunta4e, rdPreguntaCuartos, rdPreguntaCuartosDormir, rdPreguntaCuartos1a,
-			rdPreguntaE92, rdPreguntaBanos, rdPreguntaTrabajaron,rdPreguntaInternet,rdPreguntaE101, rdPreguntaE102a, rdPreguntaE103, rdPreguntaRegadera,
+			rdPreguntaE92, rdPreguntaBanos, rdPreguntaTrabajaron, rdPreguntaInternet, rdPreguntaE101, rdPreguntaE102a, rdPreguntaE103, rdPreguntaRegadera,
 			rdPreguntaEstufa, rdPreguntaEdad, rdPreguntaGenero, rdPreguntaTipoVivienda, rdPreguntaTipoPiso,
 			rdPreguntaE17;
-	
-	
+
 
 	public EditText editOtroNoticias, editOtroPeriodico, editOtroRedes;
-	public RadioGroup  rdPregunta5a, rdPregunta5b, rdPregunta5c, rdPregunta5d, rdPregunta5e, rdPregunta5f,
+	public RadioGroup rdPregunta5a, rdPregunta5b, rdPregunta5c, rdPregunta5d, rdPregunta5e, rdPregunta5f,
 			rdPregunta5g, rdPregunta5h, rdPregunta5i, rdPregunta5j, rdPregunta5k, rdPregunta5l;
-	public RadioGroup   rdPregunta79a, rdPregunta79a1, rdPregunta79a2, rdPregunta79a3;
+	public RadioGroup rdPregunta79a, rdPregunta79a1, rdPregunta79a2, rdPregunta79a3;
 	public RadioGroup rdPregunta5m, rdPregunta5n, rdPregunta5o, rdPregunta5p, rdPregunta5q, rdPregunta5r, rdPregunta5s,
 			rdPregunta5t;
 	public RadioGroup rdPreguntaJefe, rdPreguntaAporta, rdPreguntaAbandono, rdPregunta6e;
 
-	public RadioGroup   rdPreguntaHijos, rdPregunta81, rdPregunta86a, rdPregunta86b, rdPregunta86c, rdPregunta86d,
+	public RadioGroup rdPreguntaHijos, rdPregunta81, rdPregunta86a, rdPregunta86b, rdPregunta86c, rdPregunta86d,
 			rdPregunta86e, rdPregunta86f, rdPregunta86g;
 
-	public EditText editPregunta7c, editPregunta5e,   editPregunta5h, editPregunta5k,
-			editPregunta5l,  editPregunta29a, editPregunta35;
-	public RadioGroup    rdPregunta13, rdPregunta14 ;
-	public RadioGroup  rdPregunta14a, rdPregunta16a, rdPregunta18a, rdPregunta20a;
-	public RadioGroup  rdPregunta14b, rdPregunta16b, rdPregunta18b, rdPregunta20b;
+	public EditText editPregunta7c, editPregunta5e, editPregunta5h, editPregunta5k,
+			editPregunta5l, editPregunta29a, editPregunta35;
+	public RadioGroup rdPregunta13, rdPregunta14;
+	public RadioGroup rdPregunta14a, rdPregunta16a, rdPregunta18a, rdPregunta20a;
+	public RadioGroup rdPregunta14b, rdPregunta16b, rdPregunta18b, rdPregunta20b;
 	public RadioGroup rdPregunta23, rdPregunta23a, rdPregunta24;
-	public RadioGroup  rdPregunta21, rdPregunta22;
+	public RadioGroup rdPregunta21, rdPregunta22;
 	public RadioGroup rdPregunta1a, rdPregunta1a0, rdPregunta1a2, rdPregunta1b, rdPregunta1c, rdPregunta1d,
 			rdPregunta1e, rdPregunta1f, rdPregunta1g, rdPregunta1h, rdPregunta1i;
 	public RadioGroup rdPregunta2c, rdPregunta2d, rdPregunta2e, rdPregunta2f, rdPregunta2g, rdPregunta2h, rdPregunta2i;
 
 	public RadioButton radio11_1, radio11_2, radio11_3, radio11_4, radio11_5, radio11_6, radio11_7, radio11_8,
-			radio11_9, radio11_10, radio11_11, radio11_12, radio11_0,radio12_0_1,radio12_0_2;
+			radio11_9, radio11_10, radio11_11, radio11_12, radio11_0, radio12_0_1, radio12_0_2;
 	public RadioButton radio13_1, radio13_2, radio13_3, radio13_4, radio13_5, radio13_6, radio13_7, radio13_8,
 			radio13_9, radio13_10, radio13_11, radio13_12, radio13_0;
-	public RadioButton radio_abandono1,radio_abandono2,radio_abandono3;
+	public RadioButton radio_abandono1, radio_abandono2, radio_abandono3;
 
-	public EditText     editPregunta13, editPregunta16,
+	public EditText editPregunta13, editPregunta16,
 			editPregunta21, editPregunta23, editPregunta24;
-	public RadioGroup rdPregunta26a, rdPregunta280, rdPregunta28a, rdPregunta28b,  rdPregunta29a,
+	public RadioGroup rdPregunta26a, rdPregunta280, rdPregunta28a, rdPregunta28b, rdPregunta29a,
 			rdPregunta29b;
 
 	public RadioGroup rdPregunta34, rdPregunta34a, rdPregunta34b, rdPregunta34c, rdPregunta35, rdPregunta36,
@@ -182,11 +184,7 @@ public class MainActivityPantalla1 extends Activity {
 	public TextView preguntaNom1, preguntaNom2, preguntaNom3, preguntaNom4, preguntaNom5;
 	public TextView radio351, radio352, radio353, radio354, radio355;
 	public TextView radio38, radio362, radio310, radio311, radio312;
-	
 
-
-
-	
 
 	private static final int READ_BLOCK_SIZE = 100000;
 
@@ -215,15 +213,15 @@ public class MainActivityPantalla1 extends Activity {
 	public String edad_3;
 	public String edad_4;
 	public String edad_5;
-	
-	public String op1="SIN DATOS";
-	public String op2="SIN DATOS";
-	public String op3="SIN DATOS";
-	public String op4="SIN DATOS";
-	public String op5="SIN DATOS";
-	public String op6="SIN DATOS";
-	public String op7="SIN DATOS";
-	public String op8="SIN DATOS";
+
+	public String op1 = "SIN DATOS";
+	public String op2 = "SIN DATOS";
+	public String op3 = "SIN DATOS";
+	public String op4 = "SIN DATOS";
+	public String op5 = "SIN DATOS";
+	public String op6 = "SIN DATOS";
+	public String op7 = "SIN DATOS";
+	public String op8 = "SIN DATOS";
 
 	public RadioGroup rdPregunta1;
 	public RadioGroup rdPregunta2;
@@ -247,7 +245,6 @@ public class MainActivityPantalla1 extends Activity {
 	public EditText editFechaDeceso;
 
 
-	
 	public EditText editPreguntaOcupacion;
 
 
@@ -381,8 +378,13 @@ public class MainActivityPantalla1 extends Activity {
 
 	public String sacaImei() {
 		TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+			String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+			System.out.println("Mi Numero: " + szImei);
+
+		}
 		String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-		System.out.println("Mi N�mero: " + szImei);
+		System.out.println("Mi Numero: " + szImei);
 
 		return szImei;
 	}
@@ -781,11 +783,11 @@ public class MainActivityPantalla1 extends Activity {
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				if (checkedId == R.id.radio1) {
-					op2 = "Acta de Defunción";
+					op2 = "Acta de Defuncion";
 
 				}
 				else if (checkedId == R.id.radio2) {
-					op2 = "Certificado de Defunción";
+					op2 = "Certificado de Defuncion";
 
 				}
 			}
@@ -802,7 +804,7 @@ public class MainActivityPantalla1 extends Activity {
 					op7 = "Mujer";
 
 				}
-				else if (checkedId == R.id.radio2) {
+				else if (checkedId == R.id.radio0) {
 					op7 = "Otro";
 
 				}
@@ -977,7 +979,7 @@ public class MainActivityPantalla1 extends Activity {
 			if (db != null) {
 				values.put("consecutivo_diario", elMaximo);
 				values.put("usuario", cachaNombre().toUpperCase());
-				values.put("imei", sacaImei());
+				values.put("imei", sacaImei() == null ? "0" : sacaImei() );
 				values.put("fecha", formattedDate1);
 				values.put("hora", formattedDate5);
 				values.put("latitud", strLatitud);

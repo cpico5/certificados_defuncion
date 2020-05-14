@@ -305,16 +305,16 @@ public class Entrada extends Activity {
 
         /* Abre la app de seguimiento*/
 
-        try {
-            Intent launchIntent = getPackageManager().getLaunchIntentForPackage("mx.gob.cdmx.seguimiento");
-            startActivity(launchIntent);
-        } catch (Exception e) {
-            String stackTrace = Log.getStackTraceString(e);
-            Log.i(TAG, "Lanza Seguimiento" + stackTrace);
-
-            dialogoSeguimiento();
-
-        }
+//        try {
+//            Intent launchIntent = getPackageManager().getLaunchIntentForPackage("mx.gob.cdmx.seguimiento");
+//            startActivity(launchIntent);
+//        } catch (Exception e) {
+//            String stackTrace = Log.getStackTraceString(e);
+//            Log.i(TAG, "Lanza Seguimiento" + stackTrace);
+//
+//            dialogoSeguimiento();
+//
+//        }
 
 		mLoginFormView = findViewById(R.id.editUsuario);
 		mProgressView = findViewById(R.id.login_progress);
@@ -554,6 +554,8 @@ public class Entrada extends Activity {
 				}
 
 				Toast.makeText(Entrada.this, "Error de conexion, intente de nuevo", Toast.LENGTH_SHORT).show();
+
+
 
 			}
 		});

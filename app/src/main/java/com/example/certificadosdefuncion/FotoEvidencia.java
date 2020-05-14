@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.reflect.Method;
+import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,12 +16,26 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import com.example.certificadosdefuncion.R;
+import com.example.certificadosdefuncion.model.DatoContent;
 import com.example.certificadosdefuncion.model.Usuario;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.MySSLSocketFactory;
+import com.loopj.android.http.RequestHandle;
+import com.loopj.android.http.RequestParams;
 
+import android.Manifest;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -29,6 +44,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
@@ -42,6 +58,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings.Secure;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -58,8 +75,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
+import cz.msebera.android.httpclient.Header;
+
 import static com.example.certificadosdefuncion.Nombre.ID_CERTIFICADO;
 import static com.example.certificadosdefuncion.Nombre.USUARIO;
+import static com.example.certificadosdefuncion.Nombre.customURL;
 
 
 public class FotoEvidencia extends Activity {
@@ -344,6 +366,10 @@ public class FotoEvidencia extends Activity {
 
     public String sacaImei() {
         TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+            System.out.println("Mi N�mero: " + szImei);
+        }
         String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
         System.out.println("Mi N�mero: " + szImei);
 
@@ -409,26 +435,35 @@ public class FotoEvidencia extends Activity {
             String strLatitud = String.valueOf(latitude);
             String strLongitud = String.valueOf(longitude);
 
-
             if (latitude == 0.0) {
-                latitude = Double.valueOf(sacaLatitud());
+                if (sacaLatitud() == null) {
+                    latitude = 0.0;
+                } else {
+                    latitude = Double.valueOf(sacaLatitud());
+                }
 
             }
 
             if (longitude == 0.0) {
-                longitude = Double.valueOf(sacaLongitud());
+                if (sacaLongitud() == null) {
+                    longitude = 0.0;
+                } else {
+                    longitude = Double.valueOf(sacaLongitud());
+                }
 
             }
 
+            long consecutivoObtenido = 0;
+            ContentValues values = new ContentValues();
 
             if (db != null) {
-                ContentValues values = new ContentValues();
+
                 values.put("consecutivo_diario", cachaConsecutivoDiario());
                 values.put("usuario", cachaNombre().toUpperCase());
                 values.put("nombre_programa", nombreE.toUpperCase());
                 values.put("fecha", formattedDate1);
                 values.put("hora", formattedDate5);
-                values.put("imei", sacaImei());
+                values.put("imei", sacaImei() == null ? "0" : sacaImei() );
                 values.put("latitud", strLatitud);
                 values.put("longitud", strLongitud);
 
@@ -436,11 +471,15 @@ public class FotoEvidencia extends Activity {
                 values.put("numero_foto", cachaCuantos());
                 values.put("nombre_foto", nombreD);
 
-                db.insert("fotos", null, values);
+                consecutivoObtenido = db.insert("fotos", null, values);
             }
 
+            values.put("consecutivo", consecutivoObtenido);
+            guardaEncuestaWS(values);
 
-            db.close();
+
+
+            //db.close();
 
             System.out.println("Latitud  " + strLatitud);
             System.out.println("Longitud  " + strLongitud);
@@ -452,6 +491,153 @@ public class FotoEvidencia extends Activity {
             Log.i(TAG, "================>> Inserta registros" + stackTrace);
 
         }
+
+    }
+
+    private void guardaEncuestaWS(ContentValues values){
+
+        showProgress(true);
+
+        String consecutivo = "";
+        String usuarios = "";
+        String imei = "";
+        String fecha = "";
+        String hora = "";
+        String latitud = "";
+        String longitud = "";
+        String folio = "";
+        String numero_foto="";
+        String nombre_foto = "";
+
+
+        //RECORRE CONTENTVALUES
+        DatoContent datoContent = new DatoContent();
+        List<DatoContent> listaContenido = new ArrayList();
+        Set<Map.Entry<String, Object>> s=values.valueSet();
+        Iterator itr = s.iterator();
+        while(itr.hasNext()) {
+            Map.Entry me = (Map.Entry)itr.next();
+            String key = me.getKey().toString();
+            Object value =  me.getValue();
+
+            datoContent = new DatoContent();
+            datoContent.setKey(key);
+            datoContent.setValue(String.valueOf(value));
+            listaContenido.add(datoContent);
+
+            if(key.equals("consecutivo_diario"))
+                consecutivo = String.valueOf(value);
+            if(key.equals("usuario"))
+                usuarios = String.valueOf(value);
+            if(key.equals("imei"))
+                imei = String.valueOf(value);
+            if(key.equals("fecha"))
+                fecha = String.valueOf(value);
+            if(key.equals("hora"))
+                hora = String.valueOf(value);
+            if(key.equals("latitud"))
+                latitud = String.valueOf(value);
+            if(key.equals("longitud"))
+                longitud = String.valueOf(value);
+            if(key.equals("folio"))
+                folio = String.valueOf(value);
+            if(key.equals("numero_foto"))
+                numero_foto = String.valueOf(value);
+            if(key.equals("nombre_foto"))
+                nombre_foto = String.valueOf(value);
+
+        }
+
+        Gson gson  = new Gson();
+        Type collectionType = new TypeToken<List<DatoContent>>() { }.getType();
+        String json = gson.toJson(listaContenido,collectionType);
+
+        RequestParams params = new RequestParams();
+        params.put("api", "guarda_fotos");
+        params.put("id_usuario", usuario.getId());
+        params.put("certificado_id", idCertificado);
+
+        params.put("consecutivo", consecutivo);
+        params.put("usuario", usuarios);
+        params.put("imei", imei);
+        params.put("fecha", fecha);
+        params.put("hora", hora);
+        params.put("latitud", latitud);
+        params.put("longitud", longitud);
+        params.put("folio", folio);
+        params.put("numero_foto", numero_foto);
+        params.put("nombre_foto", nombre_foto);
+
+        try{
+            File file = new File(foto);
+            params.put("photo", file);
+        }catch(FileNotFoundException e){  Log.e(TAG, e.getMessage());  }
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.setSSLSocketFactory(MySSLSocketFactory.getFixedSocketFactory());
+        //client.addHeader("Authorization", "Bearer " + usuario.getToken());
+        client.setTimeout(60000);
+
+        RequestHandle requestHandle = client.post(customURL, params, new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                showProgress(false);
+                try {
+
+                    Log.d(TAG, "pimc -----------> Respuesta OK ");
+                    Log.d(TAG, "pimc -----------> " + new String(responseBody));
+                    String json = new String(responseBody);
+
+                    if (json != null && !json.isEmpty()) {
+
+                        Gson gson = new Gson();
+                        JSONObject jsonObject = new JSONObject(json);
+
+                        String login = jsonObject.getJSONObject("response").get("code").toString();
+                        if (Integer.valueOf(login) == 1) {
+
+
+                            String idCertificados = jsonObject.getJSONObject("data").getString("certificado_id");
+                            idCertificado = Integer.valueOf(idCertificados);
+
+                            dialogo();
+
+
+                        } else {
+                            Toast.makeText(FotoEvidencia.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                } catch (Exception e) {
+                    showProgress(false);
+                    Toast.makeText(FotoEvidencia.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                showProgress(false);
+                try {
+                    Log.e("guarda datos", "PIMC-----------------> existe un error en la conexi?n -----> " + error.getMessage());
+                    if (responseBody != null)
+                        Log.d("guarda datos", "pimc -----------> " + new String(responseBody));
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+
+                if (statusCode != 200) {
+                    Log.e("guarda datos", "Existe un error en la conexi?n -----> " + error.getMessage());
+                    if (responseBody != null)
+                        Log.d("guarda datos", "pimc -----------> " + new String(responseBody));
+
+                }
+
+                Toast.makeText(FotoEvidencia.this, "Error de conexion, intente de nuevo", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
     }
@@ -483,8 +669,12 @@ public class FotoEvidencia extends Activity {
                 i.putExtra("cuantos", String.valueOf(tantos));
                 i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
                 i.putExtra("folio", cachaFolio());
+                i.putExtra(USUARIO,usuario);
+                i.putExtra(ID_CERTIFICADO,idCertificado);
+
                 startActivity(i);
-                System.exit(0); // metodo que se debe implementar
+                //System.exit(0); // metodo que se debe implementar
+                finish();
             }
         });
         AlertDialog alert = builder.create();
@@ -529,6 +719,7 @@ public class FotoEvidencia extends Activity {
 
     private Usuario usuario;
     private int idCertificado = 0;
+    private View mProgressView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -549,6 +740,8 @@ public class FotoEvidencia extends Activity {
             usuario = (Usuario) startingIntent.getSerializableExtra(USUARIO);
             idCertificado = (Integer) startingIntent.getSerializableExtra(ID_CERTIFICADO);
         }
+
+        mProgressView = findViewById(R.id.login_progressMain);
 
         Thread.setDefaultUncaughtExceptionHandler(new Crash(this));
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
@@ -597,14 +790,8 @@ public class FotoEvidencia extends Activity {
 
             String diario = String.valueOf(elMaximo);
 
-            nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + cachaCuantos();
 
-
-            Log.i("Foto", "El Diario : " + diario);
-
-            Log.i("Foto", "Cuantas fotos: " + cachaCuantos());
-
-            Log.i("Foto", "Consecutivo diario: " + diario);
+            nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + cachaCuantos() + "_" + idCertificado +".jpeg";
 
             Log.i("Foto", "NombreD: " + nombreD);
 
@@ -683,7 +870,7 @@ public class FotoEvidencia extends Activity {
                         Log.i("datos f", "Solo hay foto");
 
                         insertaFoto();
-                        dialogo();
+                        //dialogo();
 
 
                     } else {
@@ -824,21 +1011,6 @@ public class FotoEvidencia extends Activity {
 
     }
 
-    public boolean hasImageCaptureBug() {
-
-        // list of known devices that have the bug
-        ArrayList<String> devices = new ArrayList<String>();
-        devices.add("android-devphone1/dream_devphone/dream");
-        devices.add("generic/sdk/generic");
-        devices.add("vodafone/vfpioneer/sapphire");
-        devices.add("tmobile/kila/dream");
-        devices.add("verizon/voles/sholes");
-        devices.add("google_ion/google_ion/sapphire");
-
-        return devices.contains(android.os.Build.BRAND + "/" + android.os.Build.PRODUCT + "/"
-                + android.os.Build.DEVICE);
-
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -1303,6 +1475,23 @@ public class FotoEvidencia extends Activity {
         return acceso;
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
+    private void showProgress(final boolean show) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
+
+            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+            mProgressView.animate().setDuration(shortAnimTime).alpha(
+                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+                }
+            });
+        } else {
+            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+        }
+    }
 
 }
 
