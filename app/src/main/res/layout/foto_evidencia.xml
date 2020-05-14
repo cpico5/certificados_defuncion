@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:text="Documento"
                 android:textColor="#002266"
-                android:textSize="12sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ProgressBar
@@ -53,6 +53,68 @@
                 android:foregroundGravity="center"
                 android:textAlignment="center"
                 android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearActa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <RadioGroup
+                android:id="@+id/rdPregunta2a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textPregunta2a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/PREGUNTA2a"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#002266"
+                    android:textStyle="bold" />
+
+
+
+               <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radiobutton_selector"
+                    android:textColor="@drawable/radiobutton_color_selector"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="10dp"
+                    android:theme="@style/RadioButton"
+                    android:text="No aplica"
+                    />
+
+                <TextView
+                    android:id="@+id/textPregunta2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Folio Acta"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#002266"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/txtFolioActa"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="N° folio"
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
 
         </LinearLayout>
 

@@ -1629,6 +1629,7 @@ id left
 id light
 id line1
 id line3
+id linearActa
 id linearLayout1
 id listMode
 id list_item
@@ -1715,6 +1716,7 @@ id radio_abandono2
 id radio_abandono3
 id rdPregunta1
 id rdPregunta2
+id rdPregunta2a
 id rdPregunta3
 id rdPregunta4
 id rdPregunta5
@@ -1791,6 +1793,8 @@ id text2
 id textFechaDeceso
 id textPregunta1
 id textPregunta2
+id textPregunta2a
+id textPregunta2b
 id textPregunta3
 id textPregunta4
 id textPregunta5
@@ -1826,6 +1830,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id txtEncuesta
 id txtEquipo
+id txtFolioActa
 id txtResultado
 id uniform
 id up
@@ -1884,6 +1889,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_main_pantalla2
 layout activity_pantalla1
 layout calendar
 layout calendar_item
@@ -1987,6 +1993,7 @@ string Muybuena
 string Nada
 string PREGUNTA1
 string PREGUNTA2
+string PREGUNTA2a
 string PREGUNTA3
 string PREGUNTA4
 string PREGUNTA5

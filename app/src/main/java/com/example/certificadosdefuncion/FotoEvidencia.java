@@ -75,6 +75,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -84,6 +86,7 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 import static com.example.certificadosdefuncion.Nombre.ID_CERTIFICADO;
+import static com.example.certificadosdefuncion.Nombre.TIPO;
 import static com.example.certificadosdefuncion.Nombre.USUARIO;
 import static com.example.certificadosdefuncion.Nombre.customURL;
 
@@ -179,9 +182,12 @@ public class FotoEvidencia extends Activity {
     public String maximo = "";
     int elMaximo;
     String laSeccion;
+    public RadioGroup rdPregunta2a;
 
     public EditText comentario;
     public EditText editNombreFoto;
+
+    public String op2a = "SIN DATOS";
 
     // NORMAL
     Nombre nom = new Nombre();
@@ -473,7 +479,7 @@ public class FotoEvidencia extends Activity {
 
                 values.put("folio", cachaFolio());
                 values.put("numero_foto", cachaCuantos());
-                //values.put("nombre_foto", nombreD);
+                values.put("tipo", tipo);
                 values.put("nombre_foto", imagen.getPathImagen());
 
                 consecutivoObtenido = db.insert("fotos", null, values);
@@ -572,6 +578,8 @@ public class FotoEvidencia extends Activity {
         params.put("folio", folio);
         params.put("numero_foto", numero_foto);
         params.put("nombre_foto", nombre_foto);
+        params.put("tipo", tipo);
+        params.put("folio_acta", txtFolioActa != null ? txtFolioActa.getText() : "");
 
         try {
             File file = new File(nombre_foto);
@@ -624,16 +632,35 @@ public class FotoEvidencia extends Activity {
 
                                     showProgress(false);
 
-                                    Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
-                                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                    i.putExtra("Nombre", cachaNombre());
-                                    //i.putExtra("cuantos", String.valueOf(tantos));
-                                    i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
-                                    i.putExtra("folio", cachaFolio());
-                                    i.putExtra(USUARIO,usuario);
-                                    i.putExtra(ID_CERTIFICADO,idCertificado);
-                                    startActivity(i);
-                                    finish();
+                                    if(tipo.equals("certificado")){
+
+
+                                        Intent i = new Intent(FotoEvidencia.this, FotoEvidencia.class);
+                                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        i.putExtra("Nombre", cachaNombre());
+                                        //i.putExtra("cuantos", String.valueOf(tantos));
+                                        i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
+                                        i.putExtra("folio", cachaFolio());
+                                        i.putExtra(USUARIO,usuario);
+                                        i.putExtra(ID_CERTIFICADO,idCertificado);
+                                        i.putExtra(TIPO,"acta");
+                                        startActivity(i);
+                                        finish();
+
+                                    }else{
+
+                                        Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
+                                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        i.putExtra("Nombre", cachaNombre());
+                                        //i.putExtra("cuantos", String.valueOf(tantos));
+                                        i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
+                                        i.putExtra("folio", cachaFolio());
+                                        i.putExtra(USUARIO,usuario);
+                                        i.putExtra(ID_CERTIFICADO,idCertificado);
+                                        startActivity(i);
+                                        finish();
+
+                                    }
                                 }
 
                             }
@@ -687,7 +714,7 @@ public class FotoEvidencia extends Activity {
 
     public void dialogo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Finaliza captura de fotos").setTitle("IMPORTANTE").setCancelable(false)
+        builder.setMessage(dialog).setTitle("IMPORTANTE").setCancelable(false)
                 .setNegativeButton("Terminar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
@@ -787,6 +814,7 @@ public class FotoEvidencia extends Activity {
 
     private Usuario usuario;
     private int idCertificado = 0;
+    private String tipo ="";
     private View mProgressView;
     private Imagen fotoActual;
     private List<Imagen> listaImagenes = new ArrayList<>();
@@ -797,6 +825,11 @@ public class FotoEvidencia extends Activity {
     private int contador = 1;
     private int count = 0;
     private int total = 0;
+
+    TextView textViewVivienda;
+    EditText txtFolioActa;
+    LinearLayout linearActa;
+    private String dialog = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -813,9 +846,11 @@ public class FotoEvidencia extends Activity {
         if (savedInstanceState != null) {
             usuario = (Usuario) savedInstanceState.getSerializable(USUARIO);
             idCertificado = (Integer) savedInstanceState.getSerializable(ID_CERTIFICADO);
+            tipo = (String) savedInstanceState.getSerializable(TIPO);
         } else {
             usuario = (Usuario) startingIntent.getSerializableExtra(USUARIO);
             idCertificado = (Integer) startingIntent.getSerializableExtra(ID_CERTIFICADO);
+            tipo = (String) startingIntent.getSerializableExtra(TIPO);
         }
 
         mProgressView = findViewById(R.id.login_progressMain);
@@ -823,6 +858,43 @@ public class FotoEvidencia extends Activity {
         recyclerFoto.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerFoto.setLayoutManager(layoutManager);
+
+
+        //cargo ls nuevos controlers
+        textViewVivienda = findViewById(R.id.textViewVivienda);
+        textViewVivienda.setText("Cargue Certificado");
+
+        rdPregunta2a	 = (RadioGroup)findViewById(R.id.rdPregunta2a);
+
+
+        txtFolioActa = findViewById(R.id.txtFolioActa);
+        linearActa = findViewById(R.id.linearActa);
+        linearActa.setVisibility(View.GONE);
+
+        dialog = "Finaliza captura de Certificado";
+
+        if(tipo.equals("acta")){
+            textViewVivienda.setText("Cargue Acta");
+            linearActa.setVisibility(View.VISIBLE);
+            dialog = "Finaliza captura de Acta";
+        }
+
+
+        rdPregunta2a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.radio1) {
+                    op2a = "No aplica";
+
+                    txtFolioActa.setText("No aplica");
+                    txtFolioActa.setEnabled(false);
+
+                    dialogoCierre();
+
+                }
+
+            }
+        });
 
         Thread.setDefaultUncaughtExceptionHandler(new Crash(this));
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
@@ -878,9 +950,9 @@ public class FotoEvidencia extends Activity {
 
 
             imagen = (ImageView) findViewById(R.id.imagen);
-            Texto = (TextView) findViewById(R.id.textViewVivienda);
+            /*Texto = (TextView) findViewById(R.id.textViewVivienda);
 
-            Texto.setText("Foto Documento");
+            Texto.setText("Foto Documento");*/
 
             la_foto = Environment.getExternalStorageDirectory() + "/Fotos/FotosCertificadoRegistro" + formattedDate3 + "N" + "/" + nombreD.trim();
             File fileF = new File(la_foto);
@@ -1027,7 +1099,7 @@ public class FotoEvidencia extends Activity {
 
     public void dialogoCierre() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Desea continuar Encuestando..?")
+        builder.setMessage("Desea Salir?")
                 .setTitle("IMPORTANTE")
                 .setCancelable(false)
                 .setNegativeButton("SALIR",
@@ -1045,12 +1117,9 @@ public class FotoEvidencia extends Activity {
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
 
-                                Intent i = new Intent(FotoEvidencia.this, MainActivity.class);
-                                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                i.putExtra("Nombre", cachaNombre());
-                                i.putExtra("max", "0");
-                                startActivity(i);
-                                System.exit(0); // metodo que se debe implementar
+                                rdPregunta2a.clearCheck();
+                                txtFolioActa.setText("");
+                                txtFolioActa.setEnabled(true);
                             }
                         });
         AlertDialog alert = builder.create();
@@ -1128,7 +1197,7 @@ public class FotoEvidencia extends Activity {
         fotoActual.setEnviado(0);
         fotoActual.setPathImagen(foto);
         fotoActual.setIdCertificado(idCertificado);
-        //fotoActual.setTipoImagen(VERIFICACION);
+        fotoActual.setTipoImagen(tipo);
 
         listaImagenes.add(fotoActual);
 

@@ -82,6 +82,7 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 import static com.example.certificadosdefuncion.Nombre.ID_CERTIFICADO;
+import static com.example.certificadosdefuncion.Nombre.TIPO;
 import static com.example.certificadosdefuncion.Nombre.USUARIO;
 import static com.example.certificadosdefuncion.Nombre.customURL;
 
@@ -432,11 +433,23 @@ public class MainActivityPantalla1 extends Activity {
 	
 	public void dialogoFoto() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage("Encuestador, tomar foto del Documento(s)").setTitle("Foto de Fachada").setCancelable(false)
+		builder.setMessage("Encuestador, tomar foto del Documento(s)").setTitle("Foto documento").setCancelable(false)
 				.setPositiveButton("CONTINUAR", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
 
 						detenerGrabacion();
+
+						String eltipo = null;
+
+						Log.i(LOG_TAG, ">>>>>>>>>>  op2"+ op2);
+
+						if(op2.matches("No aplica")){
+							eltipo="acta";
+						}else{
+							eltipo="certificado";
+						}
+
+						Log.i(LOG_TAG, ">>>>>>>>>>  Consecutivo"+ eltipo);
 
 						//elMaximo = Integer.parseInt(sacaMaximo().toString());
 						elMaximo = Integer.parseInt(sacaMaximo().toString()) + 1;
@@ -451,6 +464,7 @@ public class MainActivityPantalla1 extends Activity {
 						i.putExtra("folio", editPregunta3.getText().toString());
 						i.putExtra(USUARIO,usuario);
 						i.putExtra(ID_CERTIFICADO,idCertificado);
+						i.putExtra(TIPO,eltipo);
 
 						startActivity(i);
 						//System.exit(0); // metodo que se debe implementar
@@ -714,7 +728,7 @@ public class MainActivityPantalla1 extends Activity {
 		
 
 		rdPregunta1 = (RadioGroup)findViewById(R.id.rdPregunta1);
-		rdPregunta2 = (RadioGroup)findViewById(R.id.rdPregunta2);
+		rdPregunta2	 = (RadioGroup)findViewById(R.id.rdPregunta2);
 		rdPregunta3 = (RadioGroup)findViewById(R.id.rdPregunta3);
 		rdPregunta4 = (RadioGroup)findViewById(R.id.rdPregunta4);
 		rdPregunta5 = (RadioGroup)findViewById(R.id.rdPregunta5);
@@ -783,15 +797,23 @@ public class MainActivityPantalla1 extends Activity {
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				if (checkedId == R.id.radio1) {
-					op2 = "Acta de Defuncion";
+					op2 = "No aplica";
+
+					editPregunta3.setText("No aplica");
+					lay3.setVisibility(View.GONE);
 
 				}
 				else if (checkedId == R.id.radio2) {
 					op2 = "Certificado de Defuncion";
 
+					editPregunta3.setText("");
+					lay3.setVisibility(View.VISIBLE);
+
 				}
 			}
 		});
+
+
 
 		rdPregunta7.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			@Override
@@ -1209,6 +1231,7 @@ public class MainActivityPantalla1 extends Activity {
 		System.out.println(cachaDelegacion());
 
 //		timer.cancel();
+//		op2 = "Certificado de Defuncion";
 
 		String str = "";
 

@@ -41,22 +41,9 @@
                     android:layout_marginTop="15dp"
                     android:orientation="vertical" >
 
-                    <RadioButton
-                        android:id="@+id/radio1"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:button="@drawable/radiobutton_selector"
-                        android:textColor="@drawable/radiobutton_color_selector"
-                        android:textSize="16sp"
-                        android:layout_marginBottom="10dp"
-                        android:theme="@style/RadioButton"
-                        android:text="Acta de defunción"
-                        />
 
                     <RadioButton
                         android:id="@+id/radio2"
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:button="@drawable/radiobutton_selector"
@@ -65,6 +52,19 @@
                         android:theme="@style/RadioButton"
                         android:text="Certificado de defunción"
                         />
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_selector"
+                        android:textColor="@drawable/radiobutton_color_selector"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="10dp"
+                        android:theme="@style/RadioButton"
+                        android:text="No aplica"
+                        />
+
 
                 </RadioGroup>
             </LinearLayout>
