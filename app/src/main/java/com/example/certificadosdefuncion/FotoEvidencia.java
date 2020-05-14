@@ -597,7 +597,7 @@ public class FotoEvidencia extends Activity {
 
             String diario = String.valueOf(elMaximo);
 
-            nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + cachaCuantos() + ".jpeg";
+            nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + cachaCuantos();
 
 
             Log.i("Foto", "El Diario : " + diario);

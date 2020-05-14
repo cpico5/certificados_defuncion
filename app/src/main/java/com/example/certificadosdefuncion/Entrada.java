@@ -92,7 +92,7 @@ public class Entrada extends Activity {
     Nombre nom = new Nombre();
     String nombreEncuesta = nom.nombreEncuesta();
 
-    String upLoadServerUriBase = "https://opinion.cdmx.gob.mx/cgi-bin/php/recibeBases" + nombreEncuesta + ".php?encuesta=" + nombreEncuesta + "";
+    String upLoadServerUriBase = "http://187.141.35.110/cgi-bin/php/recibeBases" + nombreEncuesta + ".php?encuesta=" + nombreEncuesta + "";
     String upLoadServerUriAudio = "https://opinion.cdmx.gob.mx/cgi-bin/php/recibeAudios" + nombreEncuesta + ".php?encuesta=" + nombreEncuesta + "";
     int serverResponseCode = 0;
 
