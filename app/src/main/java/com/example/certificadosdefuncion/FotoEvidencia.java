@@ -39,6 +39,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -72,10 +73,12 @@ import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -474,7 +477,7 @@ public class FotoEvidencia extends Activity {
                 values.put("longitud", strLongitud);
 
                 values.put("folio", cachaFolio());
-                values.put("numero_foto", cachaCuantos());
+                values.put("numero_foto", imagen.getNumero_foto());
                 values.put("tipo", tipo);
                 values.put("nombre_foto", imagen.getPathImagen());
 
@@ -575,7 +578,14 @@ public class FotoEvidencia extends Activity {
         params.put("numero_foto", numero_foto);
         params.put("nombre_foto", nombre_foto);
         params.put("tipo", tipo);
-        params.put("folio_acta", txtFolioActa != null ? txtFolioActa.getText() : "");
+
+        params.put("folio_acta", txtFolioActa != null ? txtFolioActa.getText().toString().toUpperCase() : "");
+        params.put("paterno_acta", editPregunta4 != null ? editPregunta4.getText().toString().toUpperCase() : "");
+        params.put("materno_acta", editPregunta5 != null ? editPregunta5.getText().toString().toUpperCase() : "");
+        params.put("nombres_acta", editPregunta6 != null ? editPregunta6.getText().toString().toUpperCase() : "");
+        params.put("genero_acta", op7.toUpperCase());
+        params.put("curp_acta", editPregunta8 != null ? editPregunta8.getText().toString().toUpperCase() : "");
+        params.put("fecha_acta", editFechaDeceso != null ? editFechaDeceso.getText() : "");
 
         try {
             File file = new File(nombre_foto);
@@ -821,10 +831,13 @@ public class FotoEvidencia extends Activity {
     private int count = 0;
     private int total = 0;
 
+    public ImageButton imageButtonVale;
     TextView textViewVivienda;
-    EditText txtFolioActa;
+    public RadioGroup rdPregunta7;
+    EditText txtFolioActa,editPregunta4,editPregunta5,editPregunta6,editPregunta8,editFechaDeceso;
     LinearLayout linearActa;
     private String dialog = "";
+    private String op7 = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -862,6 +875,58 @@ public class FotoEvidencia extends Activity {
         txtFolioActa = findViewById(R.id.txtFolioActa);
         linearActa = findViewById(R.id.linearActa);
         linearActa.setVisibility(View.GONE);
+
+        editPregunta4= (EditText)findViewById(R.id.editPregunta4);
+        editPregunta5= (EditText)findViewById(R.id.editPregunta5);
+        editPregunta6= (EditText)findViewById(R.id.editPregunta6);
+        editPregunta8= (EditText)findViewById(R.id.editPregunta8);
+        editFechaDeceso= (EditText)findViewById(R.id.editFechaDeceso);
+        editFechaDeceso.setEnabled(false);
+        imageButtonVale = (ImageButton) findViewById(R.id.imageButtonVale);
+        rdPregunta7 = (RadioGroup)findViewById(R.id.rdPregunta7);
+
+        rdPregunta7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.radio1) {
+                    op7 = "Hombre";
+                }
+                else if (checkedId == R.id.radio2) {
+                    op7 = "Mujer";
+                }
+                else if (checkedId == R.id.radio0) {
+                    op7 = "Otro";
+                }
+            }
+        });
+
+        final Calendar myCalendarioF = Calendar.getInstance();
+
+        final DatePickerDialog.OnDateSetListener dateFecha = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                // TODO Auto-generated method stub
+                //myCalendarioF.set(Calendar.YEAR, year);
+                myCalendarioF.set(Calendar.YEAR, year);
+                myCalendarioF.set(Calendar.MONTH, monthOfYear);
+                myCalendarioF.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                String myFormat = "yyyy-MM-dd"; //In which you need put here
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat);
+                editFechaDeceso.setText(sdf.format(myCalendarioF.getTime()));
+
+            }
+
+        };
+
+        imageButtonVale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                new DatePickerDialog(FotoEvidencia.this,dateFecha, myCalendarioF
+                        .get(Calendar.YEAR), myCalendarioF.get(Calendar.MONTH),
+                        myCalendarioF.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
 
         dialog = "Finaliza captura de Certificado";
 
@@ -993,6 +1058,38 @@ public class FotoEvidencia extends Activity {
                 @Override
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
+                    if (linearActa.getVisibility() == View.VISIBLE && txtFolioActa.getText().toString().trim().length()==0 ){
+                        Toast.makeText(FotoEvidencia.this,"CAPTURA:  Folio Acta",Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    if (linearActa.getVisibility() == View.VISIBLE && editPregunta4.getText().toString().trim().length()==0 ){
+                        Toast.makeText(FotoEvidencia.this,"CAPTURA:  APELLIDO PATERNO",Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    /*if (linearActa.getVisibility() == View.VISIBLE && editPregunta5.getText().toString().trim().length()==0 ){
+                        Toast.makeText(FotoEvidencia.this,"CAPTURA:  Folio Acta",Toast.LENGTH_LONG).show();
+                        return;
+                    }*/
+                    if (linearActa.getVisibility() == View.VISIBLE && editPregunta6.getText().toString().trim().length()==0 ){
+                        Toast.makeText(FotoEvidencia.this,"CAPTURA:  NOMBRE",Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    if (linearActa.getVisibility() == View.VISIBLE && op7.toString().trim().length()==0 ){
+                        Toast.makeText(FotoEvidencia.this,"CAPTURA:  GENERO",Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    if (linearActa.getVisibility() == View.VISIBLE && txtFolioActa.getText().toString().trim().length()==0 ){
+                        Toast.makeText(FotoEvidencia.this,"CAPTURA:  Folio Acta",Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    if (linearActa.getVisibility() == View.VISIBLE && editPregunta8.getText().toString().trim().length()==0 ){
+                        Toast.makeText(FotoEvidencia.this,"CAPTURA:  CURP",Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    if (linearActa.getVisibility() == View.VISIBLE && editFechaDeceso.getText().toString().trim().length()==0 ){
+                        Toast.makeText(FotoEvidencia.this,"CAPTURA: FECHA DEFUNCION",Toast.LENGTH_LONG).show();
+                        return;
+                    }
 
                     if (!listaImagenes.isEmpty()) {
                         Log.i("datos f", "Solo hay foto");
@@ -1175,6 +1272,7 @@ public class FotoEvidencia extends Activity {
         fotoActual.setEnviado(0);
         fotoActual.setPathImagen(foto);
         fotoActual.setIdCertificado(idCertificado);
+        fotoActual.setNumero_foto(contador);
         fotoActual.setTipoImagen(tipo);
 
         listaImagenes.add(fotoActual);
