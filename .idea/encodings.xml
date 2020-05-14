@@ -2,15 +2,14 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/DaoManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/ImagenAdapter.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/Utils.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/model/Alcaldia.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/model/Bitacora.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/model/CedaCallCenter.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/model/Colonia.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/model/DatoContent.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/model/Imagen.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/model/PadronSms.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/model/Status.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/certificadosdefuncion/model/TipoVivienda.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/item_list_fotos.xml" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />
   </component>
 </project>

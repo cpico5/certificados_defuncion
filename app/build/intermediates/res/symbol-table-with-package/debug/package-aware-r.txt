@@ -1086,6 +1086,7 @@ drawable cast_mini_controller_progress_drawable
 drawable cast_skip_ad_label_border
 drawable censo
 drawable censo_transparente
+drawable certificados
 drawable color
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -1156,6 +1157,7 @@ drawable ic_group_expand_13
 drawable ic_group_expand_14
 drawable ic_group_expand_15
 drawable ic_launcher
+drawable ic_launcher_background
 drawable ic_media_pause_dark
 drawable ic_media_pause_light
 drawable ic_media_play_dark
@@ -1472,6 +1474,7 @@ id bottom
 id btnArchivo
 id btnAudios
 id btnConsultar
+id btnDelete
 id btnE1
 id btnFotos
 id btnGuardar
@@ -1569,6 +1572,7 @@ id fill_horizontal
 id fill_vertical
 id fixed
 id forever
+id fotos_evidencia_recycler
 id ghost_view
 id gone
 id googleMaterial2
@@ -1592,6 +1596,7 @@ id icon_group
 id icon_only
 id icon_uri
 id icon_view
+id idNombre
 id ifRoom
 id image
 id imageButtonVale
@@ -1904,6 +1909,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout entrada
 layout foto_evidencia
+layout item_list_fotos
 layout menu_principal
 layout mr_chooser_dialog
 layout mr_chooser_list_item
@@ -1947,6 +1953,8 @@ layout support_simple_spinner_dropdown_item
 layout wallet_test_layout
 menu main
 mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
 string AlgoInseguro
 string AlgoSeguro
 string Bien

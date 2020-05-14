@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.reflect.Method;
+import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,12 +16,27 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import com.example.certificadosdefuncion.R;
+import com.example.certificadosdefuncion.model.DatoContent;
+import com.example.certificadosdefuncion.model.Imagen;
 import com.example.certificadosdefuncion.model.Usuario;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.MySSLSocketFactory;
+import com.loopj.android.http.RequestHandle;
+import com.loopj.android.http.RequestParams;
 
+import android.Manifest;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -29,6 +45,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
@@ -42,7 +59,11 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings.Secure;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -58,8 +79,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
+import cz.msebera.android.httpclient.Header;
+
 import static com.example.certificadosdefuncion.Nombre.ID_CERTIFICADO;
 import static com.example.certificadosdefuncion.Nombre.USUARIO;
+import static com.example.certificadosdefuncion.Nombre.customURL;
 
 
 public class FotoEvidencia extends Activity {
@@ -344,6 +370,10 @@ public class FotoEvidencia extends Activity {
 
     public String sacaImei() {
         TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+            System.out.println("Mi N�mero: " + szImei);
+        }
         String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
         System.out.println("Mi N�mero: " + szImei);
 
@@ -381,7 +411,7 @@ public class FotoEvidencia extends Activity {
     }
 
 
-    public void insertaFoto() {
+    public void insertaFoto(Imagen imagen) {
 
         FileOutputStream fout = null;
         try {
@@ -409,38 +439,51 @@ public class FotoEvidencia extends Activity {
             String strLatitud = String.valueOf(latitude);
             String strLongitud = String.valueOf(longitude);
 
-
             if (latitude == 0.0) {
-                latitude = Double.valueOf(sacaLatitud());
+                if (sacaLatitud() == null) {
+                    latitude = 0.0;
+                } else {
+                    latitude = Double.valueOf(sacaLatitud());
+                }
 
             }
 
             if (longitude == 0.0) {
-                longitude = Double.valueOf(sacaLongitud());
+                if (sacaLongitud() == null) {
+                    longitude = 0.0;
+                } else {
+                    longitude = Double.valueOf(sacaLongitud());
+                }
 
             }
 
+            long consecutivoObtenido = 0;
+            ContentValues values = new ContentValues();
 
             if (db != null) {
-                ContentValues values = new ContentValues();
+
                 values.put("consecutivo_diario", cachaConsecutivoDiario());
                 values.put("usuario", cachaNombre().toUpperCase());
                 values.put("nombre_programa", nombreE.toUpperCase());
                 values.put("fecha", formattedDate1);
                 values.put("hora", formattedDate5);
-                values.put("imei", sacaImei());
+                values.put("imei", sacaImei() == null ? "0" : sacaImei());
                 values.put("latitud", strLatitud);
                 values.put("longitud", strLongitud);
 
                 values.put("folio", cachaFolio());
                 values.put("numero_foto", cachaCuantos());
-                values.put("nombre_foto", nombreD);
+                //values.put("nombre_foto", nombreD);
+                values.put("nombre_foto", imagen.getPathImagen());
 
-                db.insert("fotos", null, values);
+                consecutivoObtenido = db.insert("fotos", null, values);
             }
 
+            values.put("consecutivo", consecutivoObtenido);
+            guardaEncuestaWS(values, imagen);
 
-            db.close();
+
+            //db.close();
 
             System.out.println("Latitud  " + strLatitud);
             System.out.println("Longitud  " + strLongitud);
@@ -453,29 +496,240 @@ public class FotoEvidencia extends Activity {
 
         }
 
+    }
+
+    private void guardaEncuestaWS(ContentValues values, final Imagen imagenRecibida) {
+
+        showProgress(true);
+
+        String consecutivo = "";
+        String usuarios = "";
+        String imei = "";
+        String fecha = "";
+        String hora = "";
+        String latitud = "";
+        String longitud = "";
+        String folio = "";
+        String numero_foto = "";
+        String nombre_foto = "";
+
+
+        //RECORRE CONTENTVALUES
+        DatoContent datoContent = new DatoContent();
+        List<DatoContent> listaContenido = new ArrayList();
+        Set<Map.Entry<String, Object>> s = values.valueSet();
+        Iterator itr = s.iterator();
+        while (itr.hasNext()) {
+            Map.Entry me = (Map.Entry) itr.next();
+            String key = me.getKey().toString();
+            Object value = me.getValue();
+
+            datoContent = new DatoContent();
+            datoContent.setKey(key);
+            datoContent.setValue(String.valueOf(value));
+            listaContenido.add(datoContent);
+
+            if (key.equals("consecutivo_diario"))
+                consecutivo = String.valueOf(value);
+            if (key.equals("usuario"))
+                usuarios = String.valueOf(value);
+            if (key.equals("imei"))
+                imei = String.valueOf(value);
+            if (key.equals("fecha"))
+                fecha = String.valueOf(value);
+            if (key.equals("hora"))
+                hora = String.valueOf(value);
+            if (key.equals("latitud"))
+                latitud = String.valueOf(value);
+            if (key.equals("longitud"))
+                longitud = String.valueOf(value);
+            if (key.equals("folio"))
+                folio = String.valueOf(value);
+            if (key.equals("numero_foto"))
+                numero_foto = String.valueOf(value);
+            if (key.equals("nombre_foto"))
+                nombre_foto = String.valueOf(value);
+
+        }
+
+        Gson gson = new Gson();
+        Type collectionType = new TypeToken<List<DatoContent>>() {
+        }.getType();
+        String json = gson.toJson(listaContenido, collectionType);
+
+        RequestParams params = new RequestParams();
+        params.put("api", "guarda_fotos");
+        params.put("id_usuario", usuario.getId());
+        params.put("certificado_id", idCertificado);
+
+        params.put("consecutivo", consecutivo);
+        params.put("usuario", usuarios);
+        params.put("imei", imei);
+        params.put("fecha", fecha);
+        params.put("hora", hora);
+        params.put("latitud", latitud);
+        params.put("longitud", longitud);
+        params.put("folio", folio);
+        params.put("numero_foto", numero_foto);
+        params.put("nombre_foto", nombre_foto);
+
+        try {
+            File file = new File(nombre_foto);
+            params.put("photo", file);
+        } catch (FileNotFoundException e) {
+            Log.e(TAG, e.getMessage());
+        }
+
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.setSSLSocketFactory(MySSLSocketFactory.getFixedSocketFactory());
+        //client.addHeader("Authorization", "Bearer " + usuario.getToken());
+        client.setTimeout(60000);
+
+        RequestHandle requestHandle = client.post(customURL, params, new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                //showProgress(false);
+                try {
+
+                    Log.d(TAG, "pimc -----------> Respuesta OK ");
+                    Log.d(TAG, "pimc -----------> " + new String(responseBody));
+                    String json = new String(responseBody);
+
+                    if (json != null && !json.isEmpty()) {
+
+                        Gson gson = new Gson();
+                        JSONObject jsonObject = new JSONObject(json);
+
+                        String login = jsonObject.getJSONObject("response").get("code").toString();
+                        if (Integer.valueOf(login) == 1) {
+                            int idCertificadoss = 0;
+
+                            String idCertificados = jsonObject.getJSONObject("data").getString("certificado_id");
+                            idCertificadoss = Integer.valueOf(idCertificados);
+
+                            if (idCertificadoss != 0) {
+                                //borra la imagen
+                                imagenRecibida.setEnviado(1);
+
+                                File fichero = new File(imagenRecibida.getPathImagen());
+                                fichero.delete();
+
+                                imagen.setImageResource(0);
+                                listaImagenes.remove(imagenRecibida);
+                                fillImagen();
+
+                                count++;
+                                if(count >= total){
+
+                                    showProgress(false);
+
+                                    Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
+                                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    i.putExtra("Nombre", cachaNombre());
+                                    //i.putExtra("cuantos", String.valueOf(tantos));
+                                    i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
+                                    i.putExtra("folio", cachaFolio());
+                                    i.putExtra(USUARIO,usuario);
+                                    i.putExtra(ID_CERTIFICADO,idCertificado);
+                                    startActivity(i);
+                                    finish();
+                                }
+
+                            }
+
+                            //Guarda.setEnabled(true);
+                            //dialogo();
+
+
+                        } else {
+                            showProgress(false);
+                            Guarda.setEnabled(true);
+                            Toast.makeText(FotoEvidencia.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                } catch (Exception e) {
+                    Guarda.setEnabled(true);
+                    showProgress(false);
+                    Toast.makeText(FotoEvidencia.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                showProgress(false);
+                Guarda.setEnabled(true);
+                try {
+                    Log.e("guarda datos", "PIMC-----------------> existe un error en la conexi?n -----> " + error.getMessage());
+                    if (responseBody != null)
+                        Log.d("guarda datos", "pimc -----------> " + new String(responseBody));
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+
+                if (statusCode != 200) {
+                    Log.e("guarda datos", "Existe un error en la conexi?n -----> " + error.getMessage());
+                    if (responseBody != null)
+                        Log.d("guarda datos", "pimc -----------> " + new String(responseBody));
+
+                }
+
+                Toast.makeText(FotoEvidencia.this, "Error de conexion, intente de nuevo", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
 
     }
 
 
     public void dialogo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Tomar otra Fotografía").setTitle("IMPORTANTE").setCancelable(false)
-                .setNegativeButton("SALIR", new DialogInterface.OnClickListener() {
+        builder.setMessage("Finaliza captura de fotos").setTitle("IMPORTANTE").setCancelable(false)
+                .setNegativeButton("Terminar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
 //						detenerGrabacion();
 
-                        Intent i = new Intent(FotoEvidencia.this, Entrada.class);
+                        if (!listaImagenes.isEmpty()) {
+                            total = listaImagenes.size();
+                            for (Imagen imagen : listaImagenes) {
+                                if(imagen.getEnviado() == 0)
+                                    insertaFoto(imagen);
+                            }
+                            //showProgress(false);
+                            //Guarda.setEnabled(true);
+                        }
+
+
+                        /*Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        i.putExtra(USUARIO,usuario);
                         startActivity(i);
-                        System.exit(0); // metodo que se debe implementar
+                        finish();*/
+
+                        //System.exit(0); // metodo que se debe implementar
                     }
-                }).setPositiveButton("CONTINUAR", new DialogInterface.OnClickListener() {
+                }).setPositiveButton("Cancelar", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
 
-//						detenerGrabacion();
+                showProgress(false);
+                Guarda.setEnabled(true);
 
-                Integer tantos = Integer.valueOf(cachaCuantos()) + 1;
+//						detenerGrabacion();
+               /* Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                i.putExtra("Nombre", cachaNombre());
+                //i.putExtra("cuantos", String.valueOf(tantos));
+                i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
+                i.putExtra("folio", cachaFolio());
+                i.putExtra(USUARIO, usuario);
+                startActivity(i);
+                finish();*/
+
+                /*Integer tantos = Integer.valueOf(cachaCuantos()) + 1;
 
                 Intent i = new Intent(FotoEvidencia.this, FotoEvidencia.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -483,8 +737,12 @@ public class FotoEvidencia extends Activity {
                 i.putExtra("cuantos", String.valueOf(tantos));
                 i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
                 i.putExtra("folio", cachaFolio());
+                i.putExtra(USUARIO,usuario);
+                i.putExtra(ID_CERTIFICADO,idCertificado);
+
                 startActivity(i);
-                System.exit(0); // metodo que se debe implementar
+                //System.exit(0); // metodo que se debe implementar
+                finish();*/
             }
         });
         AlertDialog alert = builder.create();
@@ -529,6 +787,16 @@ public class FotoEvidencia extends Activity {
 
     private Usuario usuario;
     private int idCertificado = 0;
+    private View mProgressView;
+    private Imagen fotoActual;
+    private List<Imagen> listaImagenes = new ArrayList<>();
+
+    private ImagenAdapter imagenAdapter;
+    private RecyclerView recyclerFoto;
+    private RecyclerView.LayoutManager layoutManager;
+    private int contador = 1;
+    private int count = 0;
+    private int total = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -549,6 +817,12 @@ public class FotoEvidencia extends Activity {
             usuario = (Usuario) startingIntent.getSerializableExtra(USUARIO);
             idCertificado = (Integer) startingIntent.getSerializableExtra(ID_CERTIFICADO);
         }
+
+        mProgressView = findViewById(R.id.login_progressMain);
+        recyclerFoto = (RecyclerView) findViewById(R.id.fotos_evidencia_recycler);
+        recyclerFoto.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerFoto.setLayoutManager(layoutManager);
 
         Thread.setDefaultUncaughtExceptionHandler(new Crash(this));
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
@@ -573,12 +847,20 @@ public class FotoEvidencia extends Activity {
 
 
             if (latitude == 0.0) {
-                latitude = Double.valueOf(sacaLatitud());
+                if (sacaLatitud() == null) {
+                    latitude = 0.0;
+                } else {
+                    latitude = Double.valueOf(sacaLatitud());
+                }
 
             }
 
             if (longitude == 0.0) {
-                longitude = Double.valueOf(sacaLongitud());
+                if (sacaLongitud() == null) {
+                    longitude = 0.0;
+                } else {
+                    longitude = Double.valueOf(sacaLongitud());
+                }
 
             }
 
@@ -589,14 +871,8 @@ public class FotoEvidencia extends Activity {
 
             String diario = String.valueOf(elMaximo);
 
-            nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + cachaCuantos() + ".jpeg";
 
-
-            Log.i("Foto", "El Diario : " + diario);
-
-            Log.i("Foto", "Cuantas fotos: " + cachaCuantos());
-
-            Log.i("Foto", "Consecutivo diario: " + diario);
+            nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + contador + "_" + idCertificado + ".jpeg";
 
             Log.i("Foto", "NombreD: " + nombreD);
 
@@ -671,10 +947,10 @@ public class FotoEvidencia extends Activity {
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
 
-                    if (imagen.getDrawable() != null) {
+                    if (!listaImagenes.isEmpty()) {
                         Log.i("datos f", "Solo hay foto");
-
-                        insertaFoto();
+                        Guarda.setEnabled(false);
+                        //insertaFoto();
                         dialogo();
 
 
@@ -816,21 +1092,6 @@ public class FotoEvidencia extends Activity {
 
     }
 
-    public boolean hasImageCaptureBug() {
-
-        // list of known devices that have the bug
-        ArrayList<String> devices = new ArrayList<String>();
-        devices.add("android-devphone1/dream_devphone/dream");
-        devices.add("generic/sdk/generic");
-        devices.add("vodafone/vfpioneer/sapphire");
-        devices.add("tmobile/kila/dream");
-        devices.add("verizon/voles/sholes");
-        devices.add("google_ion/google_ion/sapphire");
-
-        return devices.contains(android.os.Build.BRAND + "/" + android.os.Build.PRODUCT + "/"
-                + android.os.Build.DEVICE);
-
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -840,9 +1101,6 @@ public class FotoEvidencia extends Activity {
     }
 
     private void setPic(Intent data) {
-        // Get the dimensions of the View
-//            int targetW = imagen.getWidth()/4;
-//            int targetH = imagen.getHeight()/4;
 
         int targetW = imagen.getWidth();
         int targetH = imagen.getHeight();
@@ -863,12 +1121,87 @@ public class FotoEvidencia extends Activity {
         bmOptions.inPurgeable = true;
 
         Bitmap bitmap = BitmapFactory.decodeFile(foto, bmOptions);
-
-
-
-
         imagen.setImageBitmap(bitmap);
+
+        //llena el objeto y la lista
+        fotoActual = new Imagen();
+        fotoActual.setEnviado(0);
+        fotoActual.setPathImagen(foto);
+        fotoActual.setIdCertificado(idCertificado);
+        //fotoActual.setTipoImagen(VERIFICACION);
+
+        listaImagenes.add(fotoActual);
+
+        contador++;
+
+        nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + contador + "_" + idCertificado + ".jpeg";
+
+        fillImagen();
+
     }
+
+    private void fillImagen() {
+
+        imagenAdapter = new ImagenAdapter(listaImagenes);
+        imagenAdapter.setOnItemClickListener(onItemClickListener);
+        imagenAdapter.setOnItemClickListenerDelete(onItemClickListenerDelete);
+        recyclerFoto.addItemDecoration(new DividerItemDecoration(recyclerFoto.getContext(), DividerItemDecoration.VERTICAL));
+        recyclerFoto.setAdapter(imagenAdapter);
+
+    }
+
+    private View.OnClickListener onItemClickListenerDelete = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
+            int position = viewHolder.getAdapterPosition();
+            fotoActual = listaImagenes.get(position);
+            //debe mostrar la imagen en el image view
+            imagen.setImageResource(0);
+            listaImagenes.remove(fotoActual);
+            File fichero = new File(fotoActual.getPathImagen());
+            fichero.delete();
+
+            fillImagen();
+
+        }
+    };
+
+    private View.OnClickListener onItemClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
+            int position = viewHolder.getAdapterPosition();
+            fotoActual = listaImagenes.get(position);
+
+            int targetW = imagen.getWidth();
+            int targetH = imagen.getHeight();
+
+            // Get the dimensions of the bitmap
+            BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+            bmOptions.inJustDecodeBounds = true;
+            BitmapFactory.decodeFile(foto, bmOptions);
+            int photoW = bmOptions.outWidth;
+            int photoH = bmOptions.outHeight;
+
+            // Determine how much to scale down the image
+            int scaleFactor = Math.min(photoW / targetW, photoH / targetH);
+
+            // Decode the image file into a Bitmap sized to fill the View
+            bmOptions.inJustDecodeBounds = false;
+            bmOptions.inSampleSize = scaleFactor;
+            bmOptions.inPurgeable = true;
+
+            Bitmap bitmap = BitmapFactory.decodeFile(fotoActual.getPathImagen(), bmOptions);
+            imagen.setImageBitmap(bitmap);
+
+
+            //ImageTool.setPic(imagen,fotoActual.getPathImagen());
+
+        }
+    };
 
     private String sacaMaximo() {
 
@@ -1295,6 +1628,23 @@ public class FotoEvidencia extends Activity {
         return acceso;
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
+    private void showProgress(final boolean show) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
+
+            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+            mProgressView.animate().setDuration(shortAnimTime).alpha(
+                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+                }
+            });
+        } else {
+            mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+        }
+    }
 
 }
 

@@ -43,7 +43,7 @@ public class UsuariosSQLiteHelper2 extends SQLiteOpenHelper {
     static String prefix = "listado";
 
     private static final String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreD + "_" + prefix + "";
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 8;
 
     public UsuariosSQLiteHelper2(Context context, String name, CursorFactory factory, int version) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -178,6 +178,9 @@ public class UsuariosSQLiteHelper2 extends SQLiteOpenHelper {
         // TODO Auto-generated method stub
         db.execSQL("DROP table if exists " + TablaDatos.TABLA_DATOS);
         db.execSQL("DROP table if exists " + TablaUsuarios.TABLA_USUARIOS);
+
+        db.execSQL(DaoManager.generateDropIfExistsQueryString(Usuario.class));
+
         onCreate(db);
     }
 }
