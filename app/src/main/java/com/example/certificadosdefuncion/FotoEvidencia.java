@@ -84,6 +84,7 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 import static com.example.certificadosdefuncion.Nombre.ID_CERTIFICADO;
+import static com.example.certificadosdefuncion.Nombre.TIPO;
 import static com.example.certificadosdefuncion.Nombre.USUARIO;
 import static com.example.certificadosdefuncion.Nombre.customURL;
 
@@ -472,8 +473,7 @@ public class FotoEvidencia extends Activity {
                 values.put("longitud", strLongitud);
 
                 values.put("folio", cachaFolio());
-                values.put("numero_foto", cachaCuantos());
-                //values.put("nombre_foto", nombreD);
+                values.put("numero_foto", imagen.getNumeroFoto());
                 values.put("nombre_foto", imagen.getPathImagen());
 
                 consecutivoObtenido = db.insert("fotos", null, values);
@@ -797,6 +797,7 @@ public class FotoEvidencia extends Activity {
     private int contador = 1;
     private int count = 0;
     private int total = 0;
+    private String tipo="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -813,9 +814,11 @@ public class FotoEvidencia extends Activity {
         if (savedInstanceState != null) {
             usuario = (Usuario) savedInstanceState.getSerializable(USUARIO);
             idCertificado = (Integer) savedInstanceState.getSerializable(ID_CERTIFICADO);
+            tipo = (String) savedInstanceState.getSerializable(TIPO);
         } else {
             usuario = (Usuario) startingIntent.getSerializableExtra(USUARIO);
             idCertificado = (Integer) startingIntent.getSerializableExtra(ID_CERTIFICADO);
+            tipo = (String) startingIntent.getSerializableExtra(TIPO);
         }
 
         mProgressView = findViewById(R.id.login_progressMain);
@@ -880,7 +883,7 @@ public class FotoEvidencia extends Activity {
             imagen = (ImageView) findViewById(R.id.imagen);
             Texto = (TextView) findViewById(R.id.textViewVivienda);
 
-            Texto.setText("Foto Documento");
+            Texto.setText(tipo);
 
             la_foto = Environment.getExternalStorageDirectory() + "/Fotos/FotosCertificadoRegistro" + formattedDate3 + "N" + "/" + nombreD.trim();
             File fileF = new File(la_foto);
@@ -1128,6 +1131,7 @@ public class FotoEvidencia extends Activity {
         fotoActual.setEnviado(0);
         fotoActual.setPathImagen(foto);
         fotoActual.setIdCertificado(idCertificado);
+        fotoActual.setNumeroFoto(contador);
         //fotoActual.setTipoImagen(VERIFICACION);
 
         listaImagenes.add(fotoActual);

@@ -524,6 +524,7 @@ public class Entrada extends Activity {
 							}
 
 						} else {
+                            showProgress(false);
 							Toast.makeText(Entrada.this, "Usuario y/o Contase?a Incorrectos", Toast.LENGTH_SHORT).show();
 						}
 					}
