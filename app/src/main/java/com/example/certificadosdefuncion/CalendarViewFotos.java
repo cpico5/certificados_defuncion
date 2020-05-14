@@ -18,7 +18,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
-import com.example.censopuelosbarrios.R;
+import com.example.certificadosdefuncion.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;

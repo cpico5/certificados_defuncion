@@ -25,7 +25,7 @@ import java.util.Set;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import com.example.censopuelosbarrios.R;
+import com.example.certificadosdefuncion.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;

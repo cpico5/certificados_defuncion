@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Locale;
 
-import com.example.censopuelosbarrios.R;
+import com.example.certificadosdefuncion.R;
 
 import android.content.Context;
 import android.graphics.Color;
