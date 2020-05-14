@@ -21,144 +21,107 @@
             android:layout_height="1075dp"
             android:orientation="vertical" >
 
-   <!-- <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="883dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="-4dp"
-        android:layout_marginTop="1dp">  !-->
+            <!-- <ScrollView
+                 android:id="@+id/scrollView1"
+                 android:layout_width="match_parent"
+                 android:layout_height="883dp"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentTop="true"
+                 android:layout_marginLeft="-4dp"
+                 android:layout_marginTop="1dp">  !-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:id="@+id/textViewVivienda"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Documento"
-                android:textColor="#002266"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <ProgressBar
-                android:id="@+id/login_progressMain"
-                style="?android:attr/progressBarStyleLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:foregroundGravity="center"
-                android:textAlignment="center"
-                android:visibility="gone" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearActa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textPregunta3"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Folio Acta"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#002266"
-                android:textStyle="bold" />
+                android:gravity="center_horizontal">
 
-            <RadioGroup
-                android:id="@+id/rdPregunta3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <EditText
-                    android:id="@+id/txtFolioActa"
-                    android:layout_width="320dp"
+                <TextView
+                    android:id="@+id/textViewVivienda"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="30dp"
-                    android:layout_marginTop="10dp"
-                    android:ems="10"
-                    android:hint="N° folio"
-                    android:inputType="text"
-                    android:textSize="16sp" />
+                    android:text="Documento"
+                    android:textColor="#002266"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            </RadioGroup>
+                <ProgressBar
+                    android:id="@+id/login_progressMain"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:foregroundGravity="center"
+                    android:textAlignment="center"
+                    android:visibility="gone" />
 
-        </LinearLayout>
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:gravity="center_horizontal">
-
-            <ImageView
-                android:id="@+id/imagen"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_above="@+id/camara"
-                android:layout_below="@+id/linearLayout1"
-                android:layout_marginTop="22dp" />
+                android:layout_height="200dp"
+                android:gravity="center_horizontal">
 
-        </LinearLayout>
+                <ImageView
+                    android:id="@+id/imagen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/camara"
+                    android:layout_below="@+id/linearLayout1"
+                    android:layout_marginTop="22dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:gravity="center_horizontal">
+            </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/camara"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/guardar"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="33dp"
-                android:layout_weight="0.78"
-                android:background="@drawable/gradient_box"
-                android:onClick="camara"
-                android:src="@android:drawable/ic_menu_camera"
-                android:textColor="@color/BLANCO" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/fotos_evidencia_recycler"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@android:layout/activity_list_item"/>
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal">
 
-        </LinearLayout>
+                <ImageButton
+                    android:id="@+id/camara"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/guardar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="33dp"
+                    android:layout_weight="0.78"
+                    android:background="@drawable/gradient_box"
+                    android:onClick="camara"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:textColor="@color/BLANCO" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center_horizontal">
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/guardar"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fotos_evidencia_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@android:layout/activity_list_item"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/gradient_box"
-                android:text="Continuar"
-                android:textColor="@drawable/color" />
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal">
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/guardar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/gradient_box"
+                    android:text="Continuar"
+                    android:textColor="@drawable/color" />
 
-    <!--</ScrollView>  !-->
+            </LinearLayout>
+
+            <!--</ScrollView>  !-->
         </LinearLayout>
     </ScrollView>
 

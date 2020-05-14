@@ -1629,7 +1629,6 @@ id left
 id light
 id line1
 id line3
-id linearActa
 id linearLayout1
 id listMode
 id list_item
@@ -1827,7 +1826,6 @@ id transition_scene_layoutid_cache
 id transition_transform
 id txtEncuesta
 id txtEquipo
-id txtFolioActa
 id txtResultado
 id uniform
 id up

@@ -1,21 +1,20 @@
 -- Merging decision tree log ---
 provider#com.example.certificadosdefuncion.GenericFileProvider
-<<<<<<< HEAD
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:217:9-225:20
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:150:9-158:20
 	android:grantUriPermissions
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:221:13-47
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:154:13-47
 	android:authorities
 		INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:219:13-60
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:152:13-60
 	android:exported
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:220:13-37
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:153:13-37
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:218:13-48
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:151:13-48
 manifest
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\4f8c1f45262d55b58a7ccf111b81474b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\562924d3f261eedc65d7b3d1198f978b\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\4528b0266dc83cf8c71efd46acaa6f59\AndroidManifest.xml:17:1-24:12
@@ -142,155 +141,9 @@ MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\User
 MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\579ee10b9c879794e0a6bf06cee24ad1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\0399ec9a57c0ae5e682e2b7514357455\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\a4dd7aaa0e8b1351a6123c2ff36cce2a\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
-=======
-INJECTED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:150:9-158:20
-	android:grantUriPermissions
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:154:13-47
-	android:authorities
-		INJECTED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:152:13-60
-	android:exported
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:153:13-37
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:151:13-48
-manifest
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
-INJECTED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
-INJECTED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
-INJECTED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\bf7bc35593ef2f6f5f400508f091c640\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\3542173ef0faa5f087ea902fcdf95899\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\80a1d8ada32f4c0f2c6f1c03f00ed37f\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-ads:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f5ef4b4a9a8e2e7080e4457a919543ca\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6c8e5089a9fa58e3db93e02508d0da10\AndroidManifest.xml:17:1-36:12
-MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\62d2070c463548dcd73f9127484d1c08\AndroidManifest.xml:17:1-47:12
-MERGED from [com.google.android.gms:play-services-tagmanager:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\482417c1f63aaebfb4fe48aa4d03a2a6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\906f6412d7bfd0e2b760a934d2fa3461\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8d8495ef23f23dce0a6c371a0ccc126e\AndroidManifest.xml:17:1-31:12
-MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c49a55677fe0ef69fede8d8e419a90cc\AndroidManifest.xml:17:1-37:12
-MERGED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\538e842989468731418376d7cd8aa950\AndroidManifest.xml:17:1-39:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\cdad67e0c91bdd18f127fb9af5b2292b\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-auth-base:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6e23a2561ad86387357818698c4b315f\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\ed126088832e103e5e272b09a0218b98\AndroidManifest.xml:2:1-14:12
-MERGED from [com.google.android.gms:play-services-cast:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0d012522a00d55ac4d4206e6dcbc96e4\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-config:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f7969ca276f157b78d0e8eec3d9170b1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-awareness:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\a14a2232288c4cb70b1d01c393097667\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-games:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5435b99bbc8b4a504cf1e4d2d4b08053\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-drive:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8233f4cfefaceb2e2e1d0d321687a4c9\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-fido:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c894baa169d5745e8874a9f8670037a5\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\d7723bbf80d77c0ec9ae59fc0159d588\AndroidManifest.xml:17:1-32:12
-MERGED from [com.google.firebase:firebase-dynamic-links:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\16a8564a0b6d98c3dfc0d38cc1c3f4a2\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-fitness:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\200d0e769b42b16f2980c9407bee3216\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\770ff6fdc51d2f8054bcbd17c26a7abc\AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.firebase:firebase-appindexing:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c68db9df9c747da09af8b70358cd4f3a\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-wallet:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\be6e947cf7a4a4ff59399d4dc2b7809b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-identity:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\707252c14a0d22c540128e38340a451e\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c30eb7bceff30032bcd45366087eabbc\AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-instantapps:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1b75c044a49d6eddd503f208e4014b03\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-location:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1d9eaf885360a0d2e8781f55d7cc2d9c\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-places:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\428a4a3d070957b4b4b5e5bf033c0c27\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8fb1556d786029235ee17b355432a02f\AndroidManifest.xml:17:1-32:12
-MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\fdaa6681cdf85dd6debae2231bc72186\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.gms:play-services-panorama:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\735959d5cd6802ed782b0a6bb12c48d7\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-safetynet:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5f75d0a0d34db675e00087a9f0591079\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-vision:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\581abe48a1d109d50ca0bc51fb64d000\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\41eb1190e2b0e75ab01cc631c4d2630d\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-wearable:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\01b50ee5cee311121e6b028bed99cad8\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\43515b7aabdef41c62f7f6ab8defc191\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\7c43e9a9d7b4120a6f68674c8b32121f\AndroidManifest.xml:17:1-27:12
-MERGED from [com.google.firebase:firebase-database:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5ea5862bd6e31ac1d7eae6b13012cb63\AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.firebase:firebase-database-connection:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\88f2d90b181049e902c25b49639775ad\AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0e1ca22eb3e5733b5b4127a4e4bb00b3\AndroidManifest.xml:17:1-37:12
-MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1087e623fa34527935747598f028295e\AndroidManifest.xml:17:1-47:12
-MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\575ec011d14fc32bf20e493fa08a9121\AndroidManifest.xml:17:1-54:12
-MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\a216ae19557ee8d13736fd5dd890046f\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9025cc9dd26cb414d3c161b29baf28e4\AndroidManifest.xml:17:1-59:12
-MERGED from [com.google.firebase:firebase-storage:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\545a8f9b7d6bc05e8371dee09b235a50\AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.firebase:firebase-storage-common:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0dffafb49bfa221dd1cb2e85a726dec9\AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.firebase:firebase-common:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0f0c17993a9c46189b5cbe6fd72310c6\AndroidManifest.xml:2:1-15:12
-MERGED from [com.google.android.gms:play-services-gass:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\66a6bfe768c59c023531315fbf8a4e14\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-tasks:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b04854459778aba951ccca82609a5a34\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e29be683e9b201c5b80ceeb1f7bd0a0d\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\2bb9f4f70e65cb17cafd57efe4087683\AndroidManifest.xml:17:1-22:12
-MERGED from [pub.devrel:easypermissions:0.2.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\d053647e7dfba99f6cf4828c1a1c571d\AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:mediarouter-v7:26.1.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\bda0b6c165bc910d255c0319cd5887b8\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\4e5ea327e399e9fedf3af8ab037eba9e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\2247dec94536a4ea17d87af7e8acdfe5\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:multidex:1.0.3] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e58458236af279a78acf076839e3ece1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\7d69cec8d177cfad46ad4c847b6a7853\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1a46ccebf9c37560887a0586f5e7cf67\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\06bbdc35e3ff06e8de17bcfbeb944279\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1bf0725935839034fdaea191f0b5a450\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\130e90b1f47766a5cd19a550cc1cfaf8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8bfcbcf3564cc31f80300d12103aefc5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:palette-v7:26.1.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\3a0596298aba2f3938deec25decf1d22\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5ba63da6553312fd2ce4c3786f2c2156\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f2b3e2d85fadabc42dac4dc36afdfe0e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\26a5f6ae5da18743f7bb6c0573c51996\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e3a5bb00c51b12ded70c81a973debe32\AndroidManifest.xml:17:1-22:12
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.19] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\77946526d3f20b74b6fc1c35ed599515\AndroidManifest.xml:2:1-9:12
-MERGED from [pl.droidsonroids:relinker:1.3.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\abeaad88a4c6c045fa96de494586ca12\AndroidManifest.xml:2:1-7:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5f55b12629f4cf452cdcbd6da6aa8b25\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e2ab4865472964bdaffb7d5dd0fb85aa\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\456faee15b256938d2fa053761045e88\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-plus-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e84fd260adbaa88b0b2458e59c0b22a9\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-ads-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b41c929f40d1c598412ee495b2909044\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-ads-lite-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\05dbb25a7a1141b2df99f667eeea74c1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-analytics-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e1ffd5b7787dee6c806e45242c88eb65\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-analytics-impl-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e86d380de029dbe002f01e9f574b95a1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-appinvite-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\111cf06b13ad475f7b969a4d44cf86ec\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\dc781406b881eab8413cfde134db7bd2\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-auth-base-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b46ce3249c1c34db518403bec1a23904\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-base-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c6582a0fceb066ab2ad619df7da394a3\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-cast-framework-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6ed27190b70d5f6d0a9201058d6a9b05\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-cast-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\43bccc11207e51c84cb885efa5f5cb96\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f10c306e08950468112f24af3b950452\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-config-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9d776f82c64e1ddd2c7e212a9e1ed9dd\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-awareness-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0ea27ada200c8c32ce195759926c29d2\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\be4205530485fb5d311d70ba42cafe3a\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-drive-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\cac751be11bef867511f7afdbc57d7de\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-fido-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\4f6639dfd6360d169edd8a2f187665c7\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\cd86cf98970e163eb241dd6c6a9b5543\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-database-connection-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c6098bc8fb1f6b49612461c95252aad3\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-database-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b2f9286c6d773b6627a0b277ef65995f\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-dynamic-links-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\260d37ff2e27aa8d2fca2c59b688abd8\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8a8adef571bcfdb66fd627df9b61b6e6\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-messaging-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\bda51cb954e8362206dcc81be22310af\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-storage-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\599030e7abf0efc086ddcf0365f6d340\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-storage-common-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\12f4c6b12e99b99ec3e3e0e346348b2c\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f7ec110a84ca05b42b7b8a65163f1a34\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-fitness-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\eb05a217d59ac5eb8ac7c19b1e64599f\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-games-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5253e653f08192ed9535be0306b3e481\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-gass-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0623f2d9dc569d24da714a0dae1e8acc\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e0cbd60843aab814a86cacb1763ebbde\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-appindexing-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\3dae84a3e49382fabf32f8581dabf09a\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-identity-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\14691ed2d7c1f6f68994453c27e1e0c7\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\af95bfd6240a477d332dced3c5985cf4\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-instantapps-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5fae3d95ffbcf161139cc44c2ebcdffd\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-location-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5284770e03d4854f61b70fa7b6e52d8c\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e69ff1e4b3b32031fc9fdbf993b07ead\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b758a4e2494f774b71e993fb537a0b59\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\668ab60aeca2941d527d80674b7b46de\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-nearby-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e86f39665d54a19be802ba8c31ef012f\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-panorama-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1f35c03e17875c15e980b6fa5308d12c\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-places-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b4341c64fce148b1e05bf962b95c83f7\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-safetynet-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\441d7c7646cb3b1d77f7839b1b741014\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-tagmanager-api-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6dc0b3364a8946c1dbd518d7360eb555\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-tagmanager-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\d3910a53fe7a0206ba905761eee06ac7\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6f68619cf9eec63aa326aa86bdc15262\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1bb1fb6abed6013cdbc045194cf94eb9\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0f2cd0ccb877f95f3de416f0065855c1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8e83a50db05f124a5bd77c0a76c60034\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6c77ea72c4255e362312810248d15b25\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0c2ea89405da66c37c3c6a295d1b0fdf\AndroidManifest.xml:17:1-24:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9c9ab082307f14d29086a9786648a550\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
-INJECTED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
-INJECTED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
->>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-161:12
 	package
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:3:5-48
 		INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
@@ -306,11 +159,7 @@ INJECTED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados
 		INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-<<<<<<< HEAD
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:7:5-80
-=======
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:7:5-81
->>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:7:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
@@ -318,8 +167,7 @@ ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:8:22-77
 uses-permission#android.permission.INTERNET
-<<<<<<< HEAD
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:9:5-66
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:9:5-67
 MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\d0afac8394b0e55813965c0902cf29d9\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\d0afac8394b0e55813965c0902cf29d9\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\3e30902a6082c99ee0acd48aee92f339\AndroidManifest.xml:23:5-67
@@ -347,59 +195,19 @@ MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\calatrejo\.gradle
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:9:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:10:5-78
-=======
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:9:5-67
-MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6c8e5089a9fa58e3db93e02508d0da10\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6c8e5089a9fa58e3db93e02508d0da10\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\62d2070c463548dcd73f9127484d1c08\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\62d2070c463548dcd73f9127484d1c08\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8d8495ef23f23dce0a6c371a0ccc126e\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8d8495ef23f23dce0a6c371a0ccc126e\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c49a55677fe0ef69fede8d8e419a90cc\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c49a55677fe0ef69fede8d8e419a90cc\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\770ff6fdc51d2f8054bcbd17c26a7abc\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\770ff6fdc51d2f8054bcbd17c26a7abc\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c30eb7bceff30032bcd45366087eabbc\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c30eb7bceff30032bcd45366087eabbc\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8fb1556d786029235ee17b355432a02f\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8fb1556d786029235ee17b355432a02f\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\7c43e9a9d7b4120a6f68674c8b32121f\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\7c43e9a9d7b4120a6f68674c8b32121f\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1087e623fa34527935747598f028295e\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1087e623fa34527935747598f028295e\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\575ec011d14fc32bf20e493fa08a9121\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\575ec011d14fc32bf20e493fa08a9121\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\a216ae19557ee8d13736fd5dd890046f\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\a216ae19557ee8d13736fd5dd890046f\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9025cc9dd26cb414d3c161b29baf28e4\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9025cc9dd26cb414d3c161b29baf28e4\AndroidManifest.xml:23:5-67
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:9:22-64
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:10:5-79
->>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:10:5-79
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:10:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-<<<<<<< HEAD
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:11:5-80
-=======
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:11:5-81
->>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:11:5-81
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:11:22-78
 uses-permission#android.permission.READ_PHONE_STATE
-<<<<<<< HEAD
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:12:5-74
-=======
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:12:5-75
->>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:12:5-75
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:12:22-72
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-<<<<<<< HEAD
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:13:5-78
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:13:5-79
 MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\d0afac8394b0e55813965c0902cf29d9\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\d0afac8394b0e55813965c0902cf29d9\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\3e30902a6082c99ee0acd48aee92f339\AndroidManifest.xml:24:5-79
@@ -421,57 +229,31 @@ MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\calatrejo\.gradle
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:13:22-76
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:14:5-70
-=======
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:13:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6c8e5089a9fa58e3db93e02508d0da10\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6c8e5089a9fa58e3db93e02508d0da10\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\62d2070c463548dcd73f9127484d1c08\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\62d2070c463548dcd73f9127484d1c08\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8d8495ef23f23dce0a6c371a0ccc126e\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8d8495ef23f23dce0a6c371a0ccc126e\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8fb1556d786029235ee17b355432a02f\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8fb1556d786029235ee17b355432a02f\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\fdaa6681cdf85dd6debae2231bc72186\AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\fdaa6681cdf85dd6debae2231bc72186\AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1087e623fa34527935747598f028295e\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1087e623fa34527935747598f028295e\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\575ec011d14fc32bf20e493fa08a9121\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\575ec011d14fc32bf20e493fa08a9121\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\a216ae19557ee8d13736fd5dd890046f\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\a216ae19557ee8d13736fd5dd890046f\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9025cc9dd26cb414d3c161b29baf28e4\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9025cc9dd26cb414d3c161b29baf28e4\AndroidManifest.xml:22:5-79
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:13:22-76
-uses-permission#android.permission.RECORD_AUDIO
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:14:5-71
->>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:14:5-71
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:14:22-68
 uses-permission#android.permission.ACCESS_LOCATION
-<<<<<<< HEAD
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:22:1-70
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:18:5-74
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:22:18-67
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:18:22-71
 uses-permission#android.permission.ACCESS_GPS
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:23:1-65
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:19:5-69
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:23:18-62
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:19:22-66
 uses-permission#android.permission.ACCESS_ASSISTED_GPS
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:24:1-74
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:20:5-78
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:24:18-71
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:20:22-75
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:27:1-61
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:23:5-65
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:27:18-58
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:23:22-62
 uses-feature#android.hardware.camera
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:28:1-56
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:25:5-60
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:28:15-53
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:25:19-57
 application
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:31:5-227:19
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:29:5-159:19
 MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\562924d3f261eedc65d7b3d1198f978b\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\562924d3f261eedc65d7b3d1198f978b\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\4528b0266dc83cf8c71efd46acaa6f59\AndroidManifest.xml:22:5-20
@@ -665,592 +447,191 @@ MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\User
 MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\0399ec9a57c0ae5e682e2b7514357455\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\0399ec9a57c0ae5e682e2b7514357455\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:34:9-41
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:32:9-41
 	android:icon
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:33:9-43
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:31:9-43
 	android:allowBackup
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:32:9-35
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:30:9-35
 	android:theme
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:35:9-40
-activity#com.example.certificadosdefuncion.Entrada
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:36:9-44:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:39:13-49
-	android:label
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:38:13-45
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:37:13-69
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:40:13-43:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:41:17-69
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:41:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:42:1-61
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:42:11-58
-activity#com.example.certificadosdefuncion.MainActivity
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:47:9-51:20
-=======
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:18:5-74
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:18:22-71
-uses-permission#android.permission.ACCESS_GPS
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:19:5-69
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:19:22-66
-uses-permission#android.permission.ACCESS_ASSISTED_GPS
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:20:5-78
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:20:22-75
-uses-permission#android.permission.CAMERA
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:23:5-65
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:23:22-62
-uses-feature#android.hardware.camera
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:25:5-60
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:25:19-57
-application
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:29:5-159:19
-MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\3542173ef0faa5f087ea902fcdf95899\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\3542173ef0faa5f087ea902fcdf95899\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\80a1d8ada32f4c0f2c6f1c03f00ed37f\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\80a1d8ada32f4c0f2c6f1c03f00ed37f\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6c8e5089a9fa58e3db93e02508d0da10\AndroidManifest.xml:26:5-34:19
-MERGED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6c8e5089a9fa58e3db93e02508d0da10\AndroidManifest.xml:26:5-34:19
-MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\62d2070c463548dcd73f9127484d1c08\AndroidManifest.xml:29:5-45:19
-MERGED from [com.google.android.gms:play-services-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\62d2070c463548dcd73f9127484d1c08\AndroidManifest.xml:29:5-45:19
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\906f6412d7bfd0e2b760a934d2fa3461\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\906f6412d7bfd0e2b760a934d2fa3461\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8d8495ef23f23dce0a6c371a0ccc126e\AndroidManifest.xml:29:5-20
-MERGED from [com.google.android.gms:play-services-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8d8495ef23f23dce0a6c371a0ccc126e\AndroidManifest.xml:29:5-20
-MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c49a55677fe0ef69fede8d8e419a90cc\AndroidManifest.xml:24:5-35:19
-MERGED from [com.google.android.gms:play-services-appinvite:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c49a55677fe0ef69fede8d8e419a90cc\AndroidManifest.xml:24:5-35:19
-MERGED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\538e842989468731418376d7cd8aa950\AndroidManifest.xml:22:5-37:19
-MERGED from [com.google.android.gms:play-services-auth:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\538e842989468731418376d7cd8aa950\AndroidManifest.xml:22:5-37:19
-MERGED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\ed126088832e103e5e272b09a0218b98\AndroidManifest.xml:7:5-12:19
-MERGED from [com.google.android.gms:play-services-cast-framework:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\ed126088832e103e5e272b09a0218b98\AndroidManifest.xml:7:5-12:19
-MERGED from [com.google.android.gms:play-services-cast:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0d012522a00d55ac4d4206e6dcbc96e4\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-cast:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0d012522a00d55ac4d4206e6dcbc96e4\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-config:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f7969ca276f157b78d0e8eec3d9170b1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-config:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f7969ca276f157b78d0e8eec3d9170b1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-awareness:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\a14a2232288c4cb70b1d01c393097667\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-awareness:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\a14a2232288c4cb70b1d01c393097667\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-games:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5435b99bbc8b4a504cf1e4d2d4b08053\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-games:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5435b99bbc8b4a504cf1e4d2d4b08053\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-drive:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8233f4cfefaceb2e2e1d0d321687a4c9\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-drive:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8233f4cfefaceb2e2e1d0d321687a4c9\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-fido:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c894baa169d5745e8874a9f8670037a5\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-fido:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c894baa169d5745e8874a9f8670037a5\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\d7723bbf80d77c0ec9ae59fc0159d588\AndroidManifest.xml:22:5-30:19
-MERGED from [com.google.firebase:firebase-auth:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\d7723bbf80d77c0ec9ae59fc0159d588\AndroidManifest.xml:22:5-30:19
-MERGED from [com.google.firebase:firebase-dynamic-links:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\16a8564a0b6d98c3dfc0d38cc1c3f4a2\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-dynamic-links:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\16a8564a0b6d98c3dfc0d38cc1c3f4a2\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-fitness:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\200d0e769b42b16f2980c9407bee3216\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-fitness:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\200d0e769b42b16f2980c9407bee3216\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\770ff6fdc51d2f8054bcbd17c26a7abc\AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-gcm:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\770ff6fdc51d2f8054bcbd17c26a7abc\AndroidManifest.xml:26:5-20
-MERGED from [com.google.firebase:firebase-appindexing:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c68db9df9c747da09af8b70358cd4f3a\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-appindexing:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c68db9df9c747da09af8b70358cd4f3a\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-identity:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\707252c14a0d22c540128e38340a451e\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-identity:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\707252c14a0d22c540128e38340a451e\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c30eb7bceff30032bcd45366087eabbc\AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c30eb7bceff30032bcd45366087eabbc\AndroidManifest.xml:26:5-20
-MERGED from [com.google.android.gms:play-services-location:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1d9eaf885360a0d2e8781f55d7cc2d9c\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-location:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1d9eaf885360a0d2e8781f55d7cc2d9c\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-places:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\428a4a3d070957b4b4b5e5bf033c0c27\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\428a4a3d070957b4b4b5e5bf033c0c27\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8fb1556d786029235ee17b355432a02f\AndroidManifest.xml:30:5-20
-MERGED from [com.google.android.gms:play-services-maps:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8fb1556d786029235ee17b355432a02f\AndroidManifest.xml:30:5-20
-MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\fdaa6681cdf85dd6debae2231bc72186\AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-nearby:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\fdaa6681cdf85dd6debae2231bc72186\AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-panorama:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\735959d5cd6802ed782b0a6bb12c48d7\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-panorama:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\735959d5cd6802ed782b0a6bb12c48d7\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-safetynet:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5f75d0a0d34db675e00087a9f0591079\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-safetynet:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5f75d0a0d34db675e00087a9f0591079\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-vision:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\581abe48a1d109d50ca0bc51fb64d000\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\581abe48a1d109d50ca0bc51fb64d000\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\41eb1190e2b0e75ab01cc631c4d2630d\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-common:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\41eb1190e2b0e75ab01cc631c4d2630d\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-wearable:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\01b50ee5cee311121e6b028bed99cad8\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-wearable:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\01b50ee5cee311121e6b028bed99cad8\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\43515b7aabdef41c62f7f6ab8defc191\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\43515b7aabdef41c62f7f6ab8defc191\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\7c43e9a9d7b4120a6f68674c8b32121f\AndroidManifest.xml:24:5-25:19
-MERGED from [com.google.firebase:firebase-crash:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\7c43e9a9d7b4120a6f68674c8b32121f\AndroidManifest.xml:24:5-25:19
-MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0e1ca22eb3e5733b5b4127a4e4bb00b3\AndroidManifest.xml:22:5-35:19
-MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0e1ca22eb3e5733b5b4127a4e4bb00b3\AndroidManifest.xml:22:5-35:19
-MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1087e623fa34527935747598f028295e\AndroidManifest.xml:26:5-45:19
-MERGED from [com.google.android.gms:play-services-tagmanager-api:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1087e623fa34527935747598f028295e\AndroidManifest.xml:26:5-45:19
-MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\575ec011d14fc32bf20e493fa08a9121\AndroidManifest.xml:27:5-52:19
-MERGED from [com.google.firebase:firebase-analytics:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\575ec011d14fc32bf20e493fa08a9121\AndroidManifest.xml:27:5-52:19
-MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\a216ae19557ee8d13736fd5dd890046f\AndroidManifest.xml:27:5-38:19
-MERGED from [com.google.firebase:firebase-analytics-impl:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\a216ae19557ee8d13736fd5dd890046f\AndroidManifest.xml:27:5-38:19
-MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9025cc9dd26cb414d3c161b29baf28e4\AndroidManifest.xml:34:5-57:19
-MERGED from [com.google.firebase:firebase-iid:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9025cc9dd26cb414d3c161b29baf28e4\AndroidManifest.xml:34:5-57:19
-MERGED from [com.google.firebase:firebase-common:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0f0c17993a9c46189b5cbe6fd72310c6\AndroidManifest.xml:7:5-13:19
-MERGED from [com.google.firebase:firebase-common:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0f0c17993a9c46189b5cbe6fd72310c6\AndroidManifest.xml:7:5-13:19
-MERGED from [com.google.android.gms:play-services-gass:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\66a6bfe768c59c023531315fbf8a4e14\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-gass:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\66a6bfe768c59c023531315fbf8a4e14\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b04854459778aba951ccca82609a5a34\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b04854459778aba951ccca82609a5a34\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e29be683e9b201c5b80ceeb1f7bd0a0d\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e29be683e9b201c5b80ceeb1f7bd0a0d\AndroidManifest.xml:22:5-26:19
-MERGED from [pub.devrel:easypermissions:0.2.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\d053647e7dfba99f6cf4828c1a1c571d\AndroidManifest.xml:12:5-20
-MERGED from [pub.devrel:easypermissions:0.2.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\d053647e7dfba99f6cf4828c1a1c571d\AndroidManifest.xml:12:5-20
-MERGED from [com.android.support:mediarouter-v7:26.1.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\bda0b6c165bc910d255c0319cd5887b8\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:mediarouter-v7:26.1.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\bda0b6c165bc910d255c0319cd5887b8\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\2247dec94536a4ea17d87af7e8acdfe5\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\2247dec94536a4ea17d87af7e8acdfe5\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:palette-v7:26.1.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\3a0596298aba2f3938deec25decf1d22\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:palette-v7:26.1.0] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\3a0596298aba2f3938deec25decf1d22\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-plus-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e84fd260adbaa88b0b2458e59c0b22a9\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-plus-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e84fd260adbaa88b0b2458e59c0b22a9\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b41c929f40d1c598412ee495b2909044\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b41c929f40d1c598412ee495b2909044\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-lite-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\05dbb25a7a1141b2df99f667eeea74c1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-lite-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\05dbb25a7a1141b2df99f667eeea74c1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-analytics-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e1ffd5b7787dee6c806e45242c88eb65\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-analytics-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e1ffd5b7787dee6c806e45242c88eb65\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-analytics-impl-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e86d380de029dbe002f01e9f574b95a1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-analytics-impl-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e86d380de029dbe002f01e9f574b95a1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-appinvite-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\111cf06b13ad475f7b969a4d44cf86ec\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-appinvite-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\111cf06b13ad475f7b969a4d44cf86ec\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-auth-api-phone-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\dc781406b881eab8413cfde134db7bd2\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-auth-api-phone-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\dc781406b881eab8413cfde134db7bd2\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-auth-base-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b46ce3249c1c34db518403bec1a23904\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-auth-base-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b46ce3249c1c34db518403bec1a23904\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-base-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c6582a0fceb066ab2ad619df7da394a3\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-base-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c6582a0fceb066ab2ad619df7da394a3\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-cast-framework-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6ed27190b70d5f6d0a9201058d6a9b05\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-cast-framework-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6ed27190b70d5f6d0a9201058d6a9b05\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-cast-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\43bccc11207e51c84cb885efa5f5cb96\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-cast-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\43bccc11207e51c84cb885efa5f5cb96\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f10c306e08950468112f24af3b950452\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f10c306e08950468112f24af3b950452\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-config-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9d776f82c64e1ddd2c7e212a9e1ed9dd\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-config-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\9d776f82c64e1ddd2c7e212a9e1ed9dd\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-awareness-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0ea27ada200c8c32ce195759926c29d2\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-awareness-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0ea27ada200c8c32ce195759926c29d2\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\be4205530485fb5d311d70ba42cafe3a\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-crash-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\be4205530485fb5d311d70ba42cafe3a\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-drive-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\cac751be11bef867511f7afdbc57d7de\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-drive-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\cac751be11bef867511f7afdbc57d7de\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-fido-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\4f6639dfd6360d169edd8a2f187665c7\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-fido-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\4f6639dfd6360d169edd8a2f187665c7\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\cd86cf98970e163eb241dd6c6a9b5543\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-auth-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\cd86cf98970e163eb241dd6c6a9b5543\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-database-connection-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c6098bc8fb1f6b49612461c95252aad3\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-database-connection-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\c6098bc8fb1f6b49612461c95252aad3\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-database-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b2f9286c6d773b6627a0b277ef65995f\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-database-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b2f9286c6d773b6627a0b277ef65995f\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-dynamic-links-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\260d37ff2e27aa8d2fca2c59b688abd8\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-dynamic-links-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\260d37ff2e27aa8d2fca2c59b688abd8\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8a8adef571bcfdb66fd627df9b61b6e6\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-iid-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8a8adef571bcfdb66fd627df9b61b6e6\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-messaging-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\bda51cb954e8362206dcc81be22310af\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-messaging-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\bda51cb954e8362206dcc81be22310af\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-storage-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\599030e7abf0efc086ddcf0365f6d340\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-storage-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\599030e7abf0efc086ddcf0365f6d340\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-storage-common-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\12f4c6b12e99b99ec3e3e0e346348b2c\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-storage-common-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\12f4c6b12e99b99ec3e3e0e346348b2c\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f7ec110a84ca05b42b7b8a65163f1a34\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-common-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\f7ec110a84ca05b42b7b8a65163f1a34\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-fitness-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\eb05a217d59ac5eb8ac7c19b1e64599f\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-fitness-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\eb05a217d59ac5eb8ac7c19b1e64599f\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-games-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5253e653f08192ed9535be0306b3e481\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-games-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5253e653f08192ed9535be0306b3e481\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-gass-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0623f2d9dc569d24da714a0dae1e8acc\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-gass-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0623f2d9dc569d24da714a0dae1e8acc\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e0cbd60843aab814a86cacb1763ebbde\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-gcm-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e0cbd60843aab814a86cacb1763ebbde\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-appindexing-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\3dae84a3e49382fabf32f8581dabf09a\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-appindexing-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\3dae84a3e49382fabf32f8581dabf09a\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-identity-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\14691ed2d7c1f6f68994453c27e1e0c7\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-identity-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\14691ed2d7c1f6f68994453c27e1e0c7\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\af95bfd6240a477d332dced3c5985cf4\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-iid-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\af95bfd6240a477d332dced3c5985cf4\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-instantapps-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5fae3d95ffbcf161139cc44c2ebcdffd\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-instantapps-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5fae3d95ffbcf161139cc44c2ebcdffd\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-location-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5284770e03d4854f61b70fa7b6e52d8c\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-location-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\5284770e03d4854f61b70fa7b6e52d8c\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e69ff1e4b3b32031fc9fdbf993b07ead\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-maps-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e69ff1e4b3b32031fc9fdbf993b07ead\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b758a4e2494f774b71e993fb537a0b59\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-analytics-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b758a4e2494f774b71e993fb537a0b59\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\668ab60aeca2941d527d80674b7b46de\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-analytics-impl-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\668ab60aeca2941d527d80674b7b46de\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-nearby-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e86f39665d54a19be802ba8c31ef012f\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-nearby-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\e86f39665d54a19be802ba8c31ef012f\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-panorama-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1f35c03e17875c15e980b6fa5308d12c\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-panorama-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1f35c03e17875c15e980b6fa5308d12c\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b4341c64fce148b1e05bf962b95c83f7\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-places-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\b4341c64fce148b1e05bf962b95c83f7\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-safetynet-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\441d7c7646cb3b1d77f7839b1b741014\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-safetynet-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\441d7c7646cb3b1d77f7839b1b741014\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-api-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6dc0b3364a8946c1dbd518d7360eb555\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-api-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6dc0b3364a8946c1dbd518d7360eb555\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\d3910a53fe7a0206ba905761eee06ac7\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\d3910a53fe7a0206ba905761eee06ac7\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6f68619cf9eec63aa326aa86bdc15262\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6f68619cf9eec63aa326aa86bdc15262\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1bb1fb6abed6013cdbc045194cf94eb9\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\1bb1fb6abed6013cdbc045194cf94eb9\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0f2cd0ccb877f95f3de416f0065855c1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0f2cd0ccb877f95f3de416f0065855c1\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8e83a50db05f124a5bd77c0a76c60034\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\8e83a50db05f124a5bd77c0a76c60034\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6c77ea72c4255e362312810248d15b25\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\6c77ea72c4255e362312810248d15b25\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0c2ea89405da66c37c3c6a295d1b0fdf\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\sagre\.gradle\caches\transforms-2\files-2.1\0c2ea89405da66c37c3c6a295d1b0fdf\AndroidManifest.xml:22:5-20
-	android:label
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:32:9-41
-	android:icon
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:31:9-43
-	android:allowBackup
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:30:9-35
-	android:theme
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:33:9-40
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:33:9-40
 activity#com.example.certificadosdefuncion.MainActivityPantalla2
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:34:9-36:61
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:34:9-36:61
 	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:36:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:36:13-49
 	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:35:13-50
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:35:13-50
 activity#com.example.certificadosdefuncion.Entrada
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:37:9-46:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:37:9-46:20
 	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:40:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:40:13-49
 	android:label
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:39:13-45
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:39:13-45
 	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:38:13-36
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:38:13-36
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:41:13-45:29
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:41:13-45:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:42:17-69
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:42:17-69
 	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:42:25-66
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:42:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:44:17-77
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:44:17-77
 	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:44:27-74
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:44:27-74
 activity#com.example.certificadosdefuncion.MainActivity
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:47:9-49:61
->>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:47:9-49:61
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:49:13-49
 	android:name
-<<<<<<< HEAD
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:48:13-74
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:48:13-41
 activity#com.example.certificadosdefuncion.FotoEvidencia
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:53:9-57:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:50:9-52:61
+	android:screenOrientation
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:52:13-49
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:51:13-42
+activity#com.example.certificadosdefuncion.Menu_Principal
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:53:9-55:61
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:55:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:54:13-75
-activity#com.example.certificadosdefuncion.Menu_Principal
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:60:10-64:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:62:13-49
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:61:13-76
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:54:13-43
 activity#com.example.certificadosdefuncion.CalendarViewAudios
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:65:10-69:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:56:9-60:20
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:65:20-87
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:56:19-53
 intent-filter#action:name:android.intent.action.MAIN
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:66:13-68:29
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:57:13-59:29
 activity#com.example.certificadosdefuncion.CalendarViewArchivo
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:71:9-75:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:61:9-65:20
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:71:19-87
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:61:19-54
 activity#com.example.certificadosdefuncion.CalendarViewFotos
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:77:10-81:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:66:9-68:61
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:79:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:68:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:78:13-79
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:67:13-46
 activity#com.example.certificadosdefuncion.MainActivityConteo
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:84:9-88:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:69:9-71:61
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:86:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:71:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:85:13-80
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:70:13-47
 activity#com.example.certificadosdefuncion.MainActivitySecciones
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:89:9-93:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:72:9-74:61
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:91:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:74:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:90:13-83
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:73:13-50
 activity#com.example.certificadosdefuncion.MainActivitySeccionesBorrar
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:94:9-98:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:75:9-77:61
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:96:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:77:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:95:13-89
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:76:13-56
 activity#com.example.certificadosdefuncion.MainActivityCarga
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:99:10-103:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:78:9-80:61
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:101:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:80:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:100:13-79
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:79:13-46
 activity#com.example.certificadosdefuncion.MainActivityPresidente
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:105:9-111:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:81:9-87:20
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:107:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:83:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:106:13-84
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:82:13-51
 activity#com.example.certificadosdefuncion.MainActivityJefeGobierno
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:113:10-119:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:88:9-94:20
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:115:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:90:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:114:13-86
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:89:13-53
 activity#com.example.certificadosdefuncion.MainActivityDiputado
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:121:11-127:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:95:9-101:20
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:123:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:97:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:122:13-82
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:96:13-49
 activity#com.example.certificadosdefuncion.MainActivityAlianzaMas
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:129:12-135:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:102:9-108:20
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:131:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:104:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:130:13-84
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:103:13-51
 activity#com.example.certificadosdefuncion.MainActivityAlianzaMenos
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:137:13-143:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:109:9-115:20
+	android:screenOrientation
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:111:13-49
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:110:13-53
+activity#com.example.certificadosdefuncion.MainActivityPantalla1
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:116:9-118:61
+	android:screenOrientation
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:118:13-49
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:117:13-50
+activity#com.example.certificadosdefuncion.MainActivityPreguntas
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:119:9-121:61
+	android:screenOrientation
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:121:13-49
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:120:13-50
+activity#com.example.certificadosdefuncion.MainActivityPantallaGUS
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:122:9-124:61
+	android:screenOrientation
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:124:13-49
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:123:13-52
+activity#com.example.certificadosdefuncion.MainActivityPantalla3
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:125:9-127:61
+	android:screenOrientation
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:127:13-49
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:126:13-50
+activity#com.example.certificadosdefuncion.MainActivityPantalla4
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:128:9-130:61
+	android:screenOrientation
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:130:13-49
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:129:13-50
+activity#com.example.certificadosdefuncion.MainActivityPantalla5
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:131:9-133:61
+	android:screenOrientation
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:133:13-49
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:132:13-50
+activity#com.example.certificadosdefuncion.MainActivityPantalla6
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:134:9-136:61
+	android:screenOrientation
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:136:13-49
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:135:13-50
+activity#com.example.certificadosdefuncion.MainActivityPantalla7
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:137:9-139:61
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:139:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:138:13-86
-activity#com.example.certificadosdefuncion.MainActivityPantalla1
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:145:9-149:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:147:13-49
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:146:13-83
-activity#com.example.certificadosdefuncion.MainActivityPreguntas
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:151:10-155:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:153:13-49
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:152:13-83
-activity#com.example.certificadosdefuncion.MainActivityPantallaGUS
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:158:9-162:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:160:13-49
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:159:13-51
-activity#com.example.certificadosdefuncion.MainActivityPantalla2
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:165:9-169:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:167:13-49
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:166:13-49
-activity#com.example.certificadosdefuncion.MainActivityPantalla3
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:171:9-175:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:173:13-49
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:172:13-49
-activity#com.example.certificadosdefuncion.MainActivityPantalla4
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:177:9-181:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:179:13-49
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:178:13-49
-activity#com.example.certificadosdefuncion.MainActivityPantalla5
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:182:9-186:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:184:13-49
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:183:13-49
-activity#com.example.certificadosdefuncion.MainActivityPantalla6
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:187:9-191:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:189:13-49
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:188:13-49
-activity#com.example.certificadosdefuncion.MainActivityPantalla7
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:193:9-197:20
-	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:195:13-49
-	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:194:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:138:13-50
 activity#com.example.certificadosdefuncion.MainActivityPantalla8
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:199:9-203:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:140:9-142:61
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:201:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:142:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:200:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:141:13-50
 activity#com.example.certificadosdefuncion.MainActivityPantalla9
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:205:9-209:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:143:9-145:61
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:207:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:145:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:206:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:144:13-50
 activity#com.example.certificadosdefuncion.MainActivityPantalla10
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:211:9-215:20
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:146:9-148:61
 	android:screenOrientation
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:213:13-49
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:148:13-49
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:212:13-50
-=======
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:48:13-41
-activity#com.example.certificadosdefuncion.FotoEvidencia
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:50:9-52:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:52:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:51:13-42
-activity#com.example.certificadosdefuncion.Menu_Principal
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:53:9-55:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:55:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:54:13-43
-activity#com.example.certificadosdefuncion.CalendarViewAudios
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:56:9-60:20
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:56:19-53
-intent-filter#action:name:android.intent.action.MAIN
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:57:13-59:29
-activity#com.example.certificadosdefuncion.CalendarViewArchivo
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:61:9-65:20
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:61:19-54
-activity#com.example.certificadosdefuncion.CalendarViewFotos
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:66:9-68:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:68:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:67:13-46
-activity#com.example.certificadosdefuncion.MainActivityConteo
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:69:9-71:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:71:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:70:13-47
-activity#com.example.certificadosdefuncion.MainActivitySecciones
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:72:9-74:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:74:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:73:13-50
-activity#com.example.certificadosdefuncion.MainActivitySeccionesBorrar
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:75:9-77:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:77:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:76:13-56
-activity#com.example.certificadosdefuncion.MainActivityCarga
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:78:9-80:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:80:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:79:13-46
-activity#com.example.certificadosdefuncion.MainActivityPresidente
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:81:9-87:20
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:83:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:82:13-51
-activity#com.example.certificadosdefuncion.MainActivityJefeGobierno
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:88:9-94:20
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:90:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:89:13-53
-activity#com.example.certificadosdefuncion.MainActivityDiputado
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:95:9-101:20
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:97:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:96:13-49
-activity#com.example.certificadosdefuncion.MainActivityAlianzaMas
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:102:9-108:20
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:104:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:103:13-51
-activity#com.example.certificadosdefuncion.MainActivityAlianzaMenos
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:109:9-115:20
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:111:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:110:13-53
-activity#com.example.certificadosdefuncion.MainActivityPantalla1
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:116:9-118:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:118:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:117:13-50
-activity#com.example.certificadosdefuncion.MainActivityPreguntas
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:119:9-121:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:121:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:120:13-50
-activity#com.example.certificadosdefuncion.MainActivityPantallaGUS
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:122:9-124:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:124:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:123:13-52
-activity#com.example.certificadosdefuncion.MainActivityPantalla3
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:125:9-127:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:127:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:126:13-50
-activity#com.example.certificadosdefuncion.MainActivityPantalla4
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:128:9-130:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:130:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:129:13-50
-activity#com.example.certificadosdefuncion.MainActivityPantalla5
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:131:9-133:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:133:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:132:13-50
-activity#com.example.certificadosdefuncion.MainActivityPantalla6
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:134:9-136:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:136:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:135:13-50
-activity#com.example.certificadosdefuncion.MainActivityPantalla7
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:137:9-139:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:139:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:138:13-50
-activity#com.example.certificadosdefuncion.MainActivityPantalla8
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:140:9-142:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:142:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:141:13-50
-activity#com.example.certificadosdefuncion.MainActivityPantalla9
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:143:9-145:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:145:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:144:13-50
-activity#com.example.certificadosdefuncion.MainActivityPantalla10
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:146:9-148:61
-	android:screenOrientation
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:148:13-49
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:147:13-51
->>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:147:13-51
 uses-sdk
 INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
@@ -1520,19 +901,11 @@ INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\m
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-<<<<<<< HEAD
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:222:13-224:57
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:155:13-157:58
 	android:resource
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:224:17-55
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:157:17-55
 	android:name
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:223:17-67
-=======
-ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:155:13-157:58
-	android:resource
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:157:17-55
-	android:name
-		ADDED from C:\Users\sagre\Proyectos\JefaturaDeGobierno\Proyectos\certificados_defuncion\app\src\main\AndroidManifest.xml:156:17-67
->>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:156:17-67
 activity#com.google.android.gms.ads.AdActivity
 ADDED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\d0afac8394b0e55813965c0902cf29d9\AndroidManifest.xml:29:9-33:64
 	android:exported

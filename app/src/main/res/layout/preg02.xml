@@ -43,6 +43,7 @@
 
                     <RadioButton
                         android:id="@+id/radio1"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:button="@drawable/radiobutton_selector"
@@ -51,14 +52,11 @@
                         android:layout_marginBottom="10dp"
                         android:theme="@style/RadioButton"
                         android:text="Acta de defunción"
-                        android:enabled="false"
-                        android:visibility="gone"
                         />
 
                     <RadioButton
                         android:id="@+id/radio2"
-                        android:checked="true"
-                        android:enabled="false"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:button="@drawable/radiobutton_selector"

@@ -1,16 +1,9 @@
 #Internal package file, do not edit.
-<<<<<<< HEAD
-#Thu May 14 12:36:24 CDT 2020
+#Thu May 14 13:30:49 CDT 2020
 4.path=classes.dex
 13.baseType=DIRECTORY
 8.set=NATIVE_RESOURCE
 6.path=classes.dex
-=======
-#Thu May 14 05:00:54 CDT 2020
-4.path=lib/x86_64/libpl_droidsonroids_gif.so
-8.set=DEX
-6.path=datos.sql
->>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
 0.baseType=DIRECTORY
 10.path=classes.dex
 5.baseType=DIRECTORY

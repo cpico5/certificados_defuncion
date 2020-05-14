@@ -412,25 +412,25 @@ public class MainActivityPantalla1 extends Activity {
 						System.exit(0); // metodo que se debe implementar
 					}
 				}).setPositiveButton("CONTINUAR", new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int id) {
+			public void onClick(DialogInterface dialog, int id) {
 
-						detenerGrabacion();
+				detenerGrabacion();
 
-						Intent i = new Intent(MainActivityPantalla1.this, MainActivity.class);
-						i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-						i.putExtra("Nombre", cachaNombre());
-						i.putExtra("cuantos", 1);
-						startActivity(i);
-						System.exit(0); // metodo que se debe implementar
-					}
-				});
+				Intent i = new Intent(MainActivityPantalla1.this, MainActivity.class);
+				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				i.putExtra("Nombre", cachaNombre());
+				i.putExtra("cuantos", 1);
+				startActivity(i);
+				System.exit(0); // metodo que se debe implementar
+			}
+		});
 		AlertDialog alert = builder.create();
 		alert.show();
 
 	}
-	
 
-	
+
+
 	public void dialogoFoto() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setMessage("Encuestador, tomar foto del Documento(s)").setTitle("Foto de Fachada").setCancelable(false)
@@ -441,7 +441,7 @@ public class MainActivityPantalla1 extends Activity {
 
 						//elMaximo = Integer.parseInt(sacaMaximo().toString());
 						elMaximo = Integer.parseInt(sacaMaximo().toString()) + 1;
-						
+
 						Log.i(LOG_TAG, ">>>>>>>>>>  Consecutivo"+ elMaximo);
 						elMaximo = Integer.parseInt(sacaMaximo().toString());
 						Intent i = new Intent(MainActivityPantalla1.this, FotoEvidencia.class);
@@ -452,7 +452,7 @@ public class MainActivityPantalla1 extends Activity {
 						i.putExtra("folio", editPregunta3.getText().toString());
 						i.putExtra(USUARIO,usuario);
 						i.putExtra(ID_CERTIFICADO,idCertificado);
-						i.putExtra(TIPO,"certificado");
+						i.putExtra(TIPO,op2.toUpperCase());
 
 						startActivity(i);
 						//System.exit(0); // metodo que se debe implementar
@@ -480,7 +480,7 @@ public class MainActivityPantalla1 extends Activity {
 								i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 								startActivity(i);
 								System.exit(0); // metodo que se debe
-												// implementar
+								// implementar
 							}
 						});
 				AlertDialog alert = builder.create();
@@ -500,17 +500,17 @@ public class MainActivityPantalla1 extends Activity {
 				builder.setMessage("Excediste el tiempo maximo para realizar la encuesta \n"
 						+ "--- Se detendra la grabacion y se reiniciara la Aplicacion..!!!").setTitle("AVISO...!!!")
 						.setCancelable(false).setNegativeButton("SALIR", new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int id) {
+					public void onClick(DialogInterface dialog, int id) {
 
-								detenerGrabacion();
+						detenerGrabacion();
 
-								Intent i = new Intent(MainActivityPantalla1.this, Entrada.class);
-								i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-								startActivity(i);
-								System.exit(0); // metodo que se debe
-												// implementar
-							}
-						});
+						Intent i = new Intent(MainActivityPantalla1.this, Entrada.class);
+						i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+						startActivity(i);
+						System.exit(0); // metodo que se debe
+						// implementar
+					}
+				});
 
 				AlertDialog alert = builder.create();
 
@@ -533,10 +533,10 @@ public class MainActivityPantalla1 extends Activity {
 								detenerGrabacion();
 							}
 						}).setPositiveButton("CONTINUAR", new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int id) {
+					public void onClick(DialogInterface dialog, int id) {
 
-							}
-						});
+					}
+				});
 
 				AlertDialog alert = builder.create();
 
@@ -631,7 +631,7 @@ public class MainActivityPantalla1 extends Activity {
 
 	}
 
-	private Integer[] mLinearLayoutIds = { 
+	private Integer[] mLinearLayoutIds = {
 //			R.layout.activity_pantalla1, 
 //			R.layout.activity_pantalla2,
 //			 R.layout.activity_pantalla3, 
@@ -654,7 +654,7 @@ public class MainActivityPantalla1 extends Activity {
 	};
 
 	private Usuario usuario;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -677,7 +677,7 @@ public class MainActivityPantalla1 extends Activity {
 		Thread.setDefaultUncaughtExceptionHandler(new Crash(this));
 
 		cachaNombre(); // llamado al método para obtener el numero del
-						// encuestador
+		// encuestador
 
 		try {
 
@@ -713,7 +713,7 @@ public class MainActivityPantalla1 extends Activity {
 //		radio_abandono1 =(RadioButton)findViewById(R.id.radio_abandono1);
 //		radio_abandono2 =(RadioButton)findViewById(R.id.radio_abandono2);
 //		radio_abandono3 =(RadioButton)findViewById(R.id.radio_abandono3);
-		
+
 
 		rdPregunta1 = (RadioGroup)findViewById(R.id.rdPregunta1);
 		rdPregunta2 = (RadioGroup)findViewById(R.id.rdPregunta2);
@@ -733,7 +733,7 @@ public class MainActivityPantalla1 extends Activity {
 		editFechaDeceso.setEnabled(false);
 
 		imageButtonVale = (ImageButton) findViewById(R.id.imageButtonVale);
-		
+
 //		editPregunta9a= (EditText)findViewById(R.id.editPregunta9a);
 //		editPregunta9m= (EditText)findViewById(R.id.editPregunta9m);
 //		editPregunta9d= (EditText)findViewById(R.id.editPregunta9d);
@@ -741,7 +741,7 @@ public class MainActivityPantalla1 extends Activity {
 		spinner_juzgado= (Spinner) findViewById(R.id.spinner_juzgado);
 
 		res = getResources();
-		
+
 		captura1 =res.getString(R.string.PREGUNTA1);
 		captura2 =res.getString(R.string.PREGUNTA2);
 		captura3 =res.getString(R.string.PREGUNTA3);
@@ -755,7 +755,7 @@ public class MainActivityPantalla1 extends Activity {
 		captura9d =res.getString(R.string.PREGUNTA9d);
 
 
-		
+
 		lay1 = (LinearLayout) findViewById(R.id.lay1);
 		lay2 = (LinearLayout) findViewById(R.id.lay2);
 		lay3 = (LinearLayout) findViewById(R.id.lay3);
@@ -775,9 +775,9 @@ public class MainActivityPantalla1 extends Activity {
 		btnSalir.setVisibility(View.GONE);
 
 //				ocultaEstadisticas();
-		
+
 		CargaSpinnerJuzgados();
-		
+
 
 
 
@@ -843,13 +843,13 @@ public class MainActivityPantalla1 extends Activity {
 		});
 
 
-		
+
 	}////// FIN ONCREATE/////////////////////////////
-	
+
 	public void mensaje(String mensaje){
-		
+
 		Toast.makeText(getBaseContext(),"Aviso: " +  mensaje,Toast.LENGTH_LONG).show();
-		
+
 	}
 
 	@Override
@@ -892,7 +892,7 @@ public class MainActivityPantalla1 extends Activity {
 
 	public void valores() {
 
-		
+
 		String str = "";
 
 		String seg = formattedDate5.substring(7);
@@ -912,7 +912,7 @@ public class MainActivityPantalla1 extends Activity {
 
 
 		elMaximo = Integer.parseInt(sacaMaximo().toString()) + 1;
-		
+
 		String strText12_1;
 		String strText12a_1;
 
@@ -953,15 +953,15 @@ public class MainActivityPantalla1 extends Activity {
 
 			String strLatitud = String.valueOf(latitude);
 			String strLongitud = String.valueOf(longitude);
-			
-			
+
+
 			if (latitude == 0.0) {
 				if (sacaLatitud() == null) {
 					latitude = 0.0;
 				} else {
 					latitude = Double.valueOf(sacaLatitud());
 				}
-				
+
 			}
 
 			if (longitude == 0.0) {
@@ -970,7 +970,7 @@ public class MainActivityPantalla1 extends Activity {
 				} else {
 					longitude = Double.valueOf(sacaLongitud());
 				}
-				
+
 			}
 
 			String strLatitud2 = String.valueOf(latitude);
@@ -1008,7 +1008,7 @@ public class MainActivityPantalla1 extends Activity {
 
 			System.out.println("Latitud  " + strLatitud);
 			System.out.println("Longitud  " + strLongitud);
-			
+
 			System.out.println("juzgado  " +   str1);
 			System.out.println("certificado_acta  " +   str2);
 			System.out.println("folio  " +   str3);
@@ -1085,7 +1085,7 @@ public class MainActivityPantalla1 extends Activity {
 				nombre_programa = String.valueOf(value);
 			if(key.equals("juzgado"))
 				juzgado = String.valueOf(value);
-			if(key.equals("juzgado"))
+			if(key.equals("certificado_acta"))
 				certificado_acta = String.valueOf(value);
 			if(key.equals("folio"))
 				folio = String.valueOf(value);
@@ -1205,45 +1205,44 @@ public class MainActivityPantalla1 extends Activity {
 
 
 	}
-	
+
 
 	public void guardar(View v) {
 		System.out.println(cachaDelegacion());
 
 //		timer.cancel();
-		op2 = "Certificado de Defuncion";
 
 		String str = "";
 
 		int tipo = 1;
 
 		switch (tipo) {
-		case 1:
+			case 1:
 
 
-			  if (lay1.getVisibility() == View.VISIBLE && spinner_juzgado.getSelectedItem().toString().equals("Selecciona")){Toast.makeText(this,"CAPTURA:  " +  captura1,Toast.LENGTH_LONG).show();}
-			  else if (lay2.getVisibility() == View.VISIBLE && op2.matches("SIN DATOS")){Toast.makeText(this,"CAPTURA:  " +  captura2,Toast.LENGTH_LONG).show();}
-			  else if (lay3.getVisibility() == View.VISIBLE && editPregunta3.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura3,Toast.LENGTH_LONG).show();}
-			  else if (lay4.getVisibility() == View.VISIBLE && editPregunta4.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura4,Toast.LENGTH_LONG).show();}
-			  else if (lay5.getVisibility() == View.VISIBLE && editPregunta5.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura5,Toast.LENGTH_LONG).show();}
-			  else if (lay6.getVisibility() == View.VISIBLE && editPregunta6.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura6,Toast.LENGTH_LONG).show();}
-			  else if (lay7.getVisibility() == View.VISIBLE && op7.matches("SIN DATOS")){Toast.makeText(this,"CAPTURA:  " +  captura7,Toast.LENGTH_LONG).show();}
-			  else if (lay8.getVisibility() == View.VISIBLE && editPregunta8.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura8,Toast.LENGTH_LONG).show();}
-			  else if (lay9.getVisibility() == View.VISIBLE
-					  	&& editFechaDeceso.getText().toString().trim().length()==0
-			  			){Toast.makeText(this,"CAPTURA:  " +  captura9,Toast.LENGTH_LONG).show();}
+				if (lay1.getVisibility() == View.VISIBLE && spinner_juzgado.getSelectedItem().toString().equals("Selecciona")){Toast.makeText(this,"CAPTURA:  " +  captura1,Toast.LENGTH_LONG).show();}
+				else if (lay2.getVisibility() == View.VISIBLE && op2.matches("SIN DATOS")){Toast.makeText(this,"CAPTURA:  " +  captura2,Toast.LENGTH_LONG).show();}
+				else if (lay3.getVisibility() == View.VISIBLE && editPregunta3.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura3,Toast.LENGTH_LONG).show();}
+				else if (lay4.getVisibility() == View.VISIBLE && editPregunta4.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura4,Toast.LENGTH_LONG).show();}
+				else if (lay5.getVisibility() == View.VISIBLE && editPregunta5.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura5,Toast.LENGTH_LONG).show();}
+				else if (lay6.getVisibility() == View.VISIBLE && editPregunta6.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura6,Toast.LENGTH_LONG).show();}
+				else if (lay7.getVisibility() == View.VISIBLE && op7.matches("SIN DATOS")){Toast.makeText(this,"CAPTURA:  " +  captura7,Toast.LENGTH_LONG).show();}
+				else if (lay8.getVisibility() == View.VISIBLE && editPregunta8.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura8,Toast.LENGTH_LONG).show();}
+				else if (lay9.getVisibility() == View.VISIBLE
+						&& editFechaDeceso.getText().toString().trim().length()==0
+				){Toast.makeText(this,"CAPTURA:  " +  captura9,Toast.LENGTH_LONG).show();}
 
-			else {
+				else {
 
-				valores();
+					valores();
 				/*btnGuardar.setEnabled(false);
 				dialogoFoto();*/
-				
-				
 
-			}// Finaliza else de validaci�n
 
-			break;
+
+				}// Finaliza else de validaci�n
+
+				break;
 
 		}
 
