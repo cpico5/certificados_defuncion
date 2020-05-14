@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed May 13 18:46:19 CDT 2020
+#Wed May 13 19:04:29 CDT 2020
 4.path=lib/x86_64/libpl_droidsonroids_gif.so
 8.set=DEX
 6.path=classes2.dex

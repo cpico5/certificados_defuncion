@@ -12,6 +12,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
@@ -61,21 +62,21 @@ import static com.example.certificadosdefuncion.Nombre.USUARIO;
 
 
 public class FotoEvidencia extends Activity {
-	
-	public static String getHostName(String defValue) {
-	    try {
-	        Method getString = Build.class.getDeclaredMethod("getString", String.class);
-	        getString.setAccessible(true);
-	        return getString.invoke(null, "net.hostname").toString();
-	    } catch (Exception ex) {
-	        return defValue;
-	    }
-	}
-	
-	
-	private String TAG="FotoEvidencia";
-	static String ID = getHostName(null);
-	static String prefix = ID;
+
+    public static String getHostName(String defValue) {
+        try {
+            Method getString = Build.class.getDeclaredMethod("getString", String.class);
+            getString.setAccessible(true);
+            return getString.invoke(null, "net.hostname").toString();
+        } catch (Exception ex) {
+            return defValue;
+        }
+    }
+
+
+    private String TAG = "FotoEvidencia";
+    static String ID = getHostName(null);
+    static String prefix = ID;
 
     Calendar c = Calendar.getInstance();
 
@@ -99,9 +100,9 @@ public class FotoEvidencia extends Activity {
 
     SimpleDateFormat df5 = new SimpleDateFormat("HH:mm:ss");
     String formattedDate5 = df5.format(c.getTime());
-	
-	UsuariosSQLiteHelper3 usdbh3;
-	private SQLiteDatabase db3;
+
+    UsuariosSQLiteHelper3 usdbh3;
+    private SQLiteDatabase db3;
 
     private ImageButton camara;
     private ImageView imagen;
@@ -135,7 +136,7 @@ public class FotoEvidencia extends Activity {
     ArrayAdapter<String> adapter;
     ArrayAdapter<String> adapter2;
     private Spinner spinnerPUBLICO;
-    String alcaldia,laCasilla,distF,distL;
+    String alcaldia, laCasilla, distF, distL;
 
     UsuariosSQLiteHelper usdbh;
     private Spinner spinner;
@@ -147,20 +148,20 @@ public class FotoEvidencia extends Activity {
     String laLatitud;
     String laLongitud;
     public String tiempo;
-    String date=formattedDate1.toString();
-    public String maximo="";
+    String date = formattedDate1.toString();
+    public String maximo = "";
     int elMaximo;
     String laSeccion;
 
     public EditText comentario;
     public EditText editNombreFoto;
-    
+
     // NORMAL
-    Nombre nom= new Nombre();
+    Nombre nom = new Nombre();
     String nombreE = nom.nombreEncuesta();
-    
-    String upLoadServerUriFotos = "https://opinion.cdmx.gob.mx/cgi-bin/php/recibeFotos"+nombreE+".php?encuesta="+nombreE+"";
-	int serverResponseCode = 0;
+
+    String upLoadServerUriFotos = "https://opinion.cdmx.gob.mx/cgi-bin/php/recibeFotos" + nombreE + ".php?encuesta=" + nombreE + "";
+    int serverResponseCode = 0;
 
     private static final int READ_BLOCK_SIZE = 100000;
 
@@ -181,164 +182,176 @@ public class FotoEvidencia extends Activity {
 //        String Imei = tManager.getDeviceId();
 //    	return Imei;
 //    	}
-    
-	public String sacaChip(){
-		String deviceId = Secure.getString(this.getContentResolver(),Secure.ANDROID_ID);
-		tablet=deviceId;	
-		return tablet;
-	}
 
-    public String cachaNombre(){
-        Bundle datos=this.getIntent().getExtras();
-        String Nombre=datos.getString("Nombre");
+    public String sacaChip() {
+        String deviceId = Secure.getString(this.getContentResolver(), Secure.ANDROID_ID);
+        tablet = deviceId;
+        return tablet;
+    }
+
+    public String cachaNombre() {
+        Bundle datos = this.getIntent().getExtras();
+        String Nombre = datos.getString("Nombre");
         return Nombre;
     }
-    
-    public String cachaCuantos(){
-        Bundle datos=this.getIntent().getExtras();
-        String cuantos=datos.getString("cuantos");
+
+    public String cachaCuantos() {
+        Bundle datos = this.getIntent().getExtras();
+        String cuantos = datos.getString("cuantos");
         return cuantos;
     }
-    
+
     public String cachaLatitud() {
-		Bundle datos = this.getIntent().getExtras();
-		String latitud = datos.getString("latitud");
-		return latitud;
-	}
+        Bundle datos = this.getIntent().getExtras();
+        String latitud = datos.getString("latitud");
+        return latitud;
+    }
+
     public String cachaFolio() {
         Bundle datos = this.getIntent().getExtras();
         String folio = datos.getString("folio");
         return folio;
     }
-	public String cachaLongitud() {
-		Bundle datos = this.getIntent().getExtras();
-		String longitud = datos.getString("longitud");
-		return longitud;
-	}
 
-    public String cachaNumeracion(){
-        Bundle datos=this.getIntent().getExtras();
-        String numeracion=datos.getString("numeracion");
+    public String cachaLongitud() {
+        Bundle datos = this.getIntent().getExtras();
+        String longitud = datos.getString("longitud");
+        return longitud;
+    }
+
+    public String cachaNumeracion() {
+        Bundle datos = this.getIntent().getExtras();
+        String numeracion = datos.getString("numeracion");
         return numeracion;
     }
-    public String cachaSeccionGPS(){
-        Bundle datos=this.getIntent().getExtras();
-        String seccion_gps=datos.getString("seccion_gps");
+
+    public String cachaSeccionGPS() {
+        Bundle datos = this.getIntent().getExtras();
+        String seccion_gps = datos.getString("seccion_gps");
         return seccion_gps;
     }
-    public String cachaSeccion(){
-        Bundle datos=this.getIntent().getExtras();
-        String seccion=datos.getString("seccion");
+
+    public String cachaSeccion() {
+        Bundle datos = this.getIntent().getExtras();
+        String seccion = datos.getString("seccion");
         return seccion;
     }
-    
-    
+
+
     public Integer cachaConsecutivoDiario() {
-		Bundle datos = this.getIntent().getExtras();
-		Integer consecutivo_diario = datos.getInt("consecutivo_diario");
-		return consecutivo_diario;
-	}
-    
+        Bundle datos = this.getIntent().getExtras();
+        Integer consecutivo_diario = datos.getInt("consecutivo_diario");
+        return consecutivo_diario;
+    }
 
 
-    public String cachaDiario(){
+    public String cachaDiario() {
 
         elMaximo = Integer.parseInt(sacaMaximo().toString());
 
-        String diario= String.valueOf(elMaximo);
+        String diario = String.valueOf(elMaximo);
 
-        if(diario.length()==1){
-            diario="00"+diario;
-        }else if(diario.length()==2){
-            diario="0"+diario;
-        }else{
+        if (diario.length() == 1) {
+            diario = "00" + diario;
+        } else if (diario.length() == 2) {
+            diario = "0" + diario;
+        } else {
         }
         return diario;
     }
-    public String cachaUsuario(){
-        Bundle datos=this.getIntent().getExtras();
-        String usuario=datos.getString("usuario");
+
+    public String cachaUsuario() {
+        Bundle datos = this.getIntent().getExtras();
+        String usuario = datos.getString("usuario");
         return usuario;
     }
-    public String cachaDireccion(){
-        Bundle datos=this.getIntent().getExtras();
-        String direccion=datos.getString("Direccion");
+
+    public String cachaDireccion() {
+        Bundle datos = this.getIntent().getExtras();
+        String direccion = datos.getString("Direccion");
         return direccion;
     }
 
-    public String cachaNombreE(){
-        Bundle datos=this.getIntent().getExtras();
-        String nombre_encuesta=datos.getString("nombre_encuesta");
+    public String cachaNombreE() {
+        Bundle datos = this.getIntent().getExtras();
+        String nombre_encuesta = datos.getString("nombre_encuesta");
         return nombre_encuesta;
     }
 
-    public String cachaTablet(){
-        Bundle datos=this.getIntent().getExtras();
-        String tablet=datos.getString("tablet");
+    public String cachaTablet() {
+        Bundle datos = this.getIntent().getExtras();
+        String tablet = datos.getString("tablet");
         return tablet;
     }
-    
-    
-    public String cachaMax(){
-        Bundle datos=this.getIntent().getExtras();
-        String max=datos.getString("max");
+
+
+    public String cachaMax() {
+        Bundle datos = this.getIntent().getExtras();
+        String max = datos.getString("max");
         return max;
     }
 
-    public String cachaId(){
-        Bundle datos=this.getIntent().getExtras();
-        String id=datos.getString("id");
+    public String cachaId() {
+        Bundle datos = this.getIntent().getExtras();
+        String id = datos.getString("id");
         return id;
     }
-    public String cachaIdNuevo(){
-        Bundle datos=this.getIntent().getExtras();
-        String id_nuevo=datos.getString("id_nuevo");
+
+    public String cachaIdNuevo() {
+        Bundle datos = this.getIntent().getExtras();
+        String id_nuevo = datos.getString("id_nuevo");
         return id_nuevo;
     }
-    public String cachaDelegacion(){
-        Bundle datos=this.getIntent().getExtras();
-    	String delegacion=datos.getString("delegacion");
+
+    public String cachaDelegacion() {
+        Bundle datos = this.getIntent().getExtras();
+        String delegacion = datos.getString("delegacion");
         return delegacion;
     }
-    public String cachaCargo(){
-     //   Bundle datos=this.getIntent().getExtras();
-        String cargo="Presidente";
+
+    public String cachaCargo() {
+        //   Bundle datos=this.getIntent().getExtras();
+        String cargo = "Presidente";
         return cargo;
     }
-    public String cachaDescripcion(){
+
+    public String cachaDescripcion() {
         //Bundle datos=this.getIntent().getExtras();
-        String descripcion="Descripcion";
+        String descripcion = "Descripcion";
         return descripcion;
     }
-    public String cachaQuien(){
+
+    public String cachaQuien() {
         //Bundle datos=this.getIntent().getExtras();
-        String quien="Quien";
+        String quien = "Quien";
         return quien;
     }
-    public String nombreArchivo(){
-        String date=formattedDate1.toString();
-        String var2=".txt";
-        String var3=date+var2;
-        final String nombre = date+"_"+cachaTablet()+"_PRESIDENTE";
+
+    public String nombreArchivo() {
+        String date = formattedDate1.toString();
+        String var2 = ".txt";
+        String var3 = date + var2;
+        final String nombre = date + "_" + cachaTablet() + "_PRESIDENTE";
         return nombre;
     }
-    public long t1(){
-        Bundle datos=this.getIntent().getExtras();
-        long t1=datos.getLong("t1");
+
+    public long t1() {
+        Bundle datos = this.getIntent().getExtras();
+        long t1 = datos.getLong("t1");
         return t1;
     }
-    
+
     public String sacaImei() {
-		TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
-		String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-		System.out.println("Mi N�mero: " + szImei);
+        TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+        String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+        System.out.println("Mi N�mero: " + szImei);
 
-		return szImei;
-	}
-    
-    public String NombreD; 
+        return szImei;
+    }
 
-    public String elTiempo(){
+    public String NombreD;
+
+    public String elTiempo() {
         //Para la diferenci entre tiempos
         Calendar t2 = Calendar.getInstance();
         long milis2 = t2.getTimeInMillis();
@@ -349,9 +362,9 @@ public class FotoEvidencia extends Activity {
         // calcular la diferencia en minutos
         long diffSegundos = diff / 1000;
 
-        long diffMinutos = diffSegundos/60;
+        long diffMinutos = diffSegundos / 60;
 
-        long residuo=diffSegundos%60;
+        long residuo = diffSegundos % 60;
 
         System.out.println(diffSegundos);
         System.out.println(diffMinutos);
@@ -360,15 +373,14 @@ public class FotoEvidencia extends Activity {
 //	    			DecimalFormat df = new DecimalFormat("#.##");
 //	    			DecimalFormat df1 = new DecimalFormat("#");
 
-        tiempo=diffMinutos+":"+residuo;
+        tiempo = diffMinutos + ":" + residuo;
 
         return tiempo;
 
     }
-    
-    
 
-	public void insertaFoto(){
+
+    public void insertaFoto() {
 
         FileOutputStream fout = null;
         try {
@@ -419,13 +431,12 @@ public class FotoEvidencia extends Activity {
                 values.put("latitud", strLatitud);
                 values.put("longitud", strLongitud);
 
-                values.put("folio",cachaFolio());
-                values.put("numero_foto",cachaCuantos());
-                values.put("nombre_foto",nombreD);
+                values.put("folio", cachaFolio());
+                values.put("numero_foto", cachaCuantos());
+                values.put("nombre_foto", nombreD);
 
                 db.insert("fotos", null, values);
             }
-
 
 
             db.close();
@@ -437,50 +448,50 @@ public class FotoEvidencia extends Activity {
 
         } catch (Exception e) {
             String stackTrace = Log.getStackTraceString(e);
-            Log.i(TAG,"================>> Inserta registros"+ stackTrace);
+            Log.i(TAG, "================>> Inserta registros" + stackTrace);
 
         }
-			
-	
-	}
-	
-	
-	public void dialogo() {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage("Tomar otra Fotografía").setTitle("IMPORTANTE").setCancelable(false)
-				.setNegativeButton("SALIR", new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int id) {
+
+
+    }
+
+
+    public void dialogo() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Tomar otra Fotografía").setTitle("IMPORTANTE").setCancelable(false)
+                .setNegativeButton("SALIR", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
 
 //						detenerGrabacion();
 
-						Intent i = new Intent(FotoEvidencia.this, Entrada.class);
-						i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-						startActivity(i);
-						System.exit(0); // metodo que se debe implementar
-					}
-				}).setPositiveButton("CONTINUAR", new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int id) {
+                        Intent i = new Intent(FotoEvidencia.this, Entrada.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(i);
+                        System.exit(0); // metodo que se debe implementar
+                    }
+                }).setPositiveButton("CONTINUAR", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
 
 //						detenerGrabacion();
 
-                        Integer tantos=Integer.valueOf(cachaCuantos())+1;
+                Integer tantos = Integer.valueOf(cachaCuantos()) + 1;
 
-						Intent i = new Intent(FotoEvidencia.this, FotoEvidencia.class);
-						i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-						i.putExtra("Nombre", cachaNombre());
-                        i.putExtra("cuantos", String.valueOf(tantos));
-                        i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
-                        i.putExtra("folio", cachaFolio());
-						startActivity(i);
-						System.exit(0); // metodo que se debe implementar
-					}
-				});
-		AlertDialog alert = builder.create();
-		alert.show();
+                Intent i = new Intent(FotoEvidencia.this, FotoEvidencia.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                i.putExtra("Nombre", cachaNombre());
+                i.putExtra("cuantos", String.valueOf(tantos));
+                i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
+                i.putExtra("folio", cachaFolio());
+                startActivity(i);
+                System.exit(0); // metodo que se debe implementar
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
 
-	}
-	
-	
+    }
+
+
     ///////    METODO PARA VERIFICAR LA CONEXI�N A INTERNET
     public static boolean verificaConexion(Context ctx) {
         boolean bConectado = false;
@@ -498,18 +509,18 @@ public class FotoEvidencia extends Activity {
         return bConectado;
     }
 
-    
+
     //EVENTO AL PULSAR EL BOTON ATRAS
-  	
-	@Override
+
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
 // Esto es lo que hace mi bot�n al pulsar ir a atr�s
             Toast.makeText(getApplicationContext(), "No puedes regresar \n\nToma la Foto",
                     Toast.LENGTH_SHORT).show();
-        	
+
 //        	dialogoAbandono();
-        	
+
             return true;
         }
         return super.onKeyDown(keyCode, event);
@@ -540,80 +551,74 @@ public class FotoEvidencia extends Activity {
 
         Thread.setDefaultUncaughtExceptionHandler(new Crash(this));
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-        
-        try{
-        	
+
+        try {
+
 //        	 //para desactivar el wifi
 //            WifiManager wifiManager = (WifiManager) this.getSystemService(Context.WIFI_SERVICE); 
 ////            wifiManager.setWifiEnabled(true);
 //            wifiManager.setWifiEnabled(false);
-        	
-        	
-        	Nombre nom = new Nombre();
-			String nombreE = nom.nombreEncuesta();
-
-			GPSTracker gps = new GPSTracker(this);
-			latitude = gps.getLatitude();
-			longitude = gps.getLongitude();
-
-			String strLatitud = String.valueOf(latitude);
-			String strLongitud = String.valueOf(longitude);
-			
-			
-			if (latitude == 0.0) {
-				latitude = Double.valueOf(sacaLatitud());
-				
-			}
-
-			if (longitude == 0.0) {
-				longitude = Double.valueOf(sacaLongitud());
-				
-			}
 
 
-             String seccion=cachaSeccion();
-        
-        	 elMaximo = Integer.parseInt(sacaMaximo().toString());
+            Nombre nom = new Nombre();
+            String nombreE = nom.nombreEncuesta();
 
-             String diario= String.valueOf(elMaximo);
-        
-             nombreD = formattedDate3+"_"+sacaImei()+"_"+cachaNombre()+"_"+cachaConsecutivoDiario()+"_"+cachaCuantos()+".jpeg";
- 
-            
-       
-        
-        Log.i("Foto", "El Diario : "+diario);
-        
-        Log.i("Foto", "Cuantas fotos: "+cachaCuantos());
-        
-        Log.i("Foto", "Consecutivo diario: "+diario);
-        
-        Log.i("Foto", "NombreD: "+nombreD);
-        
-            
-       
-        
-        imagen=(ImageView)findViewById(R.id.imagen);
-        Texto=(TextView)findViewById(R.id.textViewVivienda);
-        
-        Texto.setText("Foto Documento");
+            GPSTracker gps = new GPSTracker(this);
+            latitude = gps.getLatitude();
+            longitude = gps.getLongitude();
 
-        la_foto = Environment.getExternalStorageDirectory() +"/Fotos/FotosCertificadoRegistro"+formattedDate3+"N"+"/"+nombreD.trim();
-        File fileF=new File(la_foto);
+            String strLatitud = String.valueOf(latitude);
+            String strLongitud = String.valueOf(longitude);
 
-        if(fileF.exists()){
-            Bitmap thumb = BitmapFactory.decodeFile(la_foto);
-           // thumb = Bitmap.createScaledBitmap(thumb, 600, 400, false);
-            imagen.setImageBitmap(thumb);
 
-        }else{
+            if (latitude == 0.0) {
+                latitude = Double.valueOf(sacaLatitud());
+
+            }
+
+            if (longitude == 0.0) {
+                longitude = Double.valueOf(sacaLongitud());
+
+            }
+
+
+            String seccion = cachaSeccion();
+
+            elMaximo = Integer.parseInt(sacaMaximo().toString());
+
+            String diario = String.valueOf(elMaximo);
+
+            nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + cachaCuantos() + ".jpeg";
+
+
+            Log.i("Foto", "El Diario : " + diario);
+
+            Log.i("Foto", "Cuantas fotos: " + cachaCuantos());
+
+            Log.i("Foto", "Consecutivo diario: " + diario);
+
+            Log.i("Foto", "NombreD: " + nombreD);
+
+
+            imagen = (ImageView) findViewById(R.id.imagen);
+            Texto = (TextView) findViewById(R.id.textViewVivienda);
+
+            Texto.setText("Foto Documento");
+
+            la_foto = Environment.getExternalStorageDirectory() + "/Fotos/FotosCertificadoRegistro" + formattedDate3 + "N" + "/" + nombreD.trim();
+            File fileF = new File(la_foto);
+
+            if (fileF.exists()) {
+                Bitmap thumb = BitmapFactory.decodeFile(la_foto);
+                // thumb = Bitmap.createScaledBitmap(thumb, 600, 400, false);
+                imagen.setImageBitmap(thumb);
+
+            } else {
 //			imagen2.setImageResource(R.drawable.morena_logo);
-        }
+            }
 
 
-
-
-        camara=(ImageButton)findViewById(R.id.camara);
+            camara = (ImageButton) findViewById(R.id.camara);
 
 //        camara.setOnClickListener(new OnClickListener(){
 //            @Override
@@ -652,82 +657,79 @@ public class FotoEvidencia extends Activity {
 //        });
 
 
+            Guarda = (Button) findViewById(R.id.guardar);
 
-        Guarda=(Button)findViewById(R.id.guardar);
-
-        //PARA VER SI ESTA O NO EST� CONECTADO
+            //PARA VER SI ESTA O NO EST� CONECTADO
 
 
 //            Toast.makeText(getBaseContext(),"Sin Conexion...!", Toast.LENGTH_LONG).show();
-            Guarda.setOnClickListener(new OnClickListener(){
+            Guarda.setOnClickListener(new OnClickListener() {
 
 
                 @Override
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
 
-                   if(imagen.getDrawable() != null){
+                    if (imagen.getDrawable() != null) {
                         Log.i("datos f", "Solo hay foto");
-                       
+
                         insertaFoto();
                         dialogo();
-                     
-                        
-                    }else {
+
+
+                    } else {
                         Toast.makeText(FotoEvidencia.this, "Debe Tomar Una Foto", Toast.LENGTH_LONG).show();
                         Log.i("datos f", "No hay Nada");
                     }
                 }
             });
-            
+
         } catch (Exception e) {
-			String stackTrace = Log.getStackTraceString(e);
-	          Log.i("encuestas","Error todo OnCreate"+ stackTrace);
-		}//////FIN CATCH ONCREATE/////////////////////////////
-        }
-    
+            String stackTrace = Log.getStackTraceString(e);
+            Log.i("encuestas", "Error todo OnCreate" + stackTrace);
+        }//////FIN CATCH ONCREATE/////////////////////////////
+    }
+
     class cambia extends AsyncTask<String, Void, String> {
 
-		ProgressDialog dialog;
+        ProgressDialog dialog;
 
-		protected void onPreExecute() {
-			super.onPreExecute();
+        protected void onPreExecute() {
+            super.onPreExecute();
 //			dialog = new ProgressDialog(FotoDocumento.this);
 //			dialog.setMessage("Enviando");
 //			dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 //			dialog.show();
-		}
+        }
 
-		@Override
-		protected String doInBackground(String... arg0) {
-			
-			//guardarArchivo();
-			return null;
-		}
+        @Override
+        protected String doInBackground(String... arg0) {
 
-		protected void onPostExecute(String result) {
-			super.onPostExecute(result);
+            //guardarArchivo();
+            return null;
+        }
+
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
 //			dialog.dismiss();
 
-		}
+        }
 
-	}
+    }
 
 
-	public void camara(View view){
+    public void camara(View view) {
 
         elMaximo = Integer.parseInt(sacaMaximo().toString());
 
-        String diario= String.valueOf(elMaximo);
+        String diario = String.valueOf(elMaximo);
 
-        if(diario.length()==1){
-            diario="00"+diario;
-        }else if(diario.length()==2){
-            diario="0"+diario;
-        }else{
+        if (diario.length() == 1) {
+            diario = "00" + diario;
+        } else if (diario.length() == 2) {
+            diario = "0" + diario;
+        } else {
         }
-
-
 
 
 //                String seccion = cachaSeccion();
@@ -737,7 +739,6 @@ public class FotoEvidencia extends Activity {
         nombreImagen = nombreD;
 
 
-
         if (!nombreImagen.trim().equalsIgnoreCase("")) {
             getCamara();
         } else
@@ -745,547 +746,558 @@ public class FotoEvidencia extends Activity {
                     .show();
 
     }
-    
-   
-    public void dialogoCierre(){
-    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    	builder.setMessage("Desea continuar Encuestando..?")
-    	        .setTitle("IMPORTANTE")
-    	        .setCancelable(false)
-    	        .setNegativeButton("SALIR",
-    	                new DialogInterface.OnClickListener() {
-    	                    public void onClick(DialogInterface dialog, int id) {
-    	                    	
-    	                    	
-    	                    	Intent i =new Intent(FotoEvidencia.this,Entrada.class);
-    	        				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-    	        				startActivity(i);
-    	        				System.exit(0); // metodo que se debe implementar
-    	                    }
-    	                })
-    	        .setPositiveButton("CONTINUAR",
-    	                new DialogInterface.OnClickListener() {
-    	                    public void onClick(DialogInterface dialog, int id) {
-    	                    	
-    	        				Intent i =new Intent(FotoEvidencia.this,MainActivity.class);
-    	        				i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-    	        				i.putExtra("Nombre", cachaNombre());
-    	        				i.putExtra("max","0");
-    	        				startActivity(i);
-    	        				System.exit(0); // metodo que se debe implementar
-    	                    }
-    	                });
-    	AlertDialog alert = builder.create();
-    	alert.show();
-    	
+
+
+    public void dialogoCierre() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Desea continuar Encuestando..?")
+                .setTitle("IMPORTANTE")
+                .setCancelable(false)
+                .setNegativeButton("SALIR",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+
+                                Intent i = new Intent(FotoEvidencia.this, Entrada.class);
+                                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                startActivity(i);
+                                System.exit(0); // metodo que se debe implementar
+                            }
+                        })
+                .setPositiveButton("CONTINUAR",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                Intent i = new Intent(FotoEvidencia.this, MainActivity.class);
+                                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                i.putExtra("Nombre", cachaNombre());
+                                i.putExtra("max", "0");
+                                startActivity(i);
+                                System.exit(0); // metodo que se debe implementar
+                            }
+                        });
+        AlertDialog alert = builder.create();
+        alert.show();
+
     }
-    
 
-    private void getCamara(){
-    	
-    	elMaximo = Integer.parseInt(sacaMaximo().toString());
+
+    private void getCamara() {
+
+        elMaximo = Integer.parseInt(sacaMaximo().toString());
         int numero = 0;
-        
-        if(cachaNumeracion()==null){
-        	numero=numero+1;
-        }else{
-        	numero=Integer.valueOf(cachaNumeracion()); 
-        }
-        
-        
 
-        String diario= String.valueOf(elMaximo);
-        String diario_control= String.valueOf(elMaximo);
-
-        if(diario.length()==1){
-            diario="00"+diario;
-        }else if(diario.length()==2){
-            diario="0"+diario;
-        }else {
-            diario=diario;
+        if (cachaNumeracion() == null) {
+            numero = numero + 1;
+        } else {
+            numero = Integer.valueOf(cachaNumeracion());
         }
-        
-            foto = Environment.getExternalStorageDirectory() +"/Fotos/FotosCertificadoRegistro"+formattedDate3+"N"+"/"+nombreD.trim()+".jpg";
 
-        
-          Uri output = Uri.fromFile(new File(foto));
-    		
-            Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-            intent.putExtra(MediaStore.EXTRA_OUTPUT, output);
-            startActivityForResult(intent, 0);
-            
-            }
-            
-        
-        @Override
-        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        	if (requestCode == 0 && resultCode == Activity.RESULT_OK) {
-                setPic();
-            }
+
+        String diario = String.valueOf(elMaximo);
+        String diario_control = String.valueOf(elMaximo);
+
+        if (diario.length() == 1) {
+            diario = "00" + diario;
+        } else if (diario.length() == 2) {
+            diario = "0" + diario;
+        } else {
+            diario = diario;
         }
-        
-        private void setPic() {
-            // Get the dimensions of the View
+
+        foto = Environment.getExternalStorageDirectory() + "/Fotos/FotosCertificadoRegistro" + formattedDate3 + "N" + "/" + nombreD.trim();
+
+
+        Uri output = Uri.fromFile(new File(foto));
+
+        /*Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, output);
+        startActivityForResult(intent, 0);*/
+
+        Intent i = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        if (hasImageCaptureBug()) {
+            i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File("/sdcard/tmp")));
+        } else {
+            i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        }
+        startActivityForResult(i, 0);
+
+    }
+
+    public boolean hasImageCaptureBug() {
+
+        // list of known devices that have the bug
+        ArrayList<String> devices = new ArrayList<String>();
+        devices.add("android-devphone1/dream_devphone/dream");
+        devices.add("generic/sdk/generic");
+        devices.add("vodafone/vfpioneer/sapphire");
+        devices.add("tmobile/kila/dream");
+        devices.add("verizon/voles/sholes");
+        devices.add("google_ion/google_ion/sapphire");
+
+        return devices.contains(android.os.Build.BRAND + "/" + android.os.Build.PRODUCT + "/"
+                + android.os.Build.DEVICE);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 0 && resultCode == Activity.RESULT_OK) {
+            setPic();
+        }
+    }
+
+    private void setPic() {
+        // Get the dimensions of the View
 //            int targetW = imagen.getWidth()/4;
 //            int targetH = imagen.getHeight()/4;
-            
-            int targetW = imagen.getWidth();
-            int targetH = imagen.getHeight();
-         
-            // Get the dimensions of the bitmap
-            BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-            bmOptions.inJustDecodeBounds = true;
-            BitmapFactory.decodeFile(foto, bmOptions);
-            int photoW = bmOptions.outWidth;
-            int photoH = bmOptions.outHeight;
-         
-            // Determine how much to scale down the image
-            int scaleFactor = Math.min(photoW/targetW, photoH/targetH);
-         
-            // Decode the image file into a Bitmap sized to fill the View
-            bmOptions.inJustDecodeBounds = false;
-            bmOptions.inSampleSize = scaleFactor;
-            bmOptions.inPurgeable = true;
-         
-            Bitmap bitmap = BitmapFactory.decodeFile(foto, bmOptions);
-            imagen.setImageBitmap(bitmap);
+
+        int targetW = imagen.getWidth();
+        int targetH = imagen.getHeight();
+
+        // Get the dimensions of the bitmap
+        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+        bmOptions.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(foto, bmOptions);
+        int photoW = bmOptions.outWidth;
+        int photoH = bmOptions.outHeight;
+
+        // Determine how much to scale down the image
+        int scaleFactor = Math.min(photoW / targetW, photoH / targetH);
+
+        // Decode the image file into a Bitmap sized to fill the View
+        bmOptions.inJustDecodeBounds = false;
+        bmOptions.inSampleSize = scaleFactor;
+        bmOptions.inPurgeable = true;
+
+        Bitmap bitmap = BitmapFactory.decodeFile(foto, bmOptions);
+        imagen.setImageBitmap(bitmap);
+    }
+
+    private String sacaMaximo() {
+
+        Set<String> set = new HashSet<String>();
+
+        final String F = "File dbfile";
+
+        // Abrimos la base de datos 'DBUsuarios' en modo escritura
+        String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreE + "_"
+                + sacaImei() + "";
+        usdbh = new UsuariosSQLiteHelper(this, "F", null, 1, DATABASE_NAME);
+
+        db = usdbh.getReadableDatabase();
+
+        String selectQuery = "SELECT count(*) FROM registros where fecha='" + formattedDate3 + "'";
+        Log.i("Foto", "==========> Query sacaMaximo: " + selectQuery);
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+
+                maximo = cursor.getString(0);
+
+            } while (cursor.moveToNext());
         }
 
-        private String sacaMaximo() {
-
-    		Set<String> set = new HashSet<String>();
-
-    		final String F = "File dbfile";
-
-    		// Abrimos la base de datos 'DBUsuarios' en modo escritura
-    		String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreE + "_"
-    				+ sacaImei() + "";
-    		usdbh = new UsuariosSQLiteHelper(this, "F", null, 1, DATABASE_NAME);
-
-    		db = usdbh.getReadableDatabase();
-
-    		String selectQuery = "SELECT count(*) FROM registros where fecha='" + formattedDate3 + "'";
-    		Log.i("Foto", "==========> Query sacaMaximo: "+ selectQuery);
-
-    		Cursor cursor = db.rawQuery(selectQuery, null);
-
-    		if (cursor.moveToFirst()) {
-    			do {
-
-    				maximo = cursor.getString(0);
-
-    			} while (cursor.moveToNext());
-    		}
-
-    		cursor.close();
+        cursor.close();
 //    		db.close();
 
-    		return maximo;
-    	} 
-        
-        private String sacaConsecutivo() {
+        return maximo;
+    }
 
-    		Set<String> set = new HashSet<String>();
+    private String sacaConsecutivo() {
 
-    		final String F = "File dbfile";
+        Set<String> set = new HashSet<String>();
 
-    		// Abrimos la base de datos 'DBUsuarios' en modo escritura
-    		String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreE + "_"
-    				+ sacaImei() + "";
-    		usdbh = new UsuariosSQLiteHelper(this, "F", null, 1, DATABASE_NAME);
+        final String F = "File dbfile";
 
-    		db = usdbh.getReadableDatabase();
+        // Abrimos la base de datos 'DBUsuarios' en modo escritura
+        String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/Mis_archivos/" + nombreE + "_"
+                + sacaImei() + "";
+        usdbh = new UsuariosSQLiteHelper(this, "F", null, 1, DATABASE_NAME);
 
-    		String selectQuery = "SELECT count(*) FROM registros order by id desc limit 1";
+        db = usdbh.getReadableDatabase();
 
-    		Cursor cursor = db.rawQuery(selectQuery, null);
+        String selectQuery = "SELECT count(*) FROM registros order by id desc limit 1";
 
-    		if (cursor.moveToFirst()) {
-    			do {
+        Cursor cursor = db.rawQuery(selectQuery, null);
 
-    				maximo = cursor.getString(0);
+        if (cursor.moveToFirst()) {
+            do {
 
-    			} while (cursor.moveToNext());
-    		}
+                maximo = cursor.getString(0);
 
-    		cursor.close();
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
 //    		db.close();
 
-    		return maximo;
-    	} 
+        return maximo;
+    }
 
-        
-        //////////   UPLOAD DE FOTOS ////////
-        
-		//Enviar Fotos
-		
 
-		public int uploadFotos(String sourceFileUri,String fech) {
+    //////////   UPLOAD DE FOTOS ////////
 
-		File sdCard;
-		sdCard = Environment.getExternalStorageDirectory();
-		//final String pathFotos = sdCard.getAbsolutePath() + "/"+ nombreEncuesta+"-Audio"+fech;
-		final String pathFotos = sdCard.getAbsolutePath() +"/Fotos/FotosCertificadoRegistro"+formattedDate3+"N";
+    //Enviar Fotos
 
-		String fileName = sourceFileUri;
 
-		HttpURLConnection conn = null;
-		DataOutputStream dos = null;  
-		String lineEnd = "\r\n";
-		String twoHyphens = "--";
-		String boundary = "*****";
-		int bytesRead, bytesAvailable, bufferSize;
-		byte[] buffer;
-		int maxBufferSize = 1 * 1024 * 1024; 
-		File sourceFile = new File(sourceFileUri); 
-		 
-		if (!sourceFile.isFile()) {
-		     
+    public int uploadFotos(String sourceFileUri, String fech) {
+
+        File sdCard;
+        sdCard = Environment.getExternalStorageDirectory();
+        //final String pathFotos = sdCard.getAbsolutePath() + "/"+ nombreEncuesta+"-Audio"+fech;
+        final String pathFotos = sdCard.getAbsolutePath() + "/Fotos/FotosCertificadoRegistro" + formattedDate3 + "N";
+
+        String fileName = sourceFileUri;
+
+        HttpURLConnection conn = null;
+        DataOutputStream dos = null;
+        String lineEnd = "\r\n";
+        String twoHyphens = "--";
+        String boundary = "*****";
+        int bytesRead, bytesAvailable, bufferSize;
+        byte[] buffer;
+        int maxBufferSize = 1 * 1024 * 1024;
+        File sourceFile = new File(sourceFileUri);
+
+        if (!sourceFile.isFile()) {
+
 //		     dialog.dismiss(); 
-		     Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + pathFotos + "" + "/" + "20161124_002_359083065132816_1.jpg");
-		     runOnUiThread(new Runnable() {
-		         public void run() {
+            Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + pathFotos + "" + "/" + "20161124_002_359083065132816_1.jpg");
+            runOnUiThread(new Runnable() {
+                public void run() {
 
-		         }
-		     }); 
-		      
-		     return 0;
-		  
-		}
-		else
-		{
-		     try { 
-		           // open a URL connection to the Servlet
-		         FileInputStream fileInputStream = new FileInputStream(sourceFile);
-		         URL url = new URL(upLoadServerUriFotos);
-		         // Open a HTTP  connection to  the URL
-		         conn = (HttpURLConnection) url.openConnection(); 
-		         conn.setDoInput(true); // Allow Inputs
-		         conn.setDoOutput(true); // Allow Outputs
-		         conn.setUseCaches(false); // Don't use a Cached Copy
-		         conn.setRequestMethod("POST");
-		         conn.setRequestProperty("Connection", "Keep-Alive");
-		         conn.setRequestProperty("ENCTYPE", "multipart/form-data");
-		         conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
-		         conn.setRequestProperty("uploaded_file", fileName); 
-		          
-		         dos = new DataOutputStream(conn.getOutputStream());
+                }
+            });
 
-		         dos.writeBytes(twoHyphens + boundary + lineEnd); 
-		         dos.writeBytes("Content-Disposition: form-data; name=\"uploaded_file\";filename=\"" + fileName + "\""
-							+ lineEnd);
-		          
-		         dos.writeBytes(lineEnd);
+            return 0;
 
-		         // create a buffer of  maximum size
-		         bytesAvailable = fileInputStream.available(); 
+        } else {
+            try {
+                // open a URL connection to the Servlet
+                FileInputStream fileInputStream = new FileInputStream(sourceFile);
+                URL url = new URL(upLoadServerUriFotos);
+                // Open a HTTP  connection to  the URL
+                conn = (HttpURLConnection) url.openConnection();
+                conn.setDoInput(true); // Allow Inputs
+                conn.setDoOutput(true); // Allow Outputs
+                conn.setUseCaches(false); // Don't use a Cached Copy
+                conn.setRequestMethod("POST");
+                conn.setRequestProperty("Connection", "Keep-Alive");
+                conn.setRequestProperty("ENCTYPE", "multipart/form-data");
+                conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
+                conn.setRequestProperty("uploaded_file", fileName);
 
-		         bufferSize = Math.min(bytesAvailable, maxBufferSize);
-		         buffer = new byte[bufferSize];
-		         // read file and write it into form...
-		         bytesRead = fileInputStream.read(buffer, 0, bufferSize);  
-		         while (bytesRead > 0) {
-		           dos.write(buffer, 0, bufferSize);
-		           bytesAvailable = fileInputStream.available();
-		           bufferSize = Math.min(bytesAvailable, maxBufferSize);
-		           bytesRead = fileInputStream.read(buffer, 0, bufferSize);   
-		          }
-		         // send multipart form data necesssary after file data...
-		         dos.writeBytes(lineEnd);
-		         dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
-		         // Responses from the server (code and message)
-		         serverResponseCode = conn.getResponseCode();
-		         String serverResponseMessage = conn.getResponseMessage();
+                dos = new DataOutputStream(conn.getOutputStream());
 
-		         Log.i("Foto", "HTTP Response fotos is : "+ serverResponseMessage + ": " + serverResponseCode);
-		          
-		         if(serverResponseCode == 200){
-		              
-		             runOnUiThread(new Runnable() {
-		                  public void run() {
-		                       
-		                      String msg = "File Upload Completed.\n\n See uploaded file here : \n\n"
-		                                    +" http://www.androidexample.com/media/uploads/"
-		                                    +"20161124_002_359083065132816_1.jpg";
+                dos.writeBytes(twoHyphens + boundary + lineEnd);
+                dos.writeBytes("Content-Disposition: form-data; name=\"uploaded_file\";filename=\"" + fileName + "\""
+                        + lineEnd);
+
+                dos.writeBytes(lineEnd);
+
+                // create a buffer of  maximum size
+                bytesAvailable = fileInputStream.available();
+
+                bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                buffer = new byte[bufferSize];
+                // read file and write it into form...
+                bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+                while (bytesRead > 0) {
+                    dos.write(buffer, 0, bufferSize);
+                    bytesAvailable = fileInputStream.available();
+                    bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                    bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+                }
+                // send multipart form data necesssary after file data...
+                dos.writeBytes(lineEnd);
+                dos.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
+                // Responses from the server (code and message)
+                serverResponseCode = conn.getResponseCode();
+                String serverResponseMessage = conn.getResponseMessage();
+
+                Log.i("Foto", "HTTP Response fotos is : " + serverResponseMessage + ": " + serverResponseCode);
+
+                if (serverResponseCode == 200) {
+
+                    runOnUiThread(new Runnable() {
+                        public void run() {
+
+                            String msg = "File Upload Completed.\n\n See uploaded file here : \n\n"
+                                    + " http://www.androidexample.com/media/uploads/"
+                                    + "20161124_002_359083065132816_1.jpg";
 
 //		                      Toast.makeText(Entrada.this, "File Upload Complete."+msg,Toast.LENGTH_SHORT).show();
-		                  }
-		              });                
-		         }    
-		          
-		         //close the streams //
-		         fileInputStream.close();
-		         dos.flush();
-		         dos.close();
-		           
-		    } catch (MalformedURLException ex) {
-		         
+                        }
+                    });
+                }
+
+                //close the streams //
+                fileInputStream.close();
+                dos.flush();
+                dos.close();
+
+            } catch (MalformedURLException ex) {
+
 //		        dialog.dismiss();  
-		        ex.printStackTrace();
-		         
-		        runOnUiThread(new Runnable() {
-		            public void run() {
+                ex.printStackTrace();
+
+                runOnUiThread(new Runnable() {
+                    public void run() {
 //		                messageText.setText("MalformedURLException Exception : check script url.");
 //		                Toast.makeText(CalendarViewFotos.this, "MalformedURLException", 
 //		                                                    Toast.LENGTH_SHORT).show();
-		            }
-		        });
-		         
-		        Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server "+ "error: " + ex.getMessage());
+                    }
+                });
+
+                Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server " + "error: " + ex.getMessage());
 
 //		        Log.e("Upload file to server", "error: " + ex.getMessage(), ex);  
-		    } catch (Exception e) {
-		         
+            } catch (Exception e) {
+
 //		        dialog.dismiss();  
-		        e.printStackTrace();
-		         
-		        runOnUiThread(new Runnable() {
-		            public void run() {
+                e.printStackTrace();
+
+                runOnUiThread(new Runnable() {
+                    public void run() {
 //		                messageText.setText("Error de Internet");
 //		                Toast.makeText(CalendarViewFotos.this, "Error de Internet", 
 //		                        Toast.LENGTH_SHORT).show();
-		            }
-		        });
-		        Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server Exception "+ "Exception : "+ e.getMessage());
+                    }
+                });
+                Log.i(TAG, " =====> archivo:  El Archivo no existe... :" + "Upload file to server Exception " + "Exception : " + e.getMessage());
 
 //		        Log.e("Upload file to server Exception", "Exception : "
 //		                                         + e.getMessage(), e);  
-		    }
-		    return serverResponseCode; 
-		     
-		 } // End else block 
-		} 
+            }
+            return serverResponseCode;
 
-		class UpdateFotos extends AsyncTask<String, Float, String> {
+        } // End else block
+    }
 
-			protected void onPreExecute() {
-				super.onPreExecute();
-				Log.i("Foto", "CarlosQ:  Entra ====>");
-			}
-			
-			
-			@Override
-			protected String doInBackground(String... params) {
+    class UpdateFotos extends AsyncTask<String, Float, String> {
 
-				
-				final String date2 = formattedDate3;
-				 File sdCard;
-					sdCard = Environment.getExternalStorageDirectory();
-					final String pathFotos = sdCard.getAbsolutePath() +"/Fotos/FotosCertificadoRegistro"+date2+"N";
-					final String pathFotosN = sdCard.getAbsolutePath() +"/Fotos/FotosCertificadoRegistro"+date2+"N/";
-					final String pathFotosF = sdCard.getAbsolutePath() +"/Fotos/FotosCertificadoRegistro"+date2+ "/";;
-		        
-			        String sDirectorio = pathFotos;
-					final File f = new File(sDirectorio);
-					Log.i(null,"lista"+pathFotos);
-					final String customURL = "https://opinion.cdmx.gob.mx/fotografias/censo_pueblos/";
+        protected void onPreExecute() {
+            super.onPreExecute();
+            Log.i("Foto", "CarlosQ:  Entra ====>");
+        }
 
-				Log.i("Foto", "CarlosQ =======> lista de fotos: " + pathFotos);
-				Log.i("Foto", "CarlosQ =======> pathFotosN: " + pathFotosN);
-				Log.i("Foto", "CarlosQ =======> pathFotosF: " + pathFotosF);
-				Log.i("Foto", "CarlosQ =======> URL: " + customURL);
 
-				File F = new File(pathFotos);
+        @Override
+        protected String doInBackground(String... params) {
 
-				try {
-					
-					if (F.exists()) {
-						
-					File[] ficheros = F.listFiles();
-					
-					for (int i = 0; i <ficheros.length; i++) {
-	                    //Simulamos cierto retraso
-	                    try {Thread.sleep(500); }
-	                    catch (InterruptedException e) {}
-	 
-	                    publishProgress(i/(float)(ficheros.length)); //Actualizamos los valores
-	                }
-	 
 
-					 String seccion=cachaSeccion();
-				        
-		        	 elMaximo = Integer.parseInt(sacaMaximo().toString());
+            final String date2 = formattedDate3;
+            File sdCard;
+            sdCard = Environment.getExternalStorageDirectory();
+            final String pathFotos = sdCard.getAbsolutePath() + "/Fotos/FotosCertificadoRegistro" + date2 + "N";
+            final String pathFotosN = sdCard.getAbsolutePath() + "/Fotos/FotosCertificadoRegistro" + date2 + "N/";
+            final String pathFotosF = sdCard.getAbsolutePath() + "/Fotos/FotosCertificadoRegistro" + date2 + "/";
+            ;
 
-		             String diario= String.valueOf(elMaximo);
-		             
-		             
-		             Nombre nom = new Nombre();
-		 			String nombreE = nom.nombreEncuesta();
+            String sDirectorio = pathFotos;
+            final File f = new File(sDirectorio);
+            Log.i(null, "lista" + pathFotos);
+            final String customURL = "https://opinion.cdmx.gob.mx/fotografias/censo_pueblos/";
 
-		 			GPSTracker gps = new GPSTracker(FotoEvidencia.this);
-		 			latitude = gps.getLatitude();
-		 			longitude = gps.getLongitude();
+            Log.i("Foto", "CarlosQ =======> lista de fotos: " + pathFotos);
+            Log.i("Foto", "CarlosQ =======> pathFotosN: " + pathFotosN);
+            Log.i("Foto", "CarlosQ =======> pathFotosF: " + pathFotosF);
+            Log.i("Foto", "CarlosQ =======> URL: " + customURL);
 
-		 			String strLatitud = String.valueOf(latitude);
-		 			String strLongitud = String.valueOf(longitude);
-		 			
-		 			
-		 			if (latitude == 0.0) {
-		 				latitude = Double.valueOf(sacaLatitud());
-		 				
-		 			}
+            File F = new File(pathFotos);
 
-		 			if (longitude == 0.0) {
-		 				longitude = Double.valueOf(sacaLongitud());
-		 				
-		 			}
+            try {
 
-		 			String strLatitud2 = String.valueOf(latitude);
-		 			String strLongitud2 = String.valueOf(longitude);
-		         	
-		         	 
-		            nombreD = diario+"_"+seccion+"_"+cachaNombre()+"_"+sacaImei()+"_"+date+"_"+strLatitud2+"_"+strLongitud2;
-		  
-		             
-		             
-		             
-		             
-		        
-		             nombreD = diario+"_"+seccion+"_"+cachaNombre()+"_"+sacaImei()+"_"+date;
-					
-						String[] s = new String[ficheros.length];
-						String[] t = new String[ficheros.length];
-						for (int x = 0; x < ficheros.length; x++) {
-							Log.i("Foto", "CarlosQ ===========> lista: " + ficheros[x].getName());
-							s[x] = pathFotos + "/" + ficheros[x].getName();
+                if (F.exists()) {
+
+                    File[] ficheros = F.listFiles();
+
+                    for (int i = 0; i < ficheros.length; i++) {
+                        //Simulamos cierto retraso
+                        try {
+                            Thread.sleep(500);
+                        } catch (InterruptedException e) {
+                        }
+
+                        publishProgress(i / (float) (ficheros.length)); //Actualizamos los valores
+                    }
+
+
+                    String seccion = cachaSeccion();
+
+                    elMaximo = Integer.parseInt(sacaMaximo().toString());
+
+                    String diario = String.valueOf(elMaximo);
+
+
+                    Nombre nom = new Nombre();
+                    String nombreE = nom.nombreEncuesta();
+
+                    GPSTracker gps = new GPSTracker(FotoEvidencia.this);
+                    latitude = gps.getLatitude();
+                    longitude = gps.getLongitude();
+
+                    String strLatitud = String.valueOf(latitude);
+                    String strLongitud = String.valueOf(longitude);
+
+
+                    if (latitude == 0.0) {
+                        latitude = Double.valueOf(sacaLatitud());
+
+                    }
+
+                    if (longitude == 0.0) {
+                        longitude = Double.valueOf(sacaLongitud());
+
+                    }
+
+                    String strLatitud2 = String.valueOf(latitude);
+                    String strLongitud2 = String.valueOf(longitude);
+
+
+                    nombreD = diario + "_" + seccion + "_" + cachaNombre() + "_" + sacaImei() + "_" + date + "_" + strLatitud2 + "_" + strLongitud2;
+
+
+                    nombreD = diario + "_" + seccion + "_" + cachaNombre() + "_" + sacaImei() + "_" + date;
+
+                    String[] s = new String[ficheros.length];
+                    String[] t = new String[ficheros.length];
+                    for (int x = 0; x < ficheros.length; x++) {
+                        Log.i("Foto", "CarlosQ ===========> lista: " + ficheros[x].getName());
+                        s[x] = pathFotos + "/" + ficheros[x].getName();
 //							t[x] = ficheros[x].getName();
-							// solo la foto
-							t[x] = nombreD.trim()+".jpg";
-							
-						//	uploadFotos(s[x],date2);
-							 URL u = new URL (customURL+t[x]);
-     						HttpURLConnection huc =  ( HttpURLConnection )  u.openConnection (); 
-     						huc.setRequestMethod ("GET");  //OR  huc.setRequestMethod ("HEAD"); 
-     						huc.connect () ; 
-     						huc.getResponseCode();
-     						Log.i("Foto", "CarlosQ: =====================> Respuesta del servidor " + huc.getResponseCode());
-     						if(huc.getResponseCode()==200){
-     							moveFile(pathFotosN, t[x], pathFotosF);
-     							Log.i("Foto", "CarlosQ: ================>  Foto en el servidor y Movida a otra carpeta ====>" + t[x] );
-     						}else if(huc.getResponseCode()==404){
-     							uploadFotos(s[x],date2);
-     							Log.i("Foto", "CarlosQ: =================> Foto Enviada y a�n sin Moverse ====>" + t[x] );
-     						}
-						}
-						// first parameter is d files second parameter is zip file name
-						
-					} else {
-						Log.i(null, "lista 2: " + "No existe el directorio");
-					}
-					// first parameter is d files second parameter is zip file name
+                        // solo la foto
+                        t[x] = nombreD.trim() + ".jpg";
 
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					Log.i(null, "error zip: " + "_" + e.getMessage());
-				}
+                        //	uploadFotos(s[x],date2);
+                        URL u = new URL(customURL + t[x]);
+                        HttpURLConnection huc = (HttpURLConnection) u.openConnection();
+                        huc.setRequestMethod("GET");  //OR  huc.setRequestMethod ("HEAD");
+                        huc.connect();
+                        huc.getResponseCode();
+                        Log.i("Foto", "CarlosQ: =====================> Respuesta del servidor " + huc.getResponseCode());
+                        if (huc.getResponseCode() == 200) {
+                            moveFile(pathFotosN, t[x], pathFotosF);
+                            Log.i("Foto", "CarlosQ: ================>  Foto en el servidor y Movida a otra carpeta ====>" + t[x]);
+                        } else if (huc.getResponseCode() == 404) {
+                            uploadFotos(s[x], date2);
+                            Log.i("Foto", "CarlosQ: =================> Foto Enviada y a�n sin Moverse ====>" + t[x]);
+                        }
+                    }
+                    // first parameter is d files second parameter is zip file name
 
-				
+                } else {
+                    Log.i(null, "lista 2: " + "No existe el directorio");
+                }
+                // first parameter is d files second parameter is zip file name
 
-				return date2;
-			}
-			
-			
-			protected void onProgressUpdate (Float... valores) {
-	              int p = Math.round(100*valores[0]);
-
-	          }
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                Log.i(null, "error zip: " + "_" + e.getMessage());
+            }
 
 
+            return date2;
+        }
 
-			protected void onPostExecute(String date2) {
-				super.onPostExecute(date2);
 
-		}
+        protected void onProgressUpdate(Float... valores) {
+            int p = Math.round(100 * valores[0]);
 
-		}
+        }
 
-		private void moveFile(String inputPath, String inputFile, String outputPath) {
 
-InputStream in = null;
-OutputStream out = null;
-try {
+        protected void onPostExecute(String date2) {
+            super.onPostExecute(date2);
 
-    //create output directory if it doesn't exist
-    File dir = new File (outputPath); 
-    if (!dir.exists())
-    {
-        dir.mkdirs();
+        }
+
+    }
+
+    private void moveFile(String inputPath, String inputFile, String outputPath) {
+
+        InputStream in = null;
+        OutputStream out = null;
+        try {
+
+            //create output directory if it doesn't exist
+            File dir = new File(outputPath);
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
+
+
+            in = new FileInputStream(inputPath + inputFile);
+            out = new FileOutputStream(outputPath + inputFile);
+
+            byte[] buffer = new byte[1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+            in.close();
+            in = null;
+
+            // write the output file
+            out.flush();
+            out.close();
+            out = null;
+
+            // delete the original file
+            new File(inputPath + inputFile).delete();
+
+
+        } catch (FileNotFoundException fnfe1) {
+            Log.i(null, "Archivos  tag" + fnfe1.getMessage());
+        } catch (Exception e) {
+            Log.i(null, "Archivos  tag" + e.getMessage());
+        }
+
     }
 
 
-    in = new FileInputStream(inputPath + inputFile);        
-    out = new FileOutputStream(outputPath + inputFile);
+    private String sacaLatitud() {
+        Set<String> set = new HashSet<String>();
+        String acceso = null;
+        final String F = "File dbfile";
+        // Abrimos la base de datos 'DBUsuarios' en modo escritura
+        usdbh3 = new UsuariosSQLiteHelper3(this);
+        db3 = usdbh3.getReadableDatabase();
+        String selectQuery = "select latitud from ubicacion order by id desc limit 1";
+        Cursor cursor = db3.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                acceso = cursor.getString(0);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        // db.close();
 
-    byte[] buffer = new byte[1024];
-    int read;
-    while ((read = in.read(buffer)) != -1) {
-        out.write(buffer, 0, read);
+        return acceso;
     }
-    in.close();
-    in = null;
 
-        // write the output file
-        out.flush();
-    out.close();
-    out = null;
+    private String sacaLongitud() {
+        Set<String> set = new HashSet<String>();
+        String acceso = null;
+        final String F = "File dbfile";
+        // Abrimos la base de datos 'DBUsuarios' en modo escritura
+        usdbh3 = new UsuariosSQLiteHelper3(this);
+        db3 = usdbh3.getReadableDatabase();
+        String selectQuery = "select longitud from ubicacion order by id desc limit 1";
+        Cursor cursor = db3.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                acceso = cursor.getString(0);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        // db.close();
 
-    // delete the original file
-    new File(inputPath + inputFile).delete();  
-
-
-} 
-
-     catch (FileNotFoundException fnfe1) {
-    Log.i(null,"Archivos  tag"+ fnfe1.getMessage());
-}
-      catch (Exception e) {
-    	  Log.i(null,"Archivos  tag"+ e.getMessage());
-}
-
-}
-
-		
-		private String sacaLatitud() {
-			Set<String> set = new HashSet<String>();
-			String acceso = null;
-			final String F = "File dbfile";
-			// Abrimos la base de datos 'DBUsuarios' en modo escritura
-			usdbh3 = new UsuariosSQLiteHelper3(this);
-			db3 = usdbh3.getReadableDatabase();
-			String selectQuery = "select latitud from ubicacion order by id desc limit 1";
-			Cursor cursor = db3.rawQuery(selectQuery, null);
-			if (cursor.moveToFirst()) {
-				do {
-					acceso = cursor.getString(0);
-				} while (cursor.moveToNext());
-			}
-			cursor.close();
-			// db.close();
-
-			return acceso;
-		}
-
-		private String sacaLongitud() {
-			Set<String> set = new HashSet<String>();
-			String acceso = null;
-			final String F = "File dbfile";
-			// Abrimos la base de datos 'DBUsuarios' en modo escritura
-			usdbh3 = new UsuariosSQLiteHelper3(this);
-			db3 = usdbh3.getReadableDatabase();
-			String selectQuery = "select longitud from ubicacion order by id desc limit 1";
-			Cursor cursor = db3.rawQuery(selectQuery, null);
-			if (cursor.moveToFirst()) {
-				do {
-					acceso = cursor.getString(0);
-				} while (cursor.moveToNext());
-			}
-			cursor.close();
-			// db.close();
-
-			return acceso;
-		}
-
-	
+        return acceso;
+    }
 
 
 }
