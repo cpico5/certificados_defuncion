@@ -48,6 +48,7 @@
                         android:layout_marginTop="30dp"
                         android:ems="10"
                         android:hint="Nombres"
+                        android:textAllCaps="true"
                         android:inputType="text"
                         android:textSize="16sp" />
 
