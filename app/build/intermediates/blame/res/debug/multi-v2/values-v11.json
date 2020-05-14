@@ -1,29 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sagre\\.gradle\\caches\\transforms-2\\files-2.1\\c49a55677fe0ef69fede8d8e419a90cc\\res\\values-v11\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "172",
-                        "endLines": "5",
-                        "endColumns": "8",
-                        "endOffsets": "293"
-                    },
-                    "to": {
-                        "startLines": "5",
-                        "startColumns": "4",
-                        "startOffsets": "192",
-                        "endLines": "6",
-                        "endColumns": "8",
-                        "endOffsets": "313"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\src\\main\\res\\values-v11\\styles.xml",
+                    "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\values-v11\\styles.xml",
                     "from": {
                         "startLines": "6",
                         "startColumns": "4",
@@ -39,6 +20,25 @@
                         "endLines": "4",
                         "endColumns": "12",
                         "endOffsets": "187"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\2aa5a1e7b70345bbeb4820fd7b539439\\res\\values-v11\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "172",
+                        "endLines": "5",
+                        "endColumns": "8",
+                        "endOffsets": "293"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "192",
+                        "endLines": "6",
+                        "endColumns": "8",
+                        "endOffsets": "313"
                     }
                 }
             ]

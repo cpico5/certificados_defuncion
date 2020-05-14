@@ -573,12 +573,20 @@ public class FotoEvidencia extends Activity {
 
 
             if (latitude == 0.0) {
-                latitude = Double.valueOf(sacaLatitud());
+                if (sacaLatitud() == null) {
+                    latitude = 0.0;
+                } else {
+                    latitude = Double.valueOf(sacaLatitud());
+                }
 
             }
 
             if (longitude == 0.0) {
-                longitude = Double.valueOf(sacaLongitud());
+                if (sacaLongitud() == null) {
+                    longitude = 0.0;
+                } else {
+                    longitude = Double.valueOf(sacaLongitud());
+                }
 
             }
 

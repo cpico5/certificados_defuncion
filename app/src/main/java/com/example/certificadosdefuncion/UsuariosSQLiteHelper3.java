@@ -16,7 +16,7 @@ public class UsuariosSQLiteHelper3 extends SQLiteOpenHelper {
 
 
     private static final String DATABASE_NAME = Environment.getExternalStorageDirectory() + "/loc/ubicacion_ZJvI7PooUhZogIarOp8v";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
     public UsuariosSQLiteHelper3(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

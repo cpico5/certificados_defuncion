@@ -26,6 +26,7 @@ import com.loopj.android.http.MySSLSocketFactory;
 import com.loopj.android.http.RequestHandle;
 import com.loopj.android.http.RequestParams;
 
+import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
@@ -35,6 +36,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Address;
@@ -45,10 +47,13 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -77,11 +82,11 @@ public class Entrada extends Activity {
     double latitude;
     double longitude;
 
-	private Utils utils = new Utils();
-	private DaoManager daoManager;
-	private View mProgressView;
-	private View mLoginFormView;
-	private Usuario usuario;
+    private Utils utils = new Utils();
+    private DaoManager daoManager;
+    private View mProgressView;
+    private View mLoginFormView;
+    private Usuario usuario;
 
 
     Nombre nom = new Nombre();
@@ -150,6 +155,10 @@ public class Entrada extends Activity {
 
     public String sacaChip() {
         TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+            System.out.println("Mi N�mero: " + szImei);
+        }
         String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
         System.out.println("Mi N�mero: " + szImei);
 
@@ -164,6 +173,10 @@ public class Entrada extends Activity {
 
     public String sacaImei() {
         TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+            System.out.println("Mi N�mero: " + szImei);
+        }
         String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
         System.out.println("Mi N�mero: " + szImei);
 
@@ -265,6 +278,27 @@ public class Entrada extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        if (Build.VERSION.SDK_INT >= 23) {
+            ActivityCompat.requestPermissions(Entrada.this,
+                    new String[]{Manifest.permission.CAMERA,
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE ,
+                            Manifest.permission.ACCESS_COARSE_LOCATION,
+                            Manifest.permission.READ_PHONE_STATE,
+                            Manifest.permission.READ_EXTERNAL_STORAGE,
+                            Manifest.permission.CAMERA,
+                            Manifest.permission.ACCESS_FINE_LOCATION,
+                            Manifest.permission.INTERNET,
+                            Manifest.permission.ACCESS_NETWORK_STATE,
+                            Manifest.permission.READ_PHONE_STATE,
+                            Manifest.permission.RECORD_AUDIO,
+                            Manifest.permission.LOCATION_HARDWARE,
+                            Manifest.permission.SYSTEM_ALERT_WINDOW,
+                            Manifest.permission.ACCESS_WIFI_STATE},
+                    1);
+        }
         setContentView(R.layout.entrada);
         Thread.setDefaultUncaughtExceptionHandler(new Crash(this));
 
@@ -296,7 +330,12 @@ public class Entrada extends Activity {
         longitude = gps.getLongitude();
 
         if (latitude == 0.0) {
-            latitude = Double.valueOf(sacaLatitud());
+
+            if (sacaLatitud() == null) {
+                latitude = 0.0;
+            } else {
+                latitude = Double.valueOf(sacaLatitud());
+            }
         }
 
         Log.i(TAG, " =====> la latitud: " + latitude);
