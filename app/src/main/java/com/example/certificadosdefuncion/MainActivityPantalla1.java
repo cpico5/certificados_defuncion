@@ -82,6 +82,7 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 import static com.example.certificadosdefuncion.Nombre.ID_CERTIFICADO;
+import static com.example.certificadosdefuncion.Nombre.TIPO;
 import static com.example.certificadosdefuncion.Nombre.USUARIO;
 import static com.example.certificadosdefuncion.Nombre.customURL;
 
@@ -451,6 +452,7 @@ public class MainActivityPantalla1 extends Activity {
 						i.putExtra("folio", editPregunta3.getText().toString());
 						i.putExtra(USUARIO,usuario);
 						i.putExtra(ID_CERTIFICADO,idCertificado);
+						i.putExtra(TIPO,"certificado");
 
 						startActivity(i);
 						//System.exit(0); // metodo que se debe implementar
@@ -1209,6 +1211,7 @@ public class MainActivityPantalla1 extends Activity {
 		System.out.println(cachaDelegacion());
 
 //		timer.cancel();
+		op2 = "Certificado de Defuncion";
 
 		String str = "";
 

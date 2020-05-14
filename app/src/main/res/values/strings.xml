@@ -4,25 +4,25 @@
     <string name="app_name">Certificados_v2</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    
+
     <string name="zona">zona</string>
     <string name="si">Si</string>
     <string name="no">No</string>
     <string name="noSabe">No Sabe</string>
-    
+
     <string name="de_acuerdo">De acuerdo</string>
     <string name="nide_acuerdo">Ni de acuerdo, ni en desacuerdo</string>
     <string name="en_desacuerdo">En desacuerdo</string>
-    
-     <string name="mejor">Mejor</string>
+
+    <string name="mejor">Mejor</string>
     <string name="igual">Igual</string>
     <string name="peor">Peor</string>
-    
-     <string name="mucha">Mucha</string>
+
+    <string name="mucha">Mucha</string>
     <string name="poca">Poca</string>
     <string name="ninguna">Ninguna</string>
-   
-    
+
+
     <string name="radio">Radio</string>
     <string name="television">Televisión</string>
     <string name="periodico">Periódico</string>
@@ -35,17 +35,17 @@
     <string name="Regular">Regular</string>
     <string name="Mal">Mal</string>
     <string name="MuyMal">Muy mal</string>
-    
+
     <string name="Mbueno">Muy bueno</string>
     <string name="Bueno">Bueno</string>
     <string name="Malo">Malo</string>
     <string name="MuyMalo">Muy malo</string>
-    
+
     <string name="Muybuena">Muy buena</string>
     <string name="Buena">Buena</string>
     <string name="Mala">Mala</string>
     <string name="MuyMala">Muy mala</string>
-    
+
     <string name="MuySeguro">Muy seguro</string>
     <string name="AlgoSeguro">Algo seguro</string>
     <string name="AlgoInseguro">Algo inseguro</string>
@@ -55,36 +55,35 @@
     <string name="Mucho">Mucho</string>
     <string name="Poco">Poco</string>
     <string name="Nada">Nada</string>
-    
+
     <string name="MuchoMasCerca">Mucho más cerca</string>
     <string name="Cerca">Cerca</string>
     <string name="Lejos">Lejos</string>
     <string name="MuchoMasLejos">Mucho más lejos</string>
-    
+
     <string name="MuchoMasBaratos">Mucho más baratos</string>
     <string name="Masbaratos">Más baratos</string>
     <string name="Mascaros">Más Caros</string>
     <string name="MuchoMasCaros">Mucho más Caros</string>
-    
+
     <string name="Mmejores">Mucho mejores</string>
     <string name="Mejores">Mejores</string>
     <string name="Peores">Peores</string>
     <string name="Mpeores">Mucho peores</string>
-    
 
 
-  <string name="PREGUNTA1">Juzgado</string>
-  <string name="PREGUNTA2">Tipo de documento</string>
-  <string name="PREGUNTA3">Folio</string>
-  <string name="PREGUNTA4">Apellido Paterno</string>
-  <string name="PREGUNTA5">Apellido Materno</string>
-  <string name="PREGUNTA6">Nombres</string>
-  <string name="PREGUNTA7">Genero</string>
-  <string name="PREGUNTA8">CURP</string>
-  <string name="PREGUNTA9">Fecha de deceso</string>
-  <string name="PREGUNTA9a">Año</string>
-  <string name="PREGUNTA9m">Mes</string>
-  <string name="PREGUNTA9d">Dia</string>
+    <string name="PREGUNTA1">Juzgado</string>
+    <string name="PREGUNTA2">Tipo de documento</string>
+    <string name="PREGUNTA3">Folio</string>
+    <string name="PREGUNTA4">Apellido Paterno</string>
+    <string name="PREGUNTA5">Apellido Materno</string>
+    <string name="PREGUNTA6">Nombres</string>
+    <string name="PREGUNTA7">Genero</string>
+    <string name="PREGUNTA8">CURP</string>
+    <string name="PREGUNTA9">Fecha de deceso</string>
+    <string name="PREGUNTA9a">Año</string>
+    <string name="PREGUNTA9m">Mes</string>
+    <string name="PREGUNTA9d">Dia</string>
 
     <string name="nc">No contestó</string>
 
@@ -92,6 +91,6 @@
 
     <string name="formato_fecha">dd/mm/yyyy</string>
     <string name="formato_hora">hh:mm</string>
-    
+
 
 </resources>
