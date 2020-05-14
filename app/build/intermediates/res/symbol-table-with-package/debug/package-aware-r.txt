@@ -1086,6 +1086,7 @@ drawable cast_mini_controller_progress_drawable
 drawable cast_skip_ad_label_border
 drawable censo
 drawable censo_transparente
+drawable certificados
 drawable color
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark

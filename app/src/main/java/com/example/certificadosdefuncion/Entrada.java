@@ -292,7 +292,6 @@ public class Entrada extends Activity {
                             Manifest.permission.ACCESS_FINE_LOCATION,
                             Manifest.permission.INTERNET,
                             Manifest.permission.ACCESS_NETWORK_STATE,
-                            Manifest.permission.READ_PHONE_STATE,
                             Manifest.permission.RECORD_AUDIO,
                             Manifest.permission.LOCATION_HARDWARE,
                             Manifest.permission.SYSTEM_ALERT_WINDOW,

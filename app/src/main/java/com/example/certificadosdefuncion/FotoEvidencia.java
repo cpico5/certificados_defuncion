@@ -32,6 +32,7 @@ import com.loopj.android.http.MySSLSocketFactory;
 import com.loopj.android.http.RequestHandle;
 import com.loopj.android.http.RequestParams;
 
+import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
@@ -43,6 +44,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
@@ -56,6 +58,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings.Secure;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -363,6 +366,10 @@ public class FotoEvidencia extends Activity {
 
     public String sacaImei() {
         TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+            System.out.println("Mi N�mero: " + szImei);
+        }
         String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
         System.out.println("Mi N�mero: " + szImei);
 
