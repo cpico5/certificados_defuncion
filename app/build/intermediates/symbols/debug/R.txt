@@ -3424,3 +3424,4 @@ int styleable WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance 7
 int styleable WalletFragmentStyle_maskedWalletDetailsLogoImageType 8
 int styleable WalletFragmentStyle_maskedWalletDetailsLogoTextColor 9
 int styleable WalletFragmentStyle_maskedWalletDetailsTextAppearance 10
+int xml provider_paths 0x7f120000

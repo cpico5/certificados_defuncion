@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import com.example.censopuelosbarrios.R;
+import com.example.certificadosdefuncion.R;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

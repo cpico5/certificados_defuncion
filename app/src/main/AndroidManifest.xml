@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.censopuelosbarrios"
+    package="com.example.certificadosdefuncion"
     android:versionCode="1"
     android:versionName="1.3" >
 
@@ -213,7 +213,16 @@
             android:screenOrientation="portrait">
             
         </activity>
-        
+
+        <provider
+            android:name=".GenericFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
 
     </application>
 

@@ -18,7 +18,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.example.censopuelosbarrios.R;
+import com.example.certificadosdefuncion.R;
 import com.example.certificadosdefuncion.model.Usuario;
 
 import android.app.Activity;
@@ -42,6 +42,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.provider.Settings.Secure;
+import android.support.v4.content.FileProvider;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -806,21 +807,12 @@ public class FotoEvidencia extends Activity {
         }
 
         foto = Environment.getExternalStorageDirectory() + "/Fotos/FotosCertificadoRegistro" + formattedDate3 + "N" + "/" + nombreD.trim();
+        Uri photoURI = FileProvider.getUriForFile(this, this.getApplicationContext().getPackageName() + ".provider", new File(foto));
 
-
-        Uri output = Uri.fromFile(new File(foto));
-
-        /*Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, output);
-        startActivityForResult(intent, 0);*/
-
-        Intent i = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-        if (hasImageCaptureBug()) {
-            i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, Uri.fromFile(new File("/sdcard/tmp")));
-        } else {
-            i.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        }
-        startActivityForResult(i, 0);
+        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+        startActivityForResult(intent, 0);
 
     }
 
@@ -843,11 +835,11 @@ public class FotoEvidencia extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 0 && resultCode == Activity.RESULT_OK) {
-            setPic();
+            setPic(data);
         }
     }
 
-    private void setPic() {
+    private void setPic(Intent data) {
         // Get the dimensions of the View
 //            int targetW = imagen.getWidth()/4;
 //            int targetH = imagen.getHeight()/4;
@@ -871,6 +863,10 @@ public class FotoEvidencia extends Activity {
         bmOptions.inPurgeable = true;
 
         Bitmap bitmap = BitmapFactory.decodeFile(foto, bmOptions);
+
+
+
+
         imagen.setImageBitmap(bitmap);
     }
 
