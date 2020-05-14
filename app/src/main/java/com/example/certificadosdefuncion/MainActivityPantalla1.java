@@ -977,7 +977,7 @@ public class MainActivityPantalla1 extends Activity {
 			if (db != null) {
 				values.put("consecutivo_diario", elMaximo);
 				values.put("usuario", cachaNombre().toUpperCase());
-				values.put("imei", sacaImei());
+				values.put("imei", sacaImei() == null ? "0" : sacaImei() );
 				values.put("fecha", formattedDate1);
 				values.put("hora", formattedDate5);
 				values.put("latitud", strLatitud);

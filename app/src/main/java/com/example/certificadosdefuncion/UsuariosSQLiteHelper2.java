@@ -178,6 +178,9 @@ public class UsuariosSQLiteHelper2 extends SQLiteOpenHelper {
         // TODO Auto-generated method stub
         db.execSQL("DROP table if exists " + TablaDatos.TABLA_DATOS);
         db.execSQL("DROP table if exists " + TablaUsuarios.TABLA_USUARIOS);
+
+        db.execSQL(DaoManager.generateDropIfExistsQueryString(Usuario.class));
+
         onCreate(db);
     }
 }
