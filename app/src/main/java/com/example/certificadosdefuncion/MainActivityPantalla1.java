@@ -1085,7 +1085,7 @@ public class MainActivityPantalla1 extends Activity {
 				nombre_programa = String.valueOf(value);
 			if(key.equals("juzgado"))
 				juzgado = String.valueOf(value);
-			if(key.equals("juzgado"))
+			if(key.equals("certificado_acta"))
 				certificado_acta = String.valueOf(value);
 			if(key.equals("folio"))
 				folio = String.valueOf(value);

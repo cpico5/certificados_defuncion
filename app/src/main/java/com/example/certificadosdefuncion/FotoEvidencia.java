@@ -474,7 +474,7 @@ public class FotoEvidencia extends Activity {
                 values.put("longitud", strLongitud);
 
                 values.put("folio", cachaFolio());
-                values.put("numero_foto", cachaCuantos());
+                values.put("numero_foto", imagen.getNumero_foto());
                 values.put("tipo", tipo);
                 values.put("nombre_foto", imagen.getPathImagen());
 
@@ -1175,6 +1175,7 @@ public class FotoEvidencia extends Activity {
         fotoActual.setEnviado(0);
         fotoActual.setPathImagen(foto);
         fotoActual.setIdCertificado(idCertificado);
+        fotoActual.setNumero_foto(contador);
         fotoActual.setTipoImagen(tipo);
 
         listaImagenes.add(fotoActual);
