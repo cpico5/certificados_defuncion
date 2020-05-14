@@ -4140,8 +4140,17 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-mdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\ae732b4993ab7d0ee2007e4e11364c92\\res\\color\\common_google_signin_btn_tint.xml"
+=======
+        "merged": "C:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main_pantalla2.xml.flat",
+        "source": "C:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\src\\main\\res\\layout\\activity_main_pantalla2.xml"
+    },
+    {
+        "merged": "C:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connecting_10_dark.png.flat",
+        "source": "C:\\Users\\sagre\\.gradle\\caches\\transforms-2\\files-2.1\\bda0b6c165bc910d255c0319cd5887b8\\res\\drawable-xxhdpi-v4\\ic_mr_button_connecting_10_dark.png"
+>>>>>>> 6f420336b5609819729a935ddc9e076ba6acc6bf
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_15_light.png.flat",

@@ -53,6 +53,9 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.example.certificadosdefuncion.MainActivityPantalla2"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.example.certificadosdefuncion.Entrada"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
@@ -64,16 +67,13 @@
         </activity>
         <activity
             android:name="com.example.certificadosdefuncion.MainActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.FotoEvidencia"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.Menu_Principal"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity android:name="com.example.certificadosdefuncion.CalendarViewAudios" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -86,24 +86,19 @@
         </activity>
         <activity
             android:name="com.example.certificadosdefuncion.CalendarViewFotos"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityConteo"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivitySecciones"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivitySeccionesBorrar"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityCarga"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPresidente"
             android:screenOrientation="portrait" >
@@ -141,52 +136,37 @@
         </activity>
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla1"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPreguntas"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantallaGUS"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPantalla2"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla3"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla4"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla5"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla6"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla7"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla8"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla9"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla10"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
 
         <provider
             android:name="com.example.certificadosdefuncion.GenericFileProvider"
@@ -197,7 +177,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
-
         <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

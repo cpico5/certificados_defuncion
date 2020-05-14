@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:text="Documento"
                 android:textColor="#002266"
-                android:textSize="12sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ProgressBar
@@ -53,6 +53,43 @@
                 android:foregroundGravity="center"
                 android:textAlignment="center"
                 android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearActa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textPregunta3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Folio Acta"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#002266"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rdPregunta3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/txtFolioActa"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="N° folio"
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
 
         </LinearLayout>
 
