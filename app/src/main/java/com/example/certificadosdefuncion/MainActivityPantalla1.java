@@ -1332,7 +1332,8 @@ public class MainActivityPantalla1 extends Activity {
 				"JUZGADO 18",
 				"JUZGADO 19",
 				"JUZGADO 32",
-				"JUZGADO 51",
+				"JUZGADO 51"
+
 		};
 		ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, datos);
 		adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
