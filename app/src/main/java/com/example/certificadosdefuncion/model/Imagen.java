@@ -15,17 +15,20 @@ public class Imagen implements Serializable {
     private String tipoImagen;
     @SerializedName("certificado_id")
     private int certificadoId;
+    @SerializedName("numero_foto")
+    private int numeroFoto;
     private int enviado;
 
     public Imagen() {
     }
 
-    public Imagen(int id, int idCertificado, String pathImagen, String tipoImagen,int certificadoId, int enviado) {
+    public Imagen(int id, int idCertificado, String pathImagen, String tipoImagen,int certificadoId,int numeroFoto, int enviado) {
         this.id = id;
         this.idCertificado = idCertificado;
         this.pathImagen = pathImagen;
         this.tipoImagen = tipoImagen;
         this.certificadoId = certificadoId;
+        this.numeroFoto = numeroFoto;
         this.enviado = enviado;
     }
 
@@ -75,5 +78,13 @@ public class Imagen implements Serializable {
 
     public void setCertificadoId(int certificadoId) {
         this.certificadoId = certificadoId;
+    }
+
+    public int getNumeroFoto() {
+        return numeroFoto;
+    }
+
+    public void setNumeroFoto(int numeroFoto) {
+        this.numeroFoto = numeroFoto;
     }
 }

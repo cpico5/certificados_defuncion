@@ -82,6 +82,7 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 import static com.example.certificadosdefuncion.Nombre.ID_CERTIFICADO;
+import static com.example.certificadosdefuncion.Nombre.TIPO;
 import static com.example.certificadosdefuncion.Nombre.USUARIO;
 import static com.example.certificadosdefuncion.Nombre.customURL;
 
@@ -451,6 +452,7 @@ public class MainActivityPantalla1 extends Activity {
 						i.putExtra("folio", editPregunta3.getText().toString());
 						i.putExtra(USUARIO,usuario);
 						i.putExtra(ID_CERTIFICADO,idCertificado);
+						i.putExtra(TIPO,op2.toUpperCase());
 
 						startActivity(i);
 						//System.exit(0); // metodo que se debe implementar
@@ -1083,7 +1085,7 @@ public class MainActivityPantalla1 extends Activity {
 				nombre_programa = String.valueOf(value);
 			if(key.equals("juzgado"))
 				juzgado = String.valueOf(value);
-			if(key.equals("juzgado"))
+			if(key.equals("certificado_acta"))
 				certificado_acta = String.valueOf(value);
 			if(key.equals("folio"))
 				folio = String.valueOf(value);

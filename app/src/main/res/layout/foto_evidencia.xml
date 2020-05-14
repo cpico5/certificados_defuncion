@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:text="Documento"
                 android:textColor="#002266"
-                android:textSize="12sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <ProgressBar
