@@ -707,11 +707,11 @@ public class FotoEvidencia extends Activity {
 
                         //System.exit(0); // metodo que se debe implementar
                     }
-                }).setPositiveButton("CONTINUAR", new DialogInterface.OnClickListener() {
+                }).setPositiveButton("Cancelar", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
 
 //						detenerGrabacion();
-                Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
+               /* Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 i.putExtra("Nombre", cachaNombre());
                 //i.putExtra("cuantos", String.valueOf(tantos));
@@ -719,7 +719,7 @@ public class FotoEvidencia extends Activity {
                 i.putExtra("folio", cachaFolio());
                 i.putExtra(USUARIO, usuario);
                 startActivity(i);
-                finish();
+                finish();*/
 
                 /*Integer tantos = Integer.valueOf(cachaCuantos()) + 1;
 
