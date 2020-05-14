@@ -1,15 +1,15 @@
 #Internal package file, do not edit.
-#Wed May 13 19:56:12 CDT 2020
+#Wed May 13 20:38:37 CDT 2020
 4.path=lib/x86_64/libpl_droidsonroids_gif.so
 8.set=DEX
-6.path=classes2.dex
+6.path=datos.sql
 0.baseType=DIRECTORY
 5.baseType=DIRECTORY
 1.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 8.path=classes.dex
 3.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
 4.set=NATIVE_RESOURCE
-5.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\merged_assets\\debug\\out
+5.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
 7.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 1.baseType=DIRECTORY
 0.set=NATIVE_RESOURCE
@@ -20,20 +20,20 @@
 1.path=lib/x86/libpl_droidsonroids_gif.so
 7.baseType=DIRECTORY
 3.path=classes.dex
-5.path=datos.sql
+5.path=classes2.dex
 0.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 7.path=lib/arm64-v8a/libpl_droidsonroids_gif.so
-6.set=DEX
+6.set=ASSET
 2.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\merged_assets\\debug\\out
 4.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
 3.baseType=DIRECTORY
-6.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+6.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\merged_assets\\debug\\out
 8.base=C\:\\Users\\sagre\\Proyectos\\JefaturaDeGobierno\\Proyectos\\certificados_defuncion\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
 2.set=ASSET
 8.baseType=DIRECTORY
 count=9
 4.baseType=DIRECTORY
-5.set=ASSET
+5.set=DEX
 0.path=lib/armeabi-v7a/libpl_droidsonroids_gif.so
 1.set=NATIVE_RESOURCE
 2.path=usuarios.sql
