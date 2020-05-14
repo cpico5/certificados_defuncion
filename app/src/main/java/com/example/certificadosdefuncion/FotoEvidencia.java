@@ -23,6 +23,7 @@ import java.util.Set;
 
 import com.example.certificadosdefuncion.R;
 import com.example.certificadosdefuncion.model.DatoContent;
+import com.example.certificadosdefuncion.model.Imagen;
 import com.example.certificadosdefuncion.model.Usuario;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -60,6 +61,9 @@ import android.provider.MediaStore;
 import android.provider.Settings.Secure;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -407,7 +411,7 @@ public class FotoEvidencia extends Activity {
     }
 
 
-    public void insertaFoto() {
+    public void insertaFoto(Imagen imagen) {
 
         FileOutputStream fout = null;
         try {
@@ -463,20 +467,20 @@ public class FotoEvidencia extends Activity {
                 values.put("nombre_programa", nombreE.toUpperCase());
                 values.put("fecha", formattedDate1);
                 values.put("hora", formattedDate5);
-                values.put("imei", sacaImei() == null ? "0" : sacaImei() );
+                values.put("imei", sacaImei() == null ? "0" : sacaImei());
                 values.put("latitud", strLatitud);
                 values.put("longitud", strLongitud);
 
                 values.put("folio", cachaFolio());
                 values.put("numero_foto", cachaCuantos());
-                values.put("nombre_foto", nombreD);
+                //values.put("nombre_foto", nombreD);
+                values.put("nombre_foto", imagen.getPathImagen());
 
                 consecutivoObtenido = db.insert("fotos", null, values);
             }
 
             values.put("consecutivo", consecutivoObtenido);
-            guardaEncuestaWS(values);
-
+            guardaEncuestaWS(values, imagen);
 
 
             //db.close();
@@ -494,7 +498,7 @@ public class FotoEvidencia extends Activity {
 
     }
 
-    private void guardaEncuestaWS(ContentValues values){
+    private void guardaEncuestaWS(ContentValues values, final Imagen imagen) {
 
         showProgress(true);
 
@@ -506,51 +510,52 @@ public class FotoEvidencia extends Activity {
         String latitud = "";
         String longitud = "";
         String folio = "";
-        String numero_foto="";
+        String numero_foto = "";
         String nombre_foto = "";
 
 
         //RECORRE CONTENTVALUES
         DatoContent datoContent = new DatoContent();
         List<DatoContent> listaContenido = new ArrayList();
-        Set<Map.Entry<String, Object>> s=values.valueSet();
+        Set<Map.Entry<String, Object>> s = values.valueSet();
         Iterator itr = s.iterator();
-        while(itr.hasNext()) {
-            Map.Entry me = (Map.Entry)itr.next();
+        while (itr.hasNext()) {
+            Map.Entry me = (Map.Entry) itr.next();
             String key = me.getKey().toString();
-            Object value =  me.getValue();
+            Object value = me.getValue();
 
             datoContent = new DatoContent();
             datoContent.setKey(key);
             datoContent.setValue(String.valueOf(value));
             listaContenido.add(datoContent);
 
-            if(key.equals("consecutivo_diario"))
+            if (key.equals("consecutivo_diario"))
                 consecutivo = String.valueOf(value);
-            if(key.equals("usuario"))
+            if (key.equals("usuario"))
                 usuarios = String.valueOf(value);
-            if(key.equals("imei"))
+            if (key.equals("imei"))
                 imei = String.valueOf(value);
-            if(key.equals("fecha"))
+            if (key.equals("fecha"))
                 fecha = String.valueOf(value);
-            if(key.equals("hora"))
+            if (key.equals("hora"))
                 hora = String.valueOf(value);
-            if(key.equals("latitud"))
+            if (key.equals("latitud"))
                 latitud = String.valueOf(value);
-            if(key.equals("longitud"))
+            if (key.equals("longitud"))
                 longitud = String.valueOf(value);
-            if(key.equals("folio"))
+            if (key.equals("folio"))
                 folio = String.valueOf(value);
-            if(key.equals("numero_foto"))
+            if (key.equals("numero_foto"))
                 numero_foto = String.valueOf(value);
-            if(key.equals("nombre_foto"))
+            if (key.equals("nombre_foto"))
                 nombre_foto = String.valueOf(value);
 
         }
 
-        Gson gson  = new Gson();
-        Type collectionType = new TypeToken<List<DatoContent>>() { }.getType();
-        String json = gson.toJson(listaContenido,collectionType);
+        Gson gson = new Gson();
+        Type collectionType = new TypeToken<List<DatoContent>>() {
+        }.getType();
+        String json = gson.toJson(listaContenido, collectionType);
 
         RequestParams params = new RequestParams();
         params.put("api", "guarda_fotos");
@@ -568,10 +573,12 @@ public class FotoEvidencia extends Activity {
         params.put("numero_foto", numero_foto);
         params.put("nombre_foto", nombre_foto);
 
-        try{
-            File file = new File(foto);
+        try {
+            File file = new File(nombre_foto);
             params.put("photo", file);
-        }catch(FileNotFoundException e){  Log.e(TAG, e.getMessage());  }
+        } catch (FileNotFoundException e) {
+            Log.e(TAG, e.getMessage());
+        }
 
         AsyncHttpClient client = new AsyncHttpClient();
         client.setSSLSocketFactory(MySSLSocketFactory.getFixedSocketFactory());
@@ -596,17 +603,46 @@ public class FotoEvidencia extends Activity {
 
                         String login = jsonObject.getJSONObject("response").get("code").toString();
                         if (Integer.valueOf(login) == 1) {
-
+                            int idCertificadoss = 0;
 
                             String idCertificados = jsonObject.getJSONObject("data").getString("certificado_id");
-                            idCertificado = Integer.valueOf(idCertificados);
-                            Guarda.setEnabled(true);
-                            dialogo();
+                            idCertificadoss = Integer.valueOf(idCertificados);
+
+                            if (idCertificadoss != 0) {
+                                //borra la imagen
+                                imagen.setEnviado(1);
+
+                                int tot = listaImagenes.size();
+                                int count = 0;
+                                for(Imagen im : listaImagenes){
+                                    if(im.getEnviado() == 1){
+                                        count++;
+                                    }
+                                }
+
+                                if(tot >= count){
+                                    Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
+                                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    i.putExtra("Nombre", cachaNombre());
+                                    //i.putExtra("cuantos", String.valueOf(tantos));
+                                    i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
+                                    i.putExtra("folio", cachaFolio());
+                                    i.putExtra(USUARIO,usuario);
+                                    i.putExtra(ID_CERTIFICADO,idCertificado);
+                                    startActivity(i);
+                                    finish();
+                                }
+
+                            }
+
+                            //Guarda.setEnabled(true);
+                            //dialogo();
 
 
                         } else {
                             Guarda.setEnabled(true);
                             Toast.makeText(FotoEvidencia.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
+                            error = 1;
                         }
                     }
 
@@ -648,22 +684,44 @@ public class FotoEvidencia extends Activity {
     public void dialogo() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Tomar otra Fotografía").setTitle("IMPORTANTE").setCancelable(false)
-                .setNegativeButton("SALIR", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Siguiente", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
 //						detenerGrabacion();
 
-                        Intent i = new Intent(FotoEvidencia.this, Entrada.class);
+                        if (!listaImagenes.isEmpty()) {
+                            for (Imagen imagen : listaImagenes) {
+                                if(imagen.getEnviado() == 0 && error == 0)
+                                    insertaFoto(imagen);
+                            }
+                            error = 0;
+                            Guarda.setEnabled(true);
+                        }
+
+
+                        /*Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        i.putExtra(USUARIO,usuario);
                         startActivity(i);
-                        System.exit(0); // metodo que se debe implementar
+                        finish();*/
+
+                        //System.exit(0); // metodo que se debe implementar
                     }
                 }).setPositiveButton("CONTINUAR", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
 
 //						detenerGrabacion();
+                Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                i.putExtra("Nombre", cachaNombre());
+                //i.putExtra("cuantos", String.valueOf(tantos));
+                i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
+                i.putExtra("folio", cachaFolio());
+                i.putExtra(USUARIO, usuario);
+                startActivity(i);
+                finish();
 
-                Integer tantos = Integer.valueOf(cachaCuantos()) + 1;
+                /*Integer tantos = Integer.valueOf(cachaCuantos()) + 1;
 
                 Intent i = new Intent(FotoEvidencia.this, FotoEvidencia.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -676,7 +734,7 @@ public class FotoEvidencia extends Activity {
 
                 startActivity(i);
                 //System.exit(0); // metodo que se debe implementar
-                finish();
+                finish();*/
             }
         });
         AlertDialog alert = builder.create();
@@ -722,6 +780,14 @@ public class FotoEvidencia extends Activity {
     private Usuario usuario;
     private int idCertificado = 0;
     private View mProgressView;
+    private Imagen fotoActual;
+    private List<Imagen> listaImagenes = new ArrayList<>();
+
+    private ImagenAdapter imagenAdapter;
+    private RecyclerView recyclerFoto;
+    private RecyclerView.LayoutManager layoutManager;
+    private int contador = 1;
+    private int error = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -744,6 +810,10 @@ public class FotoEvidencia extends Activity {
         }
 
         mProgressView = findViewById(R.id.login_progressMain);
+        recyclerFoto = (RecyclerView) findViewById(R.id.fotos_evidencia_recycler);
+        recyclerFoto.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerFoto.setLayoutManager(layoutManager);
 
         Thread.setDefaultUncaughtExceptionHandler(new Crash(this));
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
@@ -793,7 +863,7 @@ public class FotoEvidencia extends Activity {
             String diario = String.valueOf(elMaximo);
 
 
-            nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + cachaCuantos() + "_" + idCertificado +".jpeg";
+            nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + contador + "_" + idCertificado + ".jpeg";
 
             Log.i("Foto", "NombreD: " + nombreD);
 
@@ -871,8 +941,8 @@ public class FotoEvidencia extends Activity {
                     if (imagen.getDrawable() != null) {
                         Log.i("datos f", "Solo hay foto");
                         Guarda.setEnabled(false);
-                        insertaFoto();
-                        //dialogo();
+                        //insertaFoto();
+                        dialogo();
 
 
                     } else {
@@ -1022,9 +1092,6 @@ public class FotoEvidencia extends Activity {
     }
 
     private void setPic(Intent data) {
-        // Get the dimensions of the View
-//            int targetW = imagen.getWidth()/4;
-//            int targetH = imagen.getHeight()/4;
 
         int targetW = imagen.getWidth();
         int targetH = imagen.getHeight();
@@ -1045,12 +1112,85 @@ public class FotoEvidencia extends Activity {
         bmOptions.inPurgeable = true;
 
         Bitmap bitmap = BitmapFactory.decodeFile(foto, bmOptions);
-
-
-
-
         imagen.setImageBitmap(bitmap);
+
+        //llena el objeto y la lista
+        fotoActual = new Imagen();
+        fotoActual.setEnviado(0);
+        fotoActual.setPathImagen(foto);
+        fotoActual.setIdCertificado(idCertificado);
+        //fotoActual.setTipoImagen(VERIFICACION);
+
+        listaImagenes.add(fotoActual);
+
+        contador++;
+
+        nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + contador + "_" + idCertificado + ".jpeg";
+
+        fillImagen();
+
     }
+
+    private void fillImagen() {
+
+        imagenAdapter = new ImagenAdapter(listaImagenes);
+        imagenAdapter.setOnItemClickListener(onItemClickListener);
+        imagenAdapter.setOnItemClickListenerDelete(onItemClickListenerDelete);
+        recyclerFoto.addItemDecoration(new DividerItemDecoration(recyclerFoto.getContext(), DividerItemDecoration.VERTICAL));
+        recyclerFoto.setAdapter(imagenAdapter);
+
+    }
+
+    private View.OnClickListener onItemClickListenerDelete = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
+            int position = viewHolder.getAdapterPosition();
+            fotoActual = listaImagenes.get(position);
+            //debe mostrar la imagen en el image view
+            imagen.setImageResource(0);
+            listaImagenes.remove(fotoActual);
+
+            fillImagen();
+
+        }
+    };
+
+    private View.OnClickListener onItemClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+            RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
+            int position = viewHolder.getAdapterPosition();
+            fotoActual = listaImagenes.get(position);
+
+            int targetW = imagen.getWidth();
+            int targetH = imagen.getHeight();
+
+            // Get the dimensions of the bitmap
+            BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+            bmOptions.inJustDecodeBounds = true;
+            BitmapFactory.decodeFile(foto, bmOptions);
+            int photoW = bmOptions.outWidth;
+            int photoH = bmOptions.outHeight;
+
+            // Determine how much to scale down the image
+            int scaleFactor = Math.min(photoW / targetW, photoH / targetH);
+
+            // Decode the image file into a Bitmap sized to fill the View
+            bmOptions.inJustDecodeBounds = false;
+            bmOptions.inSampleSize = scaleFactor;
+            bmOptions.inPurgeable = true;
+
+            Bitmap bitmap = BitmapFactory.decodeFile(fotoActual.getPathImagen(), bmOptions);
+            imagen.setImageBitmap(bitmap);
+
+
+            //ImageTool.setPic(imagen,fotoActual.getPathImagen());
+
+        }
+    };
 
     private String sacaMaximo() {
 
