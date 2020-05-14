@@ -498,7 +498,7 @@ public class FotoEvidencia extends Activity {
 
     }
 
-    private void guardaEncuestaWS(ContentValues values, final Imagen imagen) {
+    private void guardaEncuestaWS(ContentValues values, final Imagen imagenRecibida) {
 
         showProgress(true);
 
@@ -589,7 +589,7 @@ public class FotoEvidencia extends Activity {
 
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                showProgress(false);
+                //showProgress(false);
                 try {
 
                     Log.d(TAG, "pimc -----------> Respuesta OK ");
@@ -610,17 +610,20 @@ public class FotoEvidencia extends Activity {
 
                             if (idCertificadoss != 0) {
                                 //borra la imagen
-                                imagen.setEnviado(1);
+                                imagenRecibida.setEnviado(1);
 
-                                int tot = listaImagenes.size();
-                                int count = 0;
-                                for(Imagen im : listaImagenes){
-                                    if(im.getEnviado() == 1){
-                                        count++;
-                                    }
-                                }
+                                File fichero = new File(imagenRecibida.getPathImagen());
+                                fichero.delete();
 
-                                if(tot >= count){
+                                imagen.setImageResource(0);
+                                listaImagenes.remove(imagenRecibida);
+                                fillImagen();
+
+                                count++;
+                                if(count >= total){
+
+                                    showProgress(false);
+
                                     Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
                                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     i.putExtra("Nombre", cachaNombre());
@@ -640,13 +643,14 @@ public class FotoEvidencia extends Activity {
 
 
                         } else {
+                            showProgress(false);
                             Guarda.setEnabled(true);
                             Toast.makeText(FotoEvidencia.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
-                            error = 1;
                         }
                     }
 
                 } catch (Exception e) {
+                    Guarda.setEnabled(true);
                     showProgress(false);
                     Toast.makeText(FotoEvidencia.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
                 }
@@ -690,12 +694,13 @@ public class FotoEvidencia extends Activity {
 //						detenerGrabacion();
 
                         if (!listaImagenes.isEmpty()) {
+                            total = listaImagenes.size();
                             for (Imagen imagen : listaImagenes) {
-                                if(imagen.getEnviado() == 0 && error == 0)
+                                if(imagen.getEnviado() == 0)
                                     insertaFoto(imagen);
                             }
-                            error = 0;
-                            Guarda.setEnabled(true);
+                            //showProgress(false);
+                            //Guarda.setEnabled(true);
                         }
 
 
@@ -787,7 +792,8 @@ public class FotoEvidencia extends Activity {
     private RecyclerView recyclerFoto;
     private RecyclerView.LayoutManager layoutManager;
     private int contador = 1;
-    private int error = 0;
+    private int count = 0;
+    private int total = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

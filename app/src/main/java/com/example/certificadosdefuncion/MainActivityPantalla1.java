@@ -818,6 +818,7 @@ public class MainActivityPantalla1 extends Activity {
 			@Override
 			public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 				// TODO Auto-generated method stub
+				//myCalendarioF.set(Calendar.YEAR, year);
 				myCalendarioF.set(Calendar.YEAR, year);
 				myCalendarioF.set(Calendar.MONTH, monthOfYear);
 				myCalendarioF.set(Calendar.DAY_OF_MONTH, dayOfMonth);
@@ -915,7 +916,7 @@ public class MainActivityPantalla1 extends Activity {
 
 		String str1 = spinner_juzgado.getSelectedItem().toString().toUpperCase();
 		String str2 = op2.toUpperCase();
-		String str3 = editPregunta3.getText().toString();
+		String str3 = editPregunta3.getText().toString().toUpperCase();
 		String str4 = editPregunta4.getText().toString().toUpperCase();
 		String str5 = editPregunta5.getText().toString().toUpperCase();
 		String str6 = editPregunta6.getText().toString().toUpperCase();
@@ -1322,19 +1323,16 @@ public class MainActivityPantalla1 extends Activity {
 			var = "";
 		}
 		final String[] datos = new String[] { "" + var + "",
-				"JUZGADO 2",
-				"JUZGADO 3",
+				"JUZGADO GL",
+				"JUZGADO T",
+				"JUZGADO X",
+				"JUZGADO 13",
 				"JUZGADO 14",
 				"JUZGADO 16",
 				"JUZGADO 18",
 				"JUZGADO 19",
 				"JUZGADO 32",
-				"JUZGADO 51",
-				"JUZGADO MOVIL GARCIA LOPEZ",
-				"JUZGADO MOVIL TLAHUAC",
-				"JUZGADO MOVIL XOCONGO",
-
-
+				"JUZGADO 51"
 		};
 		ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, datos);
 		adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
