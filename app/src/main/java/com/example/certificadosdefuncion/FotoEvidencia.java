@@ -600,11 +600,12 @@ public class FotoEvidencia extends Activity {
 
                             String idCertificados = jsonObject.getJSONObject("data").getString("certificado_id");
                             idCertificado = Integer.valueOf(idCertificados);
-
+                            Guarda.setEnabled(true);
                             dialogo();
 
 
                         } else {
+                            Guarda.setEnabled(true);
                             Toast.makeText(FotoEvidencia.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -618,6 +619,7 @@ public class FotoEvidencia extends Activity {
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 showProgress(false);
+                Guarda.setEnabled(true);
                 try {
                     Log.e("guarda datos", "PIMC-----------------> existe un error en la conexi?n -----> " + error.getMessage());
                     if (responseBody != null)
@@ -868,7 +870,7 @@ public class FotoEvidencia extends Activity {
 
                     if (imagen.getDrawable() != null) {
                         Log.i("datos f", "Solo hay foto");
-
+                        Guarda.setEnabled(false);
                         insertaFoto();
                         //dialogo();
 

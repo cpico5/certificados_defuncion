@@ -292,7 +292,6 @@ public class Entrada extends Activity {
                             Manifest.permission.ACCESS_FINE_LOCATION,
                             Manifest.permission.INTERNET,
                             Manifest.permission.ACCESS_NETWORK_STATE,
-                            Manifest.permission.READ_PHONE_STATE,
                             Manifest.permission.RECORD_AUDIO,
                             Manifest.permission.LOCATION_HARDWARE,
                             Manifest.permission.SYSTEM_ALERT_WINDOW,
@@ -305,6 +304,7 @@ public class Entrada extends Activity {
 
         /* Abre la app de seguimiento*/
 
+
 //        try {
 //            Intent launchIntent = getPackageManager().getLaunchIntentForPackage("mx.gob.cdmx.seguimiento");
 //            startActivity(launchIntent);
@@ -315,6 +315,7 @@ public class Entrada extends Activity {
 //            dialogoSeguimiento();
 //
 //        }
+
 
 		mLoginFormView = findViewById(R.id.editUsuario);
 		mProgressView = findViewById(R.id.login_progress);

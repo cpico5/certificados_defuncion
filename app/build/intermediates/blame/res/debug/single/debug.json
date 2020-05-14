@@ -80,12 +80,20 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-xhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_places_ic_search.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\dfbece23eb4633c467d3c0c596540a69\\res\\drawable-xhdpi-v4\\places_ic_search.png"
     },
     {
-        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_certificados.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\drawable-mdpi\\certificados.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\color_wallet_secondary_text_holo_dark.xml.flat",
@@ -100,12 +108,12 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connecting_26_dark.png.flat",
-        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xxhdpi-v4\\ic_mr_button_connecting_26_dark.png"
-    },
-    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_16_dark.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xhdpi-v4\\ic_mr_button_connecting_16_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connecting_26_dark.png.flat",
+        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xxhdpi-v4\\ic_mr_button_connecting_26_dark.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -118,6 +126,10 @@
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_ic_vol_type_tv_dark.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-mdpi-v4\\ic_vol_type_tv_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_quantum_ic_replay_30_white_36.png.flat",
@@ -140,12 +152,12 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-mdpi-v4\\quantum_ic_pause_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_group_collapse_13.png.flat",
-        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xxxhdpi-v4\\ic_group_collapse_13.png"
-    },
-    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_group_collapse_13.png.flat",
+        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xxxhdpi-v4\\ic_group_collapse_13.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_quantum_ic_refresh_white_24.png.flat",
@@ -160,12 +172,12 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable\\cast_expanded_controller_seekbar_thumb.xml"
     },
     {
-        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\layout_support_simple_spinner_dropdown_item.xml.flat",
-        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\layout\\support_simple_spinner_dropdown_item.xml"
-    },
-    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_09_dark.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xhdpi-v4\\ic_mr_button_connecting_09_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\layout_support_simple_spinner_dropdown_item.xml.flat",
+        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_quantum_ic_pause_grey600_36.png.flat",
@@ -182,6 +194,10 @@
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-xhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_focused.xml.flat",
@@ -268,20 +284,20 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xhdpi-v4\\ic_vol_type_speaker_group_dark.png"
     },
     {
-        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_quantum_ic_stop_grey600_36.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxxhdpi-v4\\quantum_ic_stop_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_26_light.png.flat",
-        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xhdpi-v4\\ic_mr_button_connecting_26_light.png"
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_26_light.png.flat",
+        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xhdpi-v4\\ic_mr_button_connecting_26_light.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_20_light.png.flat",
@@ -296,12 +312,12 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-mdpi-v4\\quantum_ic_replay_white_24.png"
     },
     {
-        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mr_group_expand.xml.flat",
-        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable\\mr_group_expand.xml"
-    },
-    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connected_26_dark.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xxhdpi-v4\\ic_mr_button_connected_26_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mr_group_expand.xml.flat",
+        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable\\mr_group_expand.xml"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mr_button_dark.xml.flat",
@@ -328,12 +344,12 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxxhdpi-v4\\quantum_ic_clear_white_24.png"
     },
     {
-        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_quantum_ic_skip_previous_white_24.png.flat",
-        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxhdpi-v4\\quantum_ic_skip_previous_white_24.png"
-    },
-    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\layout_preg06.xml.flat",
         "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\layout\\preg06.xml"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_quantum_ic_skip_previous_white_24.png.flat",
+        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxhdpi-v4\\quantum_ic_skip_previous_white_24.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_mr_button_connecting_17_light.png.flat",
@@ -372,12 +388,12 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxxhdpi-v4\\quantum_ic_closed_caption_grey600_36.png"
     },
     {
-        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_quantum_ic_cast_connected_white_24.png.flat",
-        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxhdpi-v4\\quantum_ic_cast_connected_white_24.png"
-    },
-    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_audiotrack_light.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xxhdpi-v4\\ic_audiotrack_light.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_quantum_ic_cast_connected_white_24.png.flat",
+        "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxhdpi-v4\\quantum_ic_cast_connected_white_24.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\layout_cast_tracks_chooser_dialog_row_layout.xml.flat",
@@ -402,6 +418,10 @@
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_quantum_ic_skip_next_white_24.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxxhdpi-v4\\quantum_ic_skip_next_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -510,6 +530,10 @@
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_places_ic_clear.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\dfbece23eb4633c467d3c0c596540a69\\res\\drawable-hdpi-v4\\places_ic_clear.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_quantum_ic_bigtop_updates_white_24.png.flat",
@@ -1316,6 +1340,10 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_group_expand_08.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xxxhdpi-v4\\ic_group_expand_08.png"
     },
@@ -1594,6 +1622,10 @@
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_12_light.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xhdpi-v4\\ic_mr_button_connecting_12_light.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_certificados.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\drawable-xhdpi\\certificados.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cast_ic_expanded_controller_forward30.xml.flat",
@@ -1954,6 +1986,10 @@
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\layout_cast_mini_controller.xml.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\layout\\cast_mini_controller.xml"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_quantum_ic_cast_white_36.png.flat",
@@ -2330,6 +2366,10 @@
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_cast_ic_stop_circle_filled_grey600.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxxhdpi-v4\\cast_ic_stop_circle_filled_grey600.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_media_play_dark.png.flat",
@@ -3300,6 +3340,10 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxxhdpi-v4\\quantum_ic_cast_white_36.png"
     },
     {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_action_bar_item_background_material.xml.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
@@ -3568,6 +3612,10 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-hdpi-v4\\cast_abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\a0c55eb66539e6f30846ce7e8f1e0a9f\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
@@ -3578,6 +3626,10 @@
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_mr_button_connecting_17_dark.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-xhdpi-v4\\ic_mr_button_connecting_17_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_certificados.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\drawable-xxhdpi\\certificados.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -3592,12 +3644,20 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\4f8c1f45262d55b58a7ccf111b81474b\\res\\drawable\\design_fab_background.xml"
     },
     {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\999da4de53fd407a26843a6c6f04a5a2\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_ic_vol_type_speaker_group_dark.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\7aa2822998f842427ef7b814a6bfd4d9\\res\\drawable-mdpi-v4\\ic_vol_type_speaker_group_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -3738,6 +3798,10 @@
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_quantum_ic_replay_10_white_24.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-mdpi-v4\\quantum_ic_replay_10_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -4870,6 +4934,10 @@
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_cast_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\084ca797039cc5fa1a304046e046e0ee\\res\\drawable-xxhdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_certificados.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\drawable-hdpi\\certificados.png"
     },
     {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_pri.png.flat",
