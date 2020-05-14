@@ -27,6 +27,7 @@ drawable arrow_right
 drawable calendar_cel_selectl
 drawable calendar_cell
 drawable calendar_top
+drawable calendario
 drawable censo
 drawable censo_transparente
 drawable color
@@ -88,21 +89,20 @@ id button4
 id camara
 id date
 id date_icon
+id editFechaDeceso
 id editPass
 id editPregunta3
 id editPregunta4
 id editPregunta5
 id editPregunta6
 id editPregunta8
-id editPregunta9a
-id editPregunta9d
-id editPregunta9m
 id editUsuario
 id estadisticas
 id gridview
 id guardar
 id header
 id horizontalScrollView15
+id imageButtonVale
 id imageView1
 id imagen
 id lay1
@@ -139,6 +139,7 @@ id scrollView1
 id spinner2
 id spinner3
 id spinner_juzgado
+id textFechaDeceso
 id textPregunta1
 id textPregunta2
 id textPregunta3
@@ -148,9 +149,6 @@ id textPregunta6
 id textPregunta7
 id textPregunta8
 id textPregunta9
-id textPregunta9a
-id textPregunta9d
-id textPregunta9m
 id textPreguntaAbandono
 id textPreguntaEntrada
 id textView2
@@ -228,6 +226,8 @@ string action_settings
 string app_name
 string de_acuerdo
 string en_desacuerdo
+string formato_fecha
+string formato_hora
 string hello_world
 string igual
 string internet
@@ -246,6 +246,7 @@ string poca
 string radio
 string si
 string television
+string titlulo_pickers
 string zona
 style AlertDialogStyle
 style AppBaseTheme

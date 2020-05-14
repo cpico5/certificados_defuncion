@@ -1,4 +1,4 @@
-#Wed May 13 13:23:58 CDT 2020
+#Wed May 13 19:01:33 CDT 2020
 base.0=C\:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 path.0=classes.dex
 renamed.0=classes.dex

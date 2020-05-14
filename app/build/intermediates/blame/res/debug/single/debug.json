@@ -152,6 +152,10 @@
         "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\drawable-hdpi\\color.xml"
     },
     {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_calendario.png.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\drawable-xxhdpi\\calendario.png"
+    },
+    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_no_votaria_no.png.flat",
         "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\drawable-hdpi\\no_votaria_no.png"
     },

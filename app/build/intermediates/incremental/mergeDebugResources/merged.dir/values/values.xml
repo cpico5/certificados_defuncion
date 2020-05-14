@@ -72,6 +72,8 @@
     <string name="app_name">Certificados_v1</string>
     <string name="de_acuerdo">De acuerdo</string>
     <string name="en_desacuerdo">En desacuerdo</string>
+    <string name="formato_fecha">dd/mm/yyyy</string>
+    <string name="formato_hora">hh:mm</string>
     <string name="hello_world">Hello world!</string>
     <string name="igual">Igual</string>
     <string name="internet">Internet</string>
@@ -90,6 +92,7 @@
     <string name="radio">Radio</string>
     <string name="si">Si</string>
     <string name="television">Televisión</string>
+    <string name="titlulo_pickers">Obtener fecha y hora</string>
     <string name="zona">zona</string>
     <style name="AlertDialogStyle" parent="android:Theme.Holo.Light">
         <item name="android:paddingTop">25dp</item>
@@ -101,14 +104,18 @@
         <item name="android:typeface">serif</item>
         <item name="android:textSize">20sp</item>
          <item name="android:textAppearanceMedium">@style/MyAlertTextAppearance</item>
-         
+         <!-- <item name="android:buttonBarStyle">@style/MyButtonBar</item> -->
 </style>
     <style name="AppBaseTheme" parent="android:Theme.Light">
-        
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
         
-        
+        <!-- For the resting Spinner style -->
         <item name="android:spinnerItemStyle">
             @style/spinnerItemStyle
         </item> 
@@ -116,17 +123,17 @@
         <item name="android:spinnerDropDownItemStyle">
             @style/mySpinnerItemStyle
        </item>
-        
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     <style name="MyAlertTextAppearance">
-    
+    <!-- Set text size and color of title and message here -->
     <item name="android:textSize">31sp</item>
     <item name="android:textColor">@color/ROJO</item>
 </style>
     <style name="MyButtonBar">
-    
+    <!-- Define a background for the button bar and a divider between the buttons here -->
     <item name="android:divider">@color/BLANCO</item>
-   
+   <!--  <item name="android:dividerPadding">1sp</item> -->
     <item name="android:dividerHeight">60sp</item>
     <item name="android:showDividers">middle</item>
     <item name="android:background">@color/GRIS</item>

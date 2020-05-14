@@ -2,13 +2,13 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="27"
-    build-mode="COLD"
+    build-mode="FULL"
     density="hdpi"
     format="10"
     plugin-version="3.4.1"
-    timestamp="1589404557094"
+    timestamp="1589414525950"
     token="-1547208616616449031"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
@@ -23,15 +23,55 @@
         name="verifier"
         duration="0" />
 
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
+
     <build
         build-mode="FULL"
-        timestamp="1589403964289"
+        timestamp="1589414525950"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
@@ -49,10 +89,10 @@
             location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -67,18 +107,5 @@
             location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="REFLECTION_USED"
-        timestamp="1589404489174"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1589404557094"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
