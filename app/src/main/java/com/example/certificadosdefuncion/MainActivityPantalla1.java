@@ -916,7 +916,7 @@ public class MainActivityPantalla1 extends Activity {
 
 		String str1 = spinner_juzgado.getSelectedItem().toString().toUpperCase();
 		String str2 = op2.toUpperCase();
-		String str3 = editPregunta3.getText().toString();
+		String str3 = editPregunta3.getText().toString().toUpperCase();
 		String str4 = editPregunta4.getText().toString().toUpperCase();
 		String str5 = editPregunta5.getText().toString().toUpperCase();
 		String str6 = editPregunta6.getText().toString().toUpperCase();
