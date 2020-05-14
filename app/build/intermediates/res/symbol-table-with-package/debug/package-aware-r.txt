@@ -1806,6 +1806,7 @@ id textSpacerNoTitle
 id textTitle
 id textView2
 id textViewVivienda
+id textViewVivienda2
 id text_input_password_toggle
 id text_list_view
 id textinput_counter
