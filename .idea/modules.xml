@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/certificados_defuncion.iml" filepath="$PROJECT_DIR$/certificados_defuncion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="certificados_defuncion/app" />
+      <module fileurl="file://$PROJECT_DIR$/certificados_defuncion.iml" filepath="$PROJECT_DIR$/certificados_defuncion.iml" group="certificados_defuncion" />
     </modules>
   </component>
 </project>

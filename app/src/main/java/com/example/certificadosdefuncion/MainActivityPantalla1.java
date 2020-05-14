@@ -4,23 +4,39 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import com.example.censopuelosbarrios.R;
+import com.example.certificadosdefuncion.model.DatoContent;
+import com.example.certificadosdefuncion.model.Usuario;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.MySSLSocketFactory;
+import com.loopj.android.http.RequestHandle;
+import com.loopj.android.http.RequestParams;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -47,7 +63,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -56,9 +74,19 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
+import cz.msebera.android.httpclient.Header;
+
+import static com.example.certificadosdefuncion.Nombre.ID_CERTIFICADO;
+import static com.example.certificadosdefuncion.Nombre.USUARIO;
+import static com.example.certificadosdefuncion.Nombre.customURL;
 
 
 public class MainActivityPantalla1 extends Activity {
+
+	private View mProgressView;
+	private int idCertificado = 0;
 
 	private static final String LOG_TAG = "Pantalla 1";
 	private static final String TAG = "Pantalla 1";
@@ -216,6 +244,7 @@ public class MainActivityPantalla1 extends Activity {
 	public EditText editPregunta9a;
 	public EditText editPregunta9m;
 	public EditText editPregunta9d;
+	public EditText editFechaDeceso;
 
 
 	
@@ -249,6 +278,8 @@ public class MainActivityPantalla1 extends Activity {
 	LinearLayout lay7;
 	LinearLayout lay8;
 	LinearLayout lay9;
+
+	public ImageButton imageButtonVale;
 
 
 	public String maximo = "";
@@ -416,9 +447,12 @@ public class MainActivityPantalla1 extends Activity {
 						i.putExtra("consecutivo_diario", elMaximo);
 						i.putExtra("cuantos", "1");
 						i.putExtra("folio", editPregunta3.getText().toString());
+						i.putExtra(USUARIO,usuario);
+						i.putExtra(ID_CERTIFICADO,idCertificado);
 
 						startActivity(i);
-						System.exit(0); // metodo que se debe implementar
+						//System.exit(0); // metodo que se debe implementar
+						finish();
 					}
 				});
 		AlertDialog alert = builder.create();
@@ -615,13 +649,25 @@ public class MainActivityPantalla1 extends Activity {
 			//// R.layout.activity_pantalla19,
 	};
 
-	
+	private Usuario usuario;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_pantalla1); // COMENTAR ESTA CUANDO
+
+		Intent startingIntent = getIntent();
+		if (startingIntent == null) {
+			finish();
+			return;
+		}
+
+		if (savedInstanceState != null) {
+			usuario = (Usuario) savedInstanceState.getSerializable(USUARIO);
+		} else {
+			usuario = (Usuario) startingIntent.getSerializableExtra(USUARIO);
+		}
 
 		// Crea Log cuando falla la app
 		Thread.setDefaultUncaughtExceptionHandler(new Crash(this));
@@ -651,6 +697,8 @@ public class MainActivityPantalla1 extends Activity {
 
 		}
 
+		mProgressView = findViewById(R.id.login_progressMain);
+
 		///////////// EL TIMER PARA PARAR LA ENCUESTA /////////////////
 
 //		timer = new Timer();
@@ -677,10 +725,14 @@ public class MainActivityPantalla1 extends Activity {
 		editPregunta5= (EditText)findViewById(R.id.editPregunta5);
 		editPregunta6= (EditText)findViewById(R.id.editPregunta6);
 		editPregunta8= (EditText)findViewById(R.id.editPregunta8);
+		editFechaDeceso= (EditText)findViewById(R.id.editFechaDeceso);
+		editFechaDeceso.setEnabled(false);
+
+		imageButtonVale = (ImageButton) findViewById(R.id.imageButtonVale);
 		
-		editPregunta9a= (EditText)findViewById(R.id.editPregunta9a);
-		editPregunta9m= (EditText)findViewById(R.id.editPregunta9m);
-		editPregunta9d= (EditText)findViewById(R.id.editPregunta9d);
+//		editPregunta9a= (EditText)findViewById(R.id.editPregunta9a);
+//		editPregunta9m= (EditText)findViewById(R.id.editPregunta9m);
+//		editPregunta9d= (EditText)findViewById(R.id.editPregunta9d);
 
 		spinner_juzgado= (Spinner) findViewById(R.id.spinner_juzgado);
 
@@ -712,7 +764,7 @@ public class MainActivityPantalla1 extends Activity {
 //		preg_clas_2.xml
 
 
-		
+
 		btnGuardar = (Button) findViewById(R.id.btnGuardar);
 		btnSalir = (Button) findViewById(R.id.btnSalir);
 		btnSalir.setEnabled(false);
@@ -758,6 +810,33 @@ public class MainActivityPantalla1 extends Activity {
 		});
 
 
+		final Calendar myCalendarioF = Calendar.getInstance();
+
+		final DatePickerDialog.OnDateSetListener dateFecha = new DatePickerDialog.OnDateSetListener() {
+			@Override
+			public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+				// TODO Auto-generated method stub
+				myCalendarioF.set(Calendar.YEAR, year);
+				myCalendarioF.set(Calendar.MONTH, monthOfYear);
+				myCalendarioF.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+				String myFormat = "yyyy-MM-dd"; //In which you need put here
+				SimpleDateFormat sdf = new SimpleDateFormat(myFormat);
+				editFechaDeceso.setText(sdf.format(myCalendarioF.getTime()));
+
+			}
+
+		};
+
+		imageButtonVale.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				new DatePickerDialog(MainActivityPantalla1.this,dateFecha, myCalendarioF
+						.get(Calendar.YEAR), myCalendarioF.get(Calendar.MONTH),
+						myCalendarioF.get(Calendar.DAY_OF_MONTH)).show();
+			}
+		});
+
 
 		
 	}////// FIN ONCREATE/////////////////////////////
@@ -773,7 +852,7 @@ public class MainActivityPantalla1 extends Activity {
 		super.onPause();
 
 	}
-	
+
 
 	class CierraEncuesta extends TimerTask {
 
@@ -840,7 +919,7 @@ public class MainActivityPantalla1 extends Activity {
 		String str6 = editPregunta6.getText().toString().toUpperCase();
 		String str7 = op7.toUpperCase();
 		String str8 = editPregunta8.getText().toString().toUpperCase();
-		String str9 = editPregunta9a.getText().toString()+"-"+editPregunta9m.getText().toString()+"-"+editPregunta9d.getText().toString();
+		String str9 = editFechaDeceso.getText().toString();
 
 		String strFinal = "\n";
 
@@ -884,32 +963,35 @@ public class MainActivityPantalla1 extends Activity {
 			String strLatitud2 = String.valueOf(latitude);
 			String strLongitud2 = String.valueOf(longitude);
 
+			long consecutivoObtenido = 0;
+			ContentValues values = new ContentValues();
+
 			if (db != null) {
-				ContentValues values = new ContentValues();
 				values.put("consecutivo_diario", elMaximo);
 				values.put("usuario", cachaNombre().toUpperCase());
-				values.put("nombre_programa", nombreE.toUpperCase());
+				values.put("imei", sacaImei());
 				values.put("fecha", formattedDate1);
 				values.put("hora", formattedDate5);
-				values.put("imei", sacaImei());
 				values.put("latitud", strLatitud);
 				values.put("longitud", strLongitud);
 
+				values.put("nombre_programa", nombreE.toUpperCase());
 				values.put("juzgado",str1);
 				values.put("certificado_acta",str2);
 				values.put("folio",str3);
+				values.put("nombres",str6);
 				values.put("paterno",str4);
 				values.put("materno",str5);
-				values.put("nombres",str6);
 				values.put("genero",str7);
 				values.put("curp",str8);
 				values.put("fecha_deceso",str9);
 				db.insert("registros", null, values);
 			}
 
+			values.put("consecutivo", consecutivoObtenido);
+			guardaEncuestaWS(values);
 
-
-			db.close();
+			//db.close();
 
 			System.out.println("Latitud  " + strLatitud);
 			System.out.println("Longitud  " + strLongitud);
@@ -934,7 +1016,182 @@ public class MainActivityPantalla1 extends Activity {
 
 	}
 
+	private void guardaEncuestaWS(ContentValues values){
 
+		showProgress(true);
+
+		String consecutivo = "";
+		String usuarios = "";
+		String imei = "";
+		String fecha = "";
+		String hora = "";
+		String latitud = "";
+		String longitud = "";
+		String nombre_programa = "";
+		String juzgado = "";
+		String certificado_acta = "";
+		String folio = "";
+		String nombre = "";
+		String paterno = "";
+		String materno = "";
+		String genero = "";
+		String curp = "";
+		String fecha_deceso = "";
+
+
+		//RECORRE CONTENTVALUES
+		DatoContent datoContent = new DatoContent();
+		List<DatoContent> listaContenido = new ArrayList();
+		Set<Map.Entry<String, Object>> s=values.valueSet();
+		Iterator itr = s.iterator();
+		while(itr.hasNext()) {
+			Map.Entry me = (Map.Entry)itr.next();
+			String key = me.getKey().toString();
+			Object value =  me.getValue();
+
+			datoContent = new DatoContent();
+			datoContent.setKey(key);
+			datoContent.setValue(String.valueOf(value));
+			listaContenido.add(datoContent);
+
+			if(key.equals("consecutivo_diario"))
+				consecutivo = String.valueOf(value);
+			if(key.equals("usuario"))
+				usuarios = String.valueOf(value);
+			if(key.equals("imei"))
+				imei = String.valueOf(value);
+			if(key.equals("fecha"))
+				fecha = String.valueOf(value);
+			if(key.equals("hora"))
+				hora = String.valueOf(value);
+			if(key.equals("latitud"))
+				latitud = String.valueOf(value);
+			if(key.equals("longitud"))
+				longitud = String.valueOf(value);
+			if(key.equals("nombre_programa"))
+				nombre_programa = String.valueOf(value);
+			if(key.equals("juzgado"))
+				juzgado = String.valueOf(value);
+			if(key.equals("juzgado"))
+				certificado_acta = String.valueOf(value);
+			if(key.equals("folio"))
+				folio = String.valueOf(value);
+			if(key.equals("nombres"))
+				nombre = String.valueOf(value);
+			if(key.equals("paterno"))
+				paterno = String.valueOf(value);
+			if(key.equals("materno"))
+				materno = String.valueOf(value);
+			if(key.equals("genero"))
+				genero = String.valueOf(value);
+			if(key.equals("curp"))
+				curp = String.valueOf(value);
+			if(key.equals("fecha_deceso"))
+				fecha_deceso = String.valueOf(value);
+
+		}
+
+		Gson gson  = new Gson();
+		Type collectionType = new TypeToken<List<DatoContent>>() { }.getType();
+		String json = gson.toJson(listaContenido,collectionType);
+
+		RequestParams params = new RequestParams();
+		params.put("api", "guarda_certificado");
+		params.put("id_usuario", usuario.getId());
+
+		params.put("consecutivo", consecutivo);
+		params.put("usuario", usuarios);
+		params.put("imei", imei);
+		params.put("fecha", fecha);
+		params.put("hora", hora);
+		params.put("latitud", latitud);
+		params.put("longitud", longitud);
+		params.put("nombre_programa", nombre_programa);
+		params.put("juzgado", juzgado);
+		params.put("certificado_acta", certificado_acta);
+		params.put("folio", folio);
+		params.put("nombre", nombre);
+		params.put("paterno", paterno);
+		params.put("materno", materno);
+		params.put("genero", genero);
+		params.put("curp", curp);
+		params.put("fecha_deceso", fecha_deceso);
+
+		AsyncHttpClient client = new AsyncHttpClient();
+		client.setSSLSocketFactory(MySSLSocketFactory.getFixedSocketFactory());
+		//client.addHeader("Authorization", "Bearer " + usuario.getToken());
+		client.setTimeout(60000);
+
+		RequestHandle requestHandle = client.post(customURL, params, new AsyncHttpResponseHandler() {
+
+			@Override
+			public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+				showProgress(false);
+				try {
+
+					Log.d(TAG, "pimc -----------> Respuesta OK ");
+					Log.d(TAG, "pimc -----------> " + new String(responseBody));
+					String json = new String(responseBody);
+
+					if (json != null && !json.isEmpty()) {
+
+						Gson gson = new Gson();
+						JSONObject jsonObject = new JSONObject(json);
+
+						String login = jsonObject.getJSONObject("response").get("code").toString();
+						if (Integer.valueOf(login) == 1) {
+
+							//JSONObject idCertificado = jsonObject.getJSONObject("data").getJSONObject("certificado_id");
+							String idCertificados = jsonObject.getJSONObject("data").getString("certificado_id");
+							idCertificado = Integer.valueOf(idCertificados);
+
+							btnGuardar.setEnabled(false);
+							dialogoFoto();
+
+							/*Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+							intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+							intent.putExtra(USUARIO,usuario);
+							startActivity(intent);
+							finish();*/
+
+
+						} else {
+							Toast.makeText(MainActivityPantalla1.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
+						}
+					}
+
+				} catch (Exception e) {
+					showProgress(false);
+					Toast.makeText(MainActivityPantalla1.this, "Error al subir los datos", Toast.LENGTH_SHORT).show();
+				}
+			}
+
+			@Override
+			public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+				showProgress(false);
+				try {
+					Log.e("guarda datos", "PIMC-----------------> existe un error en la conexi?n -----> " + error.getMessage());
+					if (responseBody != null)
+						Log.d("guarda datos", "pimc -----------> " + new String(responseBody));
+
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				}
+
+				if (statusCode != 200) {
+					Log.e("guarda datos", "Existe un error en la conexi?n -----> " + error.getMessage());
+					if (responseBody != null)
+						Log.d("guarda datos", "pimc -----------> " + new String(responseBody));
+
+				}
+
+				Toast.makeText(MainActivityPantalla1.this, "Error de conexion, intente de nuevo", Toast.LENGTH_SHORT).show();
+
+			}
+		});
+
+
+	}
 	
 
 	public void guardar(View v) {
@@ -959,28 +1216,26 @@ public class MainActivityPantalla1 extends Activity {
 			  else if (lay7.getVisibility() == View.VISIBLE && op7.matches("SIN DATOS")){Toast.makeText(this,"CAPTURA:  " +  captura7,Toast.LENGTH_LONG).show();}
 			  else if (lay8.getVisibility() == View.VISIBLE && editPregunta8.getText().toString().trim().length()==0){Toast.makeText(this,"CAPTURA:  " +  captura8,Toast.LENGTH_LONG).show();}
 			  else if (lay9.getVisibility() == View.VISIBLE
-					  	&& editPregunta9a.getText().toString().trim().length()==0
-			  			&& editPregunta9m.getText().toString().trim().length()==0
-			  			&& editPregunta9d.getText().toString().trim().length()==0
-			  ){Toast.makeText(this,"CAPTURA:  " +  captura9,Toast.LENGTH_LONG).show();}
+					  	&& editFechaDeceso.getText().toString().trim().length()==0
+			  			){Toast.makeText(this,"CAPTURA:  " +  captura9,Toast.LENGTH_LONG).show();}
 
 			else {
 
 				valores();
-				btnGuardar.setEnabled(false);
-				dialogoFoto();
+				/*btnGuardar.setEnabled(false);
+				dialogoFoto();*/
 				
 				
 
 			}// Finaliza else de validaci�n
-			  
+
 			break;
 
 		}
 
 	}
 
-	
+
 	public void Salir(View view) {
 		finish();
 	}
@@ -1181,6 +1436,24 @@ public class MainActivityPantalla1 extends Activity {
 			}
 		};
 		thread.start();
+	}
+
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
+	private void showProgress(final boolean show) {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+			int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
+
+			mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+			mProgressView.animate().setDuration(shortAnimTime).alpha(
+					show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+				@Override
+				public void onAnimationEnd(Animator animation) {
+					mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+				}
+			});
+		} else {
+			mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
+		}
 	}
 
 }
