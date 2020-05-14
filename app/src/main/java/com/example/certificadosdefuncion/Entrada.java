@@ -16,7 +16,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.example.censopuelosbarrios.R;
+import com.example.certificadosdefuncion.R;
 import com.example.certificadosdefuncion.model.Usuario;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

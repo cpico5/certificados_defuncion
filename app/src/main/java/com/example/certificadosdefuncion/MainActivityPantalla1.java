@@ -19,7 +19,7 @@ import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.example.censopuelosbarrios.R;
+import com.example.certificadosdefuncion.R;
 import com.example.certificadosdefuncion.model.DatoContent;
 import com.example.certificadosdefuncion.model.Usuario;
 import com.google.gson.Gson;

@@ -3840,6 +3840,10 @@
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\ae732b4993ab7d0ee2007e4e11364c92\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
+        "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\xml_provider_paths.xml.flat",
+        "source": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\src\\main\\res\\xml\\provider_paths.xml"
+    },
+    {
         "merged": "C:\\Users\\calatrejo\\StudioProjects\\certificados_defuncion\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_powered_by_google_light.png.flat",
         "source": "C:\\Users\\calatrejo\\.gradle\\caches\\transforms-2\\files-2.1\\dfbece23eb4633c467d3c0c596540a69\\res\\drawable-hdpi-v4\\powered_by_google_light.png"
     },

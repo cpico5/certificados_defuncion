@@ -1,9 +1,20 @@
 -- Merging decision tree log ---
+provider#com.example.certificadosdefuncion.GenericFileProvider
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:217:9-225:20
+	android:grantUriPermissions
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:221:13-47
+	android:authorities
+		INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:219:13-60
+	android:exported
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:220:13-37
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:218:13-48
 manifest
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-220:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-220:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-220:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-220:12
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\4f8c1f45262d55b58a7ccf111b81474b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\562924d3f261eedc65d7b3d1198f978b\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\4528b0266dc83cf8c71efd46acaa6f59\AndroidManifest.xml:17:1-24:12
@@ -130,11 +141,11 @@ MERGED from [com.google.android.gms:play-services-vision-license:12.0.1] C:\User
 MERGED from [com.google.android.gms:play-services-wallet-license:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\579ee10b9c879794e0a6bf06cee24ad1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-wearable-license:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\0399ec9a57c0ae5e682e2b7514357455\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\a4dd7aaa0e8b1351a6123c2ff36cce2a\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-220:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-220:12
-INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-220:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
+INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:2:1-229:12
 	package
-		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:3:5-45
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:3:5-48
 		INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -242,7 +253,7 @@ ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:28:15-53
 application
-ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:31:5-218:19
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:31:5-227:19
 MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\562924d3f261eedc65d7b3d1198f978b\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\562924d3f261eedc65d7b3d1198f978b\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-plus:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\4528b0266dc83cf8c71efd46acaa6f59\AndroidManifest.xml:22:5-20
@@ -561,61 +572,61 @@ ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:153:13-49
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:152:13-83
-activity#com.example.censopuelosbarrios.MainActivityPantallaGUS
+activity#com.example.certificadosdefuncion.MainActivityPantallaGUS
 ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:158:9-162:20
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:160:13-49
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:159:13-51
-activity#com.example.censopuelosbarrios.MainActivityPantalla2
+activity#com.example.certificadosdefuncion.MainActivityPantalla2
 ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:165:9-169:20
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:167:13-49
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:166:13-49
-activity#com.example.censopuelosbarrios.MainActivityPantalla3
+activity#com.example.certificadosdefuncion.MainActivityPantalla3
 ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:171:9-175:20
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:173:13-49
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:172:13-49
-activity#com.example.censopuelosbarrios.MainActivityPantalla4
+activity#com.example.certificadosdefuncion.MainActivityPantalla4
 ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:177:9-181:20
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:179:13-49
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:178:13-49
-activity#com.example.censopuelosbarrios.MainActivityPantalla5
+activity#com.example.certificadosdefuncion.MainActivityPantalla5
 ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:182:9-186:20
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:184:13-49
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:183:13-49
-activity#com.example.censopuelosbarrios.MainActivityPantalla6
+activity#com.example.certificadosdefuncion.MainActivityPantalla6
 ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:187:9-191:20
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:189:13-49
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:188:13-49
-activity#com.example.censopuelosbarrios.MainActivityPantalla7
+activity#com.example.certificadosdefuncion.MainActivityPantalla7
 ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:193:9-197:20
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:195:13-49
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:194:13-49
-activity#com.example.censopuelosbarrios.MainActivityPantalla8
+activity#com.example.certificadosdefuncion.MainActivityPantalla8
 ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:199:9-203:20
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:201:13-49
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:200:13-49
-activity#com.example.censopuelosbarrios.MainActivityPantalla9
+activity#com.example.certificadosdefuncion.MainActivityPantalla9
 ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:205:9-209:20
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:207:13-49
 	android:name
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:206:13-49
-activity#com.example.censopuelosbarrios.MainActivityPantalla10
+activity#com.example.certificadosdefuncion.MainActivityPantalla10
 ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:211:9-215:20
 	android:screenOrientation
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:213:13-49
@@ -889,6 +900,12 @@ INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\m
 		INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:222:13-224:57
+	android:resource
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:224:17-55
+	android:name
+		ADDED from C:\Users\calatrejo\StudioProjects\certificados_defuncion\app\src\main\AndroidManifest.xml:223:17-67
 activity#com.google.android.gms.ads.AdActivity
 ADDED from [com.google.android.gms:play-services-ads-lite:12.0.1] C:\Users\calatrejo\.gradle\caches\transforms-2\files-2.1\d0afac8394b0e55813965c0902cf29d9\AndroidManifest.xml:29:9-33:64
 	android:exported
