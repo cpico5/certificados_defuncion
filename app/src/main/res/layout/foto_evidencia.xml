@@ -55,6 +55,28 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
+                <RadioGroup
+                    android:id="@+id/rdPreguntaActa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio1a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/radiobutton_selector"
+                        android:textColor="@drawable/radiobutton_color_selector"
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:theme="@style/RadioButton"
+                        android:text="No aplica"
+                        />
+
+                </RadioGroup>
+
+
                 <TextView
                     android:id="@+id/textPregunta3"
                     android:layout_width="match_parent"
