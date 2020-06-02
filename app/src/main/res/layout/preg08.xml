@@ -44,10 +44,11 @@
                         android:id="@+id/editPregunta8"
                         android:layout_width="320dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="30dp"
                         android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
                         android:ems="10"
                         android:hint="CURP"
+                        android:textAllCaps="true"
                         android:inputType="text"
                         android:maxLength="18"
                         android:textSize="16sp" />

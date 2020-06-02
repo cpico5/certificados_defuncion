@@ -302,6 +302,20 @@ public class Entrada extends Activity {
         Thread.setDefaultUncaughtExceptionHandler(new Crash(this));
 
 
+        File dir = new File(Environment.getExternalStorageDirectory()+ "/DCIM/Camera");
+        if (dir.isDirectory())
+        {
+
+            Log.i(TAG,">>>>>>>>>>>>>>>>>>>"+"Entra a la lista");
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++)
+            {
+                new File(dir, children[i]).delete();
+            }
+        }else{
+            Log.i(TAG,">>>>>>>>>>>>>>>>>>>"+"NO Entra");
+        }
+
         /* Abre la app de seguimiento*/
 
 

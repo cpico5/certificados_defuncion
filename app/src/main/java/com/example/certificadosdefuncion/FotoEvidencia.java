@@ -78,6 +78,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -187,6 +188,7 @@ public class FotoEvidencia extends Activity {
 
     public EditText comentario;
     public EditText editNombreFoto;
+    public RadioButton radio1a;
 
     // NORMAL
     Nombre nom = new Nombre();
@@ -735,6 +737,19 @@ public class FotoEvidencia extends Activity {
                             //Guarda.setEnabled(true);
                         }
 
+                        File dir = new File(Environment.getExternalStorageDirectory()+ "/DCIM/Camera");
+                        if (dir.isDirectory())
+                        {
+
+                            Log.i(TAG,">>>>>>>>>>>>>>>>>>>"+"Entra a la lista");
+                            String[] children = dir.list();
+                            for (int i = 0; i < children.length; i++)
+                            {
+                                new File(dir, children[i]).delete();
+                            }
+                        }else{
+                            Log.i(TAG,">>>>>>>>>>>>>>>>>>>"+"NO Entra");
+                        }
 
                         /*Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -834,10 +849,12 @@ public class FotoEvidencia extends Activity {
     public ImageButton imageButtonVale;
     TextView textViewVivienda;
     public RadioGroup rdPregunta7;
+    public RadioGroup rdPreguntaActa;
     EditText txtFolioActa,editPregunta4,editPregunta5,editPregunta6,editPregunta8,editFechaDeceso;
     LinearLayout linearActa;
     private String dialog = "";
     private String op7 = "";
+    private String opActa = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -866,9 +883,10 @@ public class FotoEvidencia extends Activity {
         recyclerFoto.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerFoto.setLayoutManager(layoutManager);
+        radio1a = (RadioButton) findViewById(R.id.radio1a);
 
 
-        //cargo ls nuevos controlers
+                //cargo ls nuevos controlers
         textViewVivienda = findViewById(R.id.textViewVivienda);
         textViewVivienda.setText("Cargue Certificado");
 
@@ -884,6 +902,7 @@ public class FotoEvidencia extends Activity {
         editFechaDeceso.setEnabled(false);
         imageButtonVale = (ImageButton) findViewById(R.id.imageButtonVale);
         rdPregunta7 = (RadioGroup)findViewById(R.id.rdPregunta7);
+        rdPreguntaActa = (RadioGroup)findViewById(R.id.rdPreguntaActa);
 
         rdPregunta7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -897,6 +916,18 @@ public class FotoEvidencia extends Activity {
                 else if (checkedId == R.id.radio0) {
                     op7 = "Otro";
                 }
+            }
+        });
+
+        rdPreguntaActa.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.radio1a) {
+                    opActa = "No aplica";
+
+                    dialogoCierre();
+                }
+
             }
         });
 
@@ -1139,6 +1170,8 @@ public class FotoEvidencia extends Activity {
     }
 
 
+
+
     public void camara(View view) {
 
         elMaximo = Integer.parseInt(sacaMaximo().toString());
@@ -1157,7 +1190,12 @@ public class FotoEvidencia extends Activity {
 //
 //                nombreD = diario+"_"+seccion+"_"+cachaNombre()+"_"+sacaImei()+"_"+date;
 
-        nombreImagen = nombreD;
+        String tp = "act";
+        if(tipo.equals("certificado")){
+            tp = "cer";
+        }
+        nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + contador + "_" + idCertificado + "_" + tp +".jpeg";
+         nombreImagen = nombreD;
 
 
         if (!nombreImagen.trim().equalsIgnoreCase("")) {
@@ -1171,12 +1209,26 @@ public class FotoEvidencia extends Activity {
 
     public void dialogoCierre() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Desea continuar Encuestando..?")
+        builder.setMessage("Desea continuar?")
                 .setTitle("IMPORTANTE")
                 .setCancelable(false)
                 .setNegativeButton("SALIR",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
+
+                                File dir = new File(Environment.getExternalStorageDirectory()+ "/DCIM/Camera");
+                                if (dir.isDirectory())
+                                {
+
+                                    Log.i(TAG,">>>>>>>>>>>>>>>>>>>"+"Entra a la lista");
+                                    String[] children = dir.list();
+                                    for (int i = 0; i < children.length; i++)
+                                    {
+                                        new File(dir, children[i]).delete();
+                                    }
+                                }else{
+                                    Log.i(TAG,">>>>>>>>>>>>>>>>>>>"+"NO Entra");
+                                }
 
 
                                 Intent i = new Intent(FotoEvidencia.this, Entrada.class);
@@ -1189,12 +1241,8 @@ public class FotoEvidencia extends Activity {
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
 
-                                Intent i = new Intent(FotoEvidencia.this, MainActivity.class);
-                                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                i.putExtra("Nombre", cachaNombre());
-                                i.putExtra("max", "0");
-                                startActivity(i);
-                                System.exit(0); // metodo que se debe implementar
+                                radio1a.setChecked(false);
+
                             }
                         });
         AlertDialog alert = builder.create();
@@ -1773,6 +1821,15 @@ public class FotoEvidencia extends Activity {
         return acceso;
     }
 
+    public static void deleteRecursive(File fileOrDirectory) {
+
+        if (fileOrDirectory.isDirectory())
+            for (File child : fileOrDirectory.listFiles())
+                deleteRecursive(child);
+
+        fileOrDirectory.delete();
+
+    }
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
     private void showProgress(final boolean show) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {

@@ -1710,6 +1710,7 @@ id r1
 id radio
 id radio0
 id radio1
+id radio1a
 id radio2
 id radio_abandono1
 id radio_abandono2
@@ -1723,6 +1724,7 @@ id rdPregunta6
 id rdPregunta7
 id rdPregunta8
 id rdPreguntaAbandono
+id rdPreguntaActa
 id rfc822
 id right
 id right_icon
@@ -1806,6 +1808,7 @@ id textSpacerNoTitle
 id textTitle
 id textView2
 id textViewVivienda
+id textViewVivienda2
 id text_input_password_toggle
 id text_list_view
 id textinput_counter
