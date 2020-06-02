@@ -50,6 +50,7 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla2"
@@ -87,84 +88,7 @@
             android:name="com.example.certificadosdefuncion.CalendarViewFotos"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.certificadosdefuncion.MainActivityConteo"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivitySecciones"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivitySeccionesBorrar"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityCarga"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPresidente"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityJefeGobierno"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityDiputado"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityAlianzaMas"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityAlianzaMenos"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.example.certificadosdefuncion.MainActivityPantalla1"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPreguntas"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPantallaGUS"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPantalla3"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPantalla4"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPantalla5"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPantalla6"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPantalla7"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPantalla8"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPantalla9"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.example.certificadosdefuncion.MainActivityPantalla10"
             android:screenOrientation="portrait" />
 
         <provider

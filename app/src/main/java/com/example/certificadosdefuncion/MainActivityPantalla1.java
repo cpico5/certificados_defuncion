@@ -551,7 +551,7 @@ public class MainActivityPantalla1 extends Activity {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-			// Esto es lo que hace mi bot�n al pulsar ir a atr�s
+			// Esto es lo que hace mi bot_n al pulsar ir a atr_s
 			Toast.makeText(getApplicationContext(), "No puedo ir hacia atras!!\nEstoy grabando...", Toast.LENGTH_SHORT)
 					.show();
 
@@ -1033,23 +1033,23 @@ public class MainActivityPantalla1 extends Activity {
 
 		showProgress(true);
 
-		String consecutivo = "";
-		String usuarios = "";
-		String imei = "";
-		String fecha = "";
-		String hora = "";
-		String latitud = "";
-		String longitud = "";
-		String nombre_programa = "";
-		String juzgado = "";
+		String consecutivo 		= "";
+		String usuarios 		= "";
+		String imei 			= "";
+		String fecha 			= "";
+		String hora 			= "";
+		String latitud 			= "";
+		String longitud 		= "";
+		String nombre_programa 	= "";
+		String juzgado		 	= "";
 		String certificado_acta = "";
-		String folio = "";
-		String nombre = "";
-		String paterno = "";
-		String materno = "";
-		String genero = "";
-		String curp = "";
-		String fecha_deceso = "";
+		String folio 			= "";
+		String nombre 			= "";
+		String paterno 			= "";
+		String materno 			= "";
+		String genero 			= "";
+		String curp 			= "";
+		String fecha_deceso 	= "";
 
 
 		//RECORRE CONTENTVALUES
@@ -1241,7 +1241,7 @@ public class MainActivityPantalla1 extends Activity {
 				
 				
 
-			}// Finaliza else de validaci�n
+			}// Finaliza else de validaci_n
 
 			break;
 
@@ -1431,7 +1431,7 @@ public class MainActivityPantalla1 extends Activity {
 		try {
 			recorder.prepare();
 		} catch (IOException e) {
-			Log.i("", String.valueOf("Fallo en grabaci�n: " + e.getMessage()));
+			Log.i("", String.valueOf("Fallo en grabaci_n: " + e.getMessage()));
 		}
 		recorder.start();
 	}

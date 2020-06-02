@@ -1,4 +1,5 @@
 package com.example.certificadosdefuncion;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
@@ -27,12 +28,14 @@ import java.util.zip.ZipOutputStream;
 
 import com.example.certificadosdefuncion.R;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
@@ -46,6 +49,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.Settings.Secure;
+import android.support.v4.app.ActivityCompat;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Gravity;
@@ -70,11 +74,11 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 
 	Nombre nom = new Nombre();
 	String nombreEncuesta = nom.nombreEncuesta();
-	String upLoadServerUriFotos = "https://opinion.cdmx.gob.mx/cgi-bin/php/recibeFotos"+nombreEncuesta+".php?encuesta="+nombreEncuesta+"";
+	String upLoadServerUriFotos = "https://opinion.cdmx.gob.mx/cgi-bin/php/recibeFotos" + nombreEncuesta + ".php?encuesta=" + nombreEncuesta + "";
 	int serverResponseCode = 0;
-	
-	final private String TAG="MainActivity";
-	
+
+	final private String TAG = "MainActivity";
+
 	private EditText txtCodigo;
 	private EditText txtNombre;
 	private TextView txtResultado;
@@ -97,10 +101,10 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	public String credencial;
 	public String seccion;
 	public String equipo;
-	
+
 	UsuariosSQLiteHelper3 usdbh3;
 	private SQLiteDatabase db3;
-	
+
 	UsuariosSQLiteHelper2 usdbh2;
 	private SQLiteDatabase db2;
 
@@ -115,7 +119,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	final String path = "/mnt/sdcard/Mis_archivos/";
 	final String pathZip = "/mnt/sdcard/";
 	// final String pathAudio="/mnt/sdcard/Audio/";
-	
+
 	double latitude;
 	double longitude;
 
@@ -143,7 +147,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 
 	static String ID = getHostName(null);
 	static String prefix = ID;
-	
+
 	//	static String prefix = ID;
 
 	public EditText editUsuario;
@@ -185,7 +189,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 	Calendar t1 = Calendar.getInstance();
 	Calendar t2 = Calendar.getInstance();
 	Calendar t3 = Calendar.getInstance();
-	// esta variable la paso hasta la �ltima p�gina
+	// esta variable la paso hasta la _ltima p_gina
 	long milis1 = t1.getTimeInMillis();
 
 	public String nombreArchivo() {
@@ -194,8 +198,8 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 //		String var3 = date + var2;
 
 //		final String nombre = date + "-" + tablet + "-" + nombreEncuesta + "-" + var2;
-		final String nombre =nombreEncuesta+"_"+prefix;
-		
+		final String nombre = nombreEncuesta + "_" + prefix;
+
 		// String nombre="encuestas20140219.txt";
 		return nombre;
 	}
@@ -228,10 +232,16 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 
 	}
 
-	public String sacaImei(){
+	public String sacaImei() {
 		TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+			String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
+			System.out.println("Mi N_mero: " + szImei);
+
+			return szImei;
+		}
 		String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-		System.out.println("Mi N�mero: " + szImei);
+		System.out.println("Mi N_mero: " + szImei);
 
 		return szImei;
 	}
@@ -499,7 +509,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 //		enviar2(to, cc, "Hola", "Esto es un email enviado desde una app de Android");
 //		txtEncuesta.setText("");
 //
-//		// en orden de ejecuci�n: este se ejecuta primero
+//		// en orden de ejecuci_n: este se ejecuta primero
 //		cargaEncuestador();
 		enviar(to, cc, "Hola", "Esto es un email enviado desde una app de Android");
 		txtEncuesta.setText("");
@@ -519,9 +529,9 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		em.setType("plain/text");
 
 		em.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] { "larecepcion2018@gmail.com" });
-		em.putExtra(android.content.Intent.EXTRA_SUBJECT, "Archivos tablet: '" + tablet + "'" + " d�a: " + date2);
-		em.putExtra(android.content.Intent.EXTRA_TEXT, "Se env�an archivos de la Tablet:  '" + tablet + "'\n\n"
-				+ "- Coordinador que env�a: '" + cachaNombre().toUpperCase() + "'" + "\n" + texto);
+		em.putExtra(android.content.Intent.EXTRA_SUBJECT, "Archivos tablet: '" + tablet + "'" + " d_a: " + date2);
+		em.putExtra(android.content.Intent.EXTRA_TEXT, "Se env_an archivos de la Tablet:  '" + tablet + "'\n\n"
+				+ "- Coordinador que env_a: '" + cachaNombre().toUpperCase() + "'" + "\n" + texto);
 
 		File sdCard;
 		sdCard = Environment.getExternalStorageDirectory();
@@ -539,7 +549,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 //		uris.add(Uri.parse("file://" + pathZip + AudiosZip));
 		em.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
 
-		startActivity(Intent.createChooser(em, "Enviar correo electr�nico"));
+		startActivity(Intent.createChooser(em, "Enviar correo electr_nico"));
 
 	}
 
@@ -613,7 +623,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		Cursor c = db2.rawQuery(selectQuery1, null);
 
 		c.moveToFirst();
-		// Recorremos el cursor hasta que no haya m�s registros
+		// Recorremos el cursor hasta que no haya m_s registros
 		String delegacion = c.getString(0);
 		c.close();
 		db2.close();
@@ -636,7 +646,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		// Cursor c = db.rawQuery(selectQuery1, null);
 		//
 		// c.moveToFirst();
-		// // Recorremos el cursor hasta que no haya m�s registros
+		// // Recorremos el cursor hasta que no haya m_s registros
 		// String equipo = c.getString(0);
 		// c.close();
 		// db.close();
@@ -656,7 +666,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 
 				String enc = c.getString(0);
 				String tot = c.getString(1);
-				// Recorremos el cursor hasta que no haya m�s registros
+				// Recorremos el cursor hasta que no haya m_s registros
 				txtEncuesta.append("- Encuestador: " + enc + "  " + "\tTotal de encuestas: " + tot + "\n");
 
 			} while (c.moveToNext());
@@ -679,7 +689,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		Cursor c = db.rawQuery(selectQuery1, null);
 
 		if (c.getCount() > 0) {
-			// Recorremos el cursor hasta que no haya m�s registros
+			// Recorremos el cursor hasta que no haya m_s registros
 			c.moveToFirst();
 			cuantasSecciones_base = c.getString(1);
 		}
@@ -704,7 +714,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 				+ "' and fecha='" + formattedDate3 + "' and tipocaptura='ABANDONO' group by seccion";
 		Cursor c = db.rawQuery(selectQuery1, null);
 		if (c.getCount() > 0) {
-			// Recorremos el cursor hasta que no haya m�s registros
+			// Recorremos el cursor hasta que no haya m_s registros
 			c.moveToFirst();
 			cuantasSecciones_base = c.getString(1);
 		} else {
@@ -731,7 +741,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		Cursor c = db.rawQuery(selectQuery1, null);
 
 		if (c.getCount() > 0) {
-			// Recorremos el cursor hasta que no haya m�s registros
+			// Recorremos el cursor hasta que no haya m_s registros
 			c.moveToFirst();
 			masculino = c.getString(1);
 		}
@@ -764,7 +774,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		Cursor c = db.rawQuery(selectQuery1, null);
 
 		if (c.getCount() > 0) {
-			// Recorremos el cursor hasta que no haya m�s registros
+			// Recorremos el cursor hasta que no haya m_s registros
 			c.moveToFirst();
 			femenino = c.getString(1);
 		}
@@ -789,7 +799,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 				+ "' and tipocaptura='RECHAZO' group by seccion";
 		Cursor c = db.rawQuery(selectQuery1, null);
 		if (c.getCount() > 0) {
-			// Recorremos el cursor hasta que no haya m�s registros
+			// Recorremos el cursor hasta que no haya m_s registros
 			c.moveToFirst();
 			cuantasSecciones_base = c.getString(1);
 		} else {
@@ -808,7 +818,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 				+ "' and fecha='" + formattedDate3 + "' and tipocaptura='RECHAZO' group by seccion";
 		Cursor c = db.rawQuery(selectQuery1, null);
 		if (c.getCount() > 0) {
-			// Recorremos el cursor hasta que no haya m�s registros
+			// Recorremos el cursor hasta que no haya m_s registros
 			c.moveToFirst();
 			cuantasSecciones_base = c.getString(1);
 		} else {
@@ -865,12 +875,12 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 
 		spinner2.setAdapter(adaptador);
 
-		// ACCI�N QUE SE REALIZA CUANDO ES SELECCIOANDO UN ELEMENTO DEL SPINNER
+		// ACCI_N QUE SE REALIZA CUANDO ES SELECCIOANDO UN ELEMENTO DEL SPINNER
 		spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 			public void onItemSelected(AdapterView<?> parent, android.view.View v, int position, long id) {
 				SeccionesSpinner();
 				txtEquipo.setText("Seleccionado: " + datos[position]);
-				btnSiguiente.setEnabled(false);// desactiva el bot�n siguiente
+				btnSiguiente.setEnabled(false);// desactiva el bot_n siguiente
 				txtResultado.setText("");// limpia el cuadro de texto
 			}
 
@@ -918,7 +928,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		}
 
 		else {
-			Toast toast2 = Toast.makeText(getApplicationContext(), "NO CORRESPONDE ESTE N�MERO DE SECCI�N...!",
+			Toast toast2 = Toast.makeText(getApplicationContext(), "NO CORRESPONDE ESTE N_MERO DE SECCI_N...!",
 					Toast.LENGTH_LONG);
 
 			toast2.setGravity(Gravity.TOP | Gravity.CENTER, 0, 0);
@@ -940,10 +950,10 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 		Collections.sort(list);
 		spinner3.setAdapter(adapter);
 
-		// ACCI�N QUE SE REALIZA CUANDO ES SELECCIOANDO UN ELEMENTO DEL SPINNER
+		// ACCI_N QUE SE REALIZA CUANDO ES SELECCIOANDO UN ELEMENTO DEL SPINNER
 		spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 			public void onItemSelected(AdapterView<?> parent, android.view.View v, int position, long id) {
-				btnSiguiente.setEnabled(false);// desactiva el bot�n siguiente
+				btnSiguiente.setEnabled(false);// desactiva el bot_n siguiente
 				txtResultado.setText("");// limpia el cuadro de texto
 			}
 
@@ -1091,12 +1101,12 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 			// FIN INSERTA BASE DE DATOS //
 			
 			txtEquipo.setText("");
-			btnSiguiente.setEnabled(false);// desactiva el bot�n siguiente
+			btnSiguiente.setEnabled(false);// desactiva el bot_n siguiente
 			btnRechazo.setEnabled(false);
 			txtResultado.setText("");// limpia el cuadro de texto
 
 		} catch (Exception e) {
-			System.out.println("algo pas�...1");
+			System.out.println("algo pas_...1");
 			Log.i("Guardar", e.getMessage());
 		}
 
@@ -1176,12 +1186,12 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
 			// FIN INSERTA BASE DE DATOS //
 			
 			txtEquipo.setText("");
-			btnSiguiente.setEnabled(false);// desactiva el bot�n siguiente
+			btnSiguiente.setEnabled(false);// desactiva el bot_n siguiente
 			btnRechazo.setEnabled(false);
 			txtResultado.setText("");// limpia el cuadro de texto
 
 		} catch (Exception e) {
-			System.out.println("algo pas�...1");
+			System.out.println("algo pas_...1");
 			Log.i("Guardar", e.getMessage());
 		}
 
@@ -1563,7 +1573,7 @@ public class MainActivity extends Activity implements OnItemSelectedListener {
  							Log.i("Foto", "CarlosQ: ================>  Foto en el servidor y Movido a otra carpeta main ====>" + t[x] );
  						}else if(huc.getResponseCode()==404){
  							uploadFotos(s[x],date2);
- 							Log.i("Foto", "CarlosQ: =================> Foto Enviada al servidor y est� Sin Moverse main ====>" + t[x] );
+ 							Log.i("Foto", "CarlosQ: =================> Foto Enviada al servidor y est_ Sin Moverse main ====>" + t[x] );
  						}
 					}
 					// first parameter is d files second parameter is zip file name

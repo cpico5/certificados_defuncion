@@ -162,19 +162,7 @@ public class FotoEvidencia extends Activity {
     private String nombreF;
     private String nombreD;
 
-    private File file4;
-    private File file5;
-    private File file6;
-    List<String> list;
-    ArrayAdapter<String> adapter;
-    ArrayAdapter<String> adapter2;
-    private Spinner spinnerPUBLICO;
-    String alcaldia, laCasilla, distF, distL;
-
     UsuariosSQLiteHelper usdbh;
-    private Spinner spinner;
-    private Spinner spinner2;
-    UsuariosSQLiteHelper Udb;
     private SQLiteDatabase db;
     double latitude;
     double longitude;
@@ -379,10 +367,10 @@ public class FotoEvidencia extends Activity {
         TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
             String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-            System.out.println("Mi N�mero: " + szImei);
+            System.out.println("Mi N_mero: " + szImei);
         }
         String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-        System.out.println("Mi N�mero: " + szImei);
+        System.out.println("Mi N_mero: " + szImei);
 
         return szImei;
     }
@@ -725,7 +713,6 @@ public class FotoEvidencia extends Activity {
                 .setNegativeButton("Terminar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
-//						detenerGrabacion();
 
                         if (!listaImagenes.isEmpty()) {
                             total = listaImagenes.size();
@@ -748,7 +735,7 @@ public class FotoEvidencia extends Activity {
                                 new File(dir, children[i]).delete();
                             }
                         }else{
-                            Log.i(TAG,">>>>>>>>>>>>>>>>>>>"+"NO Entra");
+                            Log.i(TAG,">>>>>>>>>>>>>>>>>>>"+"No Entra");
                         }
 
                         /*Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
@@ -765,31 +752,6 @@ public class FotoEvidencia extends Activity {
                 showProgress(false);
                 Guarda.setEnabled(true);
 
-//						detenerGrabacion();
-               /* Intent i = new Intent(FotoEvidencia.this, MainActivityPantalla1.class);
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                i.putExtra("Nombre", cachaNombre());
-                //i.putExtra("cuantos", String.valueOf(tantos));
-                i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
-                i.putExtra("folio", cachaFolio());
-                i.putExtra(USUARIO, usuario);
-                startActivity(i);
-                finish();*/
-
-                /*Integer tantos = Integer.valueOf(cachaCuantos()) + 1;
-
-                Intent i = new Intent(FotoEvidencia.this, FotoEvidencia.class);
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                i.putExtra("Nombre", cachaNombre());
-                i.putExtra("cuantos", String.valueOf(tantos));
-                i.putExtra("consecutivo_diario", cachaConsecutivoDiario());
-                i.putExtra("folio", cachaFolio());
-                i.putExtra(USUARIO,usuario);
-                i.putExtra(ID_CERTIFICADO,idCertificado);
-
-                startActivity(i);
-                //System.exit(0); // metodo que se debe implementar
-                finish();*/
             }
         });
         AlertDialog alert = builder.create();
@@ -798,16 +760,16 @@ public class FotoEvidencia extends Activity {
     }
 
 
-    ///////    METODO PARA VERIFICAR LA CONEXI�N A INTERNET
+    ///////    METODO PARA VERIFICAR LA CONEXI_N A INTERNET
     public static boolean verificaConexion(Context ctx) {
         boolean bConectado = false;
         ConnectivityManager connec = (ConnectivityManager) ctx
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
-        // No s�lo wifi, tambi�n GPRS
+        // No s_lo wifi, tambi_n GPRS
         NetworkInfo[] redes = connec.getAllNetworkInfo();
-        // este bucle deber�a no ser tan �apa
+        // este bucle deber_a no ser tan _apa
         for (int i = 0; i < 2; i++) {
-            // �Tenemos conexi�n? ponemos a true
+            // _Tenemos conexi_n? ponemos a true
             if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
                 bConectado = true;
             }
@@ -821,7 +783,7 @@ public class FotoEvidencia extends Activity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-// Esto es lo que hace mi bot�n al pulsar ir a atr�s
+// Esto es lo que hace mi bot_n al pulsar ir a atr_s
             Toast.makeText(getApplicationContext(), "No puedes regresar \n\nToma la Foto",
                     Toast.LENGTH_SHORT).show();
 
@@ -1079,7 +1041,7 @@ public class FotoEvidencia extends Activity {
 
             Guarda = (Button) findViewById(R.id.guardar);
 
-            //PARA VER SI ESTA O NO EST� CONECTADO
+            //PARA VER SI ESTA O NO EST_ CONECTADO
 
 
 //            Toast.makeText(getBaseContext(),"Sin Conexion...!", Toast.LENGTH_LONG).show();
@@ -1186,16 +1148,14 @@ public class FotoEvidencia extends Activity {
         }
 
 
-//                String seccion = cachaSeccion();
-//
-//                nombreD = diario+"_"+seccion+"_"+cachaNombre()+"_"+sacaImei()+"_"+date;
 
         String tp = "act";
         if(tipo.equals("certificado")){
             tp = "cer";
         }
+        //  AQUI EL NOMBRE COMPLETO DE LA FOTO
         nombreD = formattedDate3 + "_" + sacaImei() + "_" + cachaNombre() + "_" + cachaConsecutivoDiario() + "_" + contador + "_" + idCertificado + "_" + tp +".jpeg";
-         nombreImagen = nombreD;
+        nombreImagen = nombreD;
 
 
         if (!nombreImagen.trim().equalsIgnoreCase("")) {
@@ -1706,7 +1666,7 @@ public class FotoEvidencia extends Activity {
                             Log.i("Foto", "CarlosQ: ================>  Foto en el servidor y Movida a otra carpeta ====>" + t[x]);
                         } else if (huc.getResponseCode() == 404) {
                             uploadFotos(s[x], date2);
-                            Log.i("Foto", "CarlosQ: =================> Foto Enviada y a�n sin Moverse ====>" + t[x]);
+                            Log.i("Foto", "CarlosQ: =================> Foto Enviada y a_n sin Moverse ====>" + t[x]);
                         }
                     }
                     // first parameter is d files second parameter is zip file name

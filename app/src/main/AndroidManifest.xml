@@ -66,86 +66,13 @@
         <activity
             android:name=".CalendarViewFotos"
             android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityConteo"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivitySecciones"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivitySeccionesBorrar"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityCarga"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPresidente"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivityJefeGobierno"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivityDiputado"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivityAlianzaMas"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivityAlianzaMenos"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
+
+
+
         <activity
             android:name=".MainActivityPantalla1"
             android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPreguntas"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPantallaGUS"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPantalla3"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPantalla4"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPantalla5"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPantalla6"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPantalla7"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPantalla8"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPantalla9"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".MainActivityPantalla10"
-            android:screenOrientation="portrait"></activity>
+
 
         <provider
             android:name=".GenericFileProvider"

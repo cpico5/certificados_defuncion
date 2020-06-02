@@ -26,13 +26,13 @@ public class UsuariosSQLiteHelper3 extends SQLiteOpenHelper {
     }
 
     public static class TablaUbicacion {
-        public static String TABLA_UBICACION = "ubicacion";
-        public static String COLUMNA_ID = "id";
-        public static String COLUMNA_fecha = "fecha";
-        public static String COLUMNA_hora = "hora";
-        public static String COLUMNA_LATITUD = "latitud";
-        public static String COLUMNA_LONGITUD = "longitud";
-        public static String COLUMNA_DIRECCION = "direccion";
+        public static String TABLA_UBICACION    = "ubicacion";
+        public static String COLUMNA_ID         = "id";
+        public static String COLUMNA_fecha      = "fecha";
+        public static String COLUMNA_hora       = "hora";
+        public static String COLUMNA_LATITUD    = "latitud";
+        public static String COLUMNA_LONGITUD   = "longitud";
+        public static String COLUMNA_DIRECCION  = "direccion";
     }
 
     private static final String DATABASE_UBICACION = "create table "

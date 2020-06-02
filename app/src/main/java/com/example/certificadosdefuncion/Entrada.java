@@ -157,10 +157,10 @@ public class Entrada extends Activity {
         TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
             String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-            System.out.println("Mi N�mero: " + szImei);
+            System.out.println("Mi Numero: " + szImei);
         }
         String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-        System.out.println("Mi N�mero: " + szImei);
+        System.out.println("Mi Numero: " + szImei);
 
         return szImei;
     }
@@ -175,10 +175,10 @@ public class Entrada extends Activity {
         TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
             String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-            System.out.println("Mi N�mero: " + szImei);
+            System.out.println("Mi Numero: " + szImei);
         }
         String szImei = TelephonyMgr.getDeviceId(); // Requires READ_PHONE_STATE
-        System.out.println("Mi N�mero: " + szImei);
+        System.out.println("Mi Numero: " + szImei);
 
         return szImei;
     }
@@ -218,7 +218,7 @@ public class Entrada extends Activity {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         Entrada.this.runOnUiThread(new Runnable() {
             public void run() {
-                builder.setMessage("Instala la aplicaci�n de Seguimiento")
+                builder.setMessage("Instala la App de Seguimiento")
                         .setTitle("Aviso").setCancelable(false)
                         .setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -319,16 +319,16 @@ public class Entrada extends Activity {
         /* Abre la app de seguimiento*/
 
 
-//        try {
-//            Intent launchIntent = getPackageManager().getLaunchIntentForPackage("mx.gob.cdmx.seguimiento");
-//            startActivity(launchIntent);
-//        } catch (Exception e) {
-//            String stackTrace = Log.getStackTraceString(e);
-//            Log.i(TAG, "Lanza Seguimiento" + stackTrace);
-//
-//            dialogoSeguimiento();
-//
-//        }
+        try {
+            Intent launchIntent = getPackageManager().getLaunchIntentForPackage("mx.gob.cdmx.seguimiento");
+            startActivity(launchIntent);
+        } catch (Exception e) {
+            String stackTrace = Log.getStackTraceString(e);
+            Log.i(TAG, "Lanza Seguimiento" + stackTrace);
+
+            dialogoSeguimiento();
+
+        }
 
 
 		mLoginFormView = findViewById(R.id.editUsuario);
@@ -362,7 +362,7 @@ public class Entrada extends Activity {
 //			dialog = ProgressDialog.show(Entrada.this, "", "Actualizando...", true);
 
         if (!verificaConexion(this)) {
-            Toast.makeText(getBaseContext(), "Sin conexi�n",
+            Toast.makeText(getBaseContext(), "Sin conexion",
                     Toast.LENGTH_LONG).show();
             //this.finish();
         } else {
@@ -539,14 +539,14 @@ public class Entrada extends Activity {
 							}
 
 						} else {
-							Toast.makeText(Entrada.this, "Usuario y/o Contase?a Incorrectos", Toast.LENGTH_SHORT).show();
+							Toast.makeText(Entrada.this, "Usuario y/o Password Incorrectos", Toast.LENGTH_SHORT).show();
 						}
 					}
 
 				} catch (Exception e) {
 					showProgress(false);
 					Log.e(TAG, e.getMessage());
-					Toast.makeText(Entrada.this, "Usuario y/o Contase?a Incorrectos", Toast.LENGTH_SHORT).show();
+					Toast.makeText(Entrada.this, "Usuario y/o Password Incorrectos", Toast.LENGTH_SHORT).show();
 				}
 			}
 
@@ -554,7 +554,7 @@ public class Entrada extends Activity {
 			public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
 				showProgress(false);
 				try {
-					Log.e(TAG, "PIMC-----------------> existe un error en la conexi?n -----> " + error.getMessage());
+					Log.e(TAG, "PIMC-----------------> existe un error en la conexion -----> " + error.getMessage());
 					if (responseBody != null)
 						Log.d(TAG, "pimc -----------> " + new String(responseBody));
 
@@ -563,7 +563,7 @@ public class Entrada extends Activity {
 				}
 
 				if (statusCode != 200) {
-					Log.e(TAG, "Existe un error en la conexi?n -----> " + error.getMessage());
+					Log.e(TAG, "Existe un error en la conexion -----> " + error.getMessage());
 					if (responseBody != null)
 						Log.d(TAG, "pimc -----------> " + new String(responseBody));
 
@@ -578,15 +578,15 @@ public class Entrada extends Activity {
 
 	}
 
-    /////// METODO PARA VERIFICAR LA CONEXI�N A INTERNET
+    /////// METODO PARA VERIFICAR LA CONEXION A INTERNET
     public static boolean verificaConexion(Context ctx) {
         boolean bConectado = false;
         ConnectivityManager connec = (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
-        // No s�lo wifi, tambi�n GPRS
+        // No solo wifi, tambien GPRS
         NetworkInfo[] redes = connec.getAllNetworkInfo();
-        // este bucle deber�a no ser tan �apa
+        // este bucle deberia no ser tan
         for (int i = 0; i < 2; i++) {
-            // �Tenemos conexi�n? ponemos a true
+            // Tenemos conexion? ponemos a true
             if (redes[i].getState() == NetworkInfo.State.CONNECTED) {
                 bConectado = true;
             }
@@ -642,7 +642,7 @@ public class Entrada extends Activity {
             Toast.makeText(this, "Acceso OK", Toast.LENGTH_SHORT).show();
 
         } else {
-            Toast.makeText(this, "Usuario y/o Contase�a Incorrectos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Usuario y/o Pasword Incorrectos", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -831,7 +831,7 @@ public class Entrada extends Activity {
 //		            dialog.setCancelable(false);
 //		            dialog.setProgress(0);
 //		            dialog.setMax(100);
-//		            dialog.show(); //Mostramos el di�logo antes de comenzar
+//		            dialog.show(); //Mostramos el di_logo antes de comenzar
         }
 
 
@@ -847,7 +847,6 @@ public class Entrada extends Activity {
             final File f = new File(sDirectorio);
             Log.i(TAG, "lista" + pathBase);
 
-//						final String customURL = "https://registros.sies2018.org/coordinacion/audios/";
             final String customURL = "https://opinion.cdmx.gob.mx/cgi-bin/bases/";
 
 
@@ -940,13 +939,13 @@ public class Entrada extends Activity {
             super.onPreExecute();
 
 //					dialog = new ProgressDialog(CalendarViewFotos.this);
-//			        dialog.setMessage("Enviando Fotograf�as...");
+//			        dialog.setMessage("Enviando Fotografias...");
 //			        dialog.setTitle("Progreso");
 //			        dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 //			        dialog.setCancelable(false);
 //			        dialog.setProgress(0);
 //			        dialog.setMax(100);
-//			        dialog.show(); //Mostramos el di�logo antes de comenzar
+//			        dialog.show(); //Mostramos el dialogo antes de comenzar
         }
 
 
@@ -1047,7 +1046,7 @@ public class Entrada extends Activity {
             super.onPostExecute(date2);
 //					dialog.dismiss();
 
-            //	Toast.makeText(CalendarViewFotos.this, "Env�o de Fotografias completo ",Toast.LENGTH_LONG).show();
+            //	Toast.makeText(CalendarViewFotos.this, "Env_o de Fotografias completo ",Toast.LENGTH_LONG).show();
 
 //					correo(date2, prefix);
 //					correo(date2, sacaChip());
@@ -1060,7 +1059,6 @@ public class Entrada extends Activity {
 
         File sdCard;
         sdCard = Environment.getExternalStorageDirectory();
-        //final String pathFotos = sdCard.getAbsolutePath() + "/"+ nombreEncuesta+"-Audio"+fech;
         final String pathAudios = sdCard.getAbsolutePath() + nombreEncuesta + "-Audio" + formattedDate3 + "/";
 
         String fileName = sourceFileUri;
